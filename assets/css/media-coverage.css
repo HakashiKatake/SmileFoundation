@@ -1,0 +1,225 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+:root {
+    --primary-color: #8cc63f;
+    --secondary-color: #f7941d;
+    --dark-gray: #333333;
+    --light-gray: #f2f2f2;
+    --white: #ffffff;
+    --black: #000000;
+    --font-heading: 'Bebas Neue', sans-serif;
+    --font-primary: 'Roboto', Arial, sans-serif;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    line-height: 1.6;
+    color: #666;
+    background-color: #f7f7f7;
+}
+
+.po-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header styles */
+.po-header {
+    background-color: #f2f2f2;
+    padding: 25px;
+}
+
+.po-title {
+    font-family: var(--font-heading);
+    color: #666;
+    font-size: 32px;
+    margin-bottom: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.po-breadcrumbs {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.po-breadcrumb-item {
+    color: #666;
+    text-decoration: none;
+}
+
+.po-breadcrumb-item.po-active {
+    color: #8bc34a;
+}
+
+.po-breadcrumb-separator {
+    margin: 0 10px;
+    color: #666;
+}
+
+/* Introduction text */
+.po-intro {
+    padding: 30px 0;
+}
+
+.po-intro p {
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+/* Year tabs */
+.po-year-tabs {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+}
+
+.po-year-tab {
+    background: #ededed;
+    border: none;
+    border-radius: 10px 10px 0 0;
+    padding: 12px 28px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #888;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    outline: none;
+}
+
+.po-year-tab.po-active,
+.po-year-tab.active {
+    background: #fff;
+    color: #222;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+/* Media cards - REVISED to match image layout */
+.po-year-content {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin: 30px 0;
+}
+
+.po-media-card {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    overflow: hidden;
+    padding: 25px;
+}
+
+.po-media-logo {
+    flex: 0 0 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 25px;
+}
+
+.po-media-logo img {
+    max-width: 100%;
+    max-height: 80px;
+    object-fit: contain;
+}
+
+.po-media-details {
+    flex: 1;
+    text-align: left;
+}
+
+.po-media-title {
+    font-family: var(--font-heading);
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.po-media-date {
+    color: #999;
+    font-size: 14px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .po-media-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .po-media-logo {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .po-media-details {
+        text-align: center;
+    }
+    
+    .po-title {
+        font-size: 28px;
+    }
+    
+    .po-media-title {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .po-year-tab {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+    
+    .po-title {
+        font-size: 24px;
+    }
+    
+    .po-intro {
+        padding: 20px 0;
+    }
+    
+    .po-intro p {
+        font-size: 15px;
+    }
+    
+    .po-media-logo {
+        flex: 0 0 120px;
+    }
+    
+    .po-media-logo img {
+        max-height: 60px;
+    }
+}
+
+.po-main-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    padding: 40px 32px 32px 32px;
+}

@@ -1,0 +1,246 @@
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.soc-nav {
+    background-color: #8abe57;
+    background-image: 
+        linear-gradient(rgba(138, 190, 87, 0.85), rgba(138, 190, 87, 0.85)),
+        url('../images/Banner1-scaled.jpg.webp');
+    background-position: center;
+    background-size: cover;
+    padding: 40px 0;
+    border-radius: 20px;
+}
+
+.soc-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.soc-nav li {
+    position: relative;
+    padding: 0 20px;
+}
+
+.soc-nav li:not(:last-child)::after {
+    content: "|";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.soc-nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+.soc-nav a:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.soc-nav a.active {
+    color: #f7df4c; /* Yellow color for EDUCATION */
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .soc-nav ul {
+        flex-wrap: wrap;
+        padding: 0 10px;
+    }
+    
+    .soc-nav li {
+        margin: 5px 0;
+    }
+    
+    .soc-nav li:not(:last-child)::after {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .soc-nav a {
+        font-size: 14px;
+    }
+}
+
+.soc-main {
+    background: #fafafa;
+    min-height: 100vh;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+.soc-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #666;
+    letter-spacing: 1px;
+    margin: 32px 0 24px 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+.soc-tabs {
+    display: flex;
+    background: #7cb342;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 38px;
+    padding: 0 0 0 12px;
+    align-items: center;
+    min-height: 56px;
+}
+.soc-tab {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 1.08rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0 32px;
+    height: 56px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    position: relative;
+    font-family: 'Montserrat', Arial, sans-serif;
+    border-right: 1.5px solid #b6e07c;
+    display: flex;
+    align-items: center;
+}
+.soc-tab:last-child {
+    border-right: none;
+}
+.soc-tab.active {
+    background: #6fa92e;
+    color: #ffe066;
+    box-shadow: 0 2px 8px rgba(124,179,66,0.08);
+}
+.soc-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+.soc-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 420px;
+    transition: box-shadow 0.2s;
+}
+.soc-card:hover {
+    box-shadow: 0 4px 24px rgba(124,179,66,0.13);
+}
+.soc-img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+    margin-bottom: 0;
+}
+.soc-card-content {
+    padding: 24px 22px 18px 22px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.soc-name {
+    font-size: 1.08rem;
+    font-weight: 700;
+    color: #666;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+.soc-story {
+    color: #888;
+    font-size: 1.05rem;
+    margin-bottom: 18px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    line-height: 1.6;
+}
+.soc-readmore {
+    color: #7cb342;
+    font-size: 1.05rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+.soc-readmore:hover {
+    color: #558b2f;
+    text-decoration: underline;
+}
+@media (max-width: 900px) {
+    .soc-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+    .soc-img {
+        height: 180px;
+    }
+}
+@media (max-width: 600px) {
+    .container {
+        padding: 0 4px;
+    }
+    .soc-title {
+        font-size: 1.2rem;
+        margin: 18px 0 12px 0;
+    }
+    .soc-tabs {
+        flex-direction: column;
+        min-height: unset;
+        padding: 0;
+    }
+    .soc-tab {
+        width: 100%;
+        padding: 0 12px;
+        height: 44px;
+        font-size: 0.98rem;
+        border-right: none;
+        border-bottom: 1px solid #b6e07c;
+        justify-content: flex-start;
+    }
+    .soc-tab:last-child {
+        border-bottom: none;
+    }
+    .soc-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .soc-img {
+        height: auto;
+        max-height: 300px;
+        object-fit: contain;
+        width: 100%;
+        background: #fff;
+        border-radius: 12px 12px 0 0;
+        display: block;
+    }
+    .soc-card-content {
+        padding: 14px 10px 10px 10px;
+    }
+} 

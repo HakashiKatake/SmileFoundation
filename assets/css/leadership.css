@@ -1,0 +1,541 @@
+:root {
+    --primary-color: #8cc63f;
+    --primary-dark: #7ab52e;
+    --secondary-color: #f7941d;
+    --white: #ffffff;
+    --black: #000000;
+    --dark-gray: #333333;
+    --light-gray: #f5f5f5;
+    --border-color: #e0e0e0;
+    --font-heading: 'Bebas Neue', sans-serif;
+    --font-primary: 'Montserrat', Arial, sans-serif;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Leadership Header Section */
+.page-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Container */
+.container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Leadership Header Section - Updated */
+.leadership-header {
+    background-color: #f5f5f5;
+    padding: 30px;
+    margin-top: 20px;
+    border-radius: 0;
+}
+
+.leadership-title {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: var(--black);
+    margin: 0 0 15px 0;
+}
+
+.leadership-breadcrumb {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.leadership-breadcrumb a {
+    text-decoration: none;
+    color: var(--dark-gray);
+    transition: color 0.3s ease;
+}
+
+.leadership-breadcrumb a:hover {
+    color: var(--primary-color);
+}
+
+.breadcrumb-separator {
+    margin: 0 10px;
+    color: var(--dark-gray);
+}
+
+.breadcrumb-pages {
+    color: var(--primary-color) !important;
+}
+
+.breadcrumb-current {
+    color: var(--dark-gray);
+}
+
+/* Introduction Section - Updated */
+.leadership-intro {
+    padding: 40px 0;
+    max-width: 1160px;
+    margin: 0 auto;
+}
+
+.intro-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--dark-gray);
+    text-align: justify;
+    padding: 0 30px;
+}
+/* Team Sections Common Styles */
+.page-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: var(--black);
+    text-align: center;
+    margin: 50px 0 15px;
+}
+
+.section-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #ddd;
+    margin-bottom: 30px;
+}
+
+.section-subtitle {
+    font-size: 1rem;
+    text-align: center;
+    color: var(--dark-gray);
+    margin-bottom: 40px;
+}
+
+.section-subtitle strong {
+    font-weight: 600;
+}
+
+/* Profile Cards */
+.mentor-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.management-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.profile-card {
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    max-width: 350px;
+    margin: 0 auto;
+    transition: box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.profile-header {
+    padding: 20px 20px 0;
+    text-align: center;
+}
+
+.profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 15px;
+    border: 1px solid #eee;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--dark-gray);
+    margin-bottom: 10px;
+}
+
+.profile-separator {
+    height: 3px;
+    background-color: #ffeb3b;
+    margin: 0 auto 15px;
+    width: 100%;
+}
+
+.profile-details {
+    padding: 0 20px;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, height 0.3s ease, padding 0.3s ease;
+}
+
+.profile-details p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--dark-gray);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.profile-toggle {
+    width: 30px;
+    height: 30px;
+    background-color: #8cc63f;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.toggle-icon {
+    color: white;
+    font-size: 1.2rem;
+    line-height: 1;
+    font-weight: bold;
+}
+
+/* Expanded State */
+.profile-card.expanded .profile-details {
+    height: auto;
+    opacity: 1;
+    padding: 15px 20px;
+}
+
+.profile-card.expanded .profile-toggle {
+    transform: rotate(180deg);
+}
+
+/* Our Mentor Specific Styles */
+.mentor-container .profile-card {
+    width: 350px;
+}
+
+/* Links You May Find Useful Section */
+.useful-links-section {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.useful-links-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #000;
+    text-align: left;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+}
+
+.links-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.useful-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    width: 180px;
+    transition: transform 0.3s ease;
+}
+
+.useful-link:hover {
+    transform: translateY(-5px);
+}
+
+.link-icon-wrapper {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.mint {
+    background-color: #a8d1d0;
+}
+
+.gold {
+    background-color: #f4d28c;
+}
+
+.purple {
+    background-color: #cec0d8;
+}
+
+.link-icon {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.link-icon svg {
+    width: 100%;
+    height: auto;
+    fill: #444;
+}
+
+.link-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #222;
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .useful-links-title {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+    
+    .links-container {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .useful-links-title {
+        font-size: 2rem;
+    }
+    
+    .link-icon-wrapper {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .link-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .link-text {
+        font-size: 1.1rem;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 1100px) {
+    .management-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .management-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .profile-card {
+        max-width: 450px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .profile-name {
+        font-size: 1.1rem;
+    }
+    
+    .profile-image {
+        width: 90px;
+        height: 90px;
+    }
+}
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .leadership-title {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .leadership-header {
+        padding: 25px 20px;
+    }
+    
+    .leadership-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .leadership-title {
+        font-size: 1.8rem;
+    }
+    
+    .leadership-breadcrumb {
+        font-size: 0.8rem;
+    }
+}
+
+/* Introduction Section */
+.leadership-intro {
+    padding: 40px 0;
+}
+
+.intro-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--dark-gray);
+    text-align: justify;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Board of Trustees Section */
+.board-section {
+    padding: 40px 0 60px;
+}
+
+.board-title {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: var(--black);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.board-members {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.board-member {
+    border: 1px solid var(--border-color);
+    padding: 25px;
+    background-color: var(--white);
+}
+
+.member-name {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--black);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.member-bio p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--dark-gray);
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.member-bio p:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .board-members {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
+    
+    .leadership-title {
+        font-size: 2.2rem;
+    }
+    
+    .board-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .leadership-header {
+        padding: 25px 0;
+    }
+    
+    .leadership-title {
+        font-size: 2rem;
+    }
+    
+    .board-title {
+        font-size: 1.8rem;
+    }
+    
+    .member-name {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .leadership-title {
+        font-size: 1.8rem;
+    }
+    
+    .leadership-breadcrumb {
+        font-size: 0.8rem;
+    }
+    
+    .board-title {
+        font-size: 1.6rem;
+    }
+    
+    .member-name {
+        font-size: 1.2rem;
+    }
+    
+    .board-member {
+        padding: 20px;
+    }
+    
+    .member-bio p {
+        font-size: 0.9rem;
+    }
+}

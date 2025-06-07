@@ -1,0 +1,225 @@
+body, .flims-main {
+    background: #fafafa;
+    min-height: 100vh;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+.flims-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #666;
+    letter-spacing: 1px;
+    margin: 32px 0 0 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+.flims-breadcrumbs {
+    background: #f5f5f5;
+    padding: 18px 18px 18px 0;
+    margin: 18px 0 32px 0;
+    font-size: 1.05rem;
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: #888;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 2px;
+}
+.flims-breadcrumbs .fa-home {
+    margin-right: 4px;
+}
+.flims-breadcrumbs .crumb-sep {
+    color: #bbb;
+    font-weight: 700;
+}
+.flims-breadcrumbs .crumb-active {
+    color: #8cc63f;
+    font-weight: 600;
+}
+.flims-intro {
+    color: #888;
+    font-size: 1.13rem;
+    margin-bottom: 36px;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+.flims-intro p {
+    margin-bottom: 12px;
+}
+.flims-list {
+    margin-bottom: 40px;
+}
+.flim-row {
+    display: flex;
+    align-items: stretch;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    margin-bottom: 38px;
+    overflow: hidden;
+    min-height: 320px;
+    padding: 0;
+}
+.flim-img-col {
+    position: relative;
+    min-width: 540px;
+    max-width: 600px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background: #eaeaea;
+    padding: 0;
+}
+.flim-img {
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    object-fit: cover;
+    border-radius: 0;
+    display: block;
+}
+.flim-badge {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #222;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 0 12px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    border-radius: 0 0 8px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    z-index: 2;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flim-info-col {
+    flex: 1;
+    padding: 48px 48px 48px 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+}
+.flim-name {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #666;
+    margin: 0 0 8px 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+    letter-spacing: 1px;
+    text-align: left;
+}
+.flim-type {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #888;
+    margin-left: 0;
+    margin-top: 8px;
+    display: block;
+    letter-spacing: 1px;
+    text-align: left;
+}
+.flim-desc {
+    color: #888;
+    font-size: 1.35rem;
+    margin-bottom: 28px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    line-height: 1.5;
+    text-align: left;
+    max-width: 600px;
+}
+.flim-link {
+    color: #8cc63f;
+    font-size: 1.18rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s;
+    font-family: 'Montserrat', Arial, sans-serif;
+    text-align: left;
+}
+.flim-link:hover {
+    color: #558b2f;
+    text-decoration: underline;
+}
+@media (max-width: 1200px) {
+    .flim-img-col {
+        min-width: 340px;
+        max-width: 400px;
+    }
+    .flim-info-col {
+        padding: 32px 24px 32px 32px;
+    }
+    .flim-name {
+        font-size: 2rem;
+    }
+    .flim-desc {
+        font-size: 1.1rem;
+    }
+}
+@media (max-width: 900px) {
+    .flim-row {
+        flex-direction: column;
+        min-height: unset;
+    }
+    .flim-img-col {
+        min-width: 100%;
+        max-width: 100%;
+    }
+    .flim-img {
+        min-height: 180px;
+        height: 220px;
+    }
+    .flim-info-col {
+        padding: 22px 16px 18px 16px;
+    }
+    .flim-badge {
+        top: 10px;
+        left: 10px;
+        border-radius: 6px;
+        writing-mode: horizontal-tb;
+        padding: 4px 12px;
+        font-size: 0.98rem;
+        height: auto;
+    }
+}
+@media (max-width: 600px) {
+    .container {
+        padding: 0 4px;
+    }
+    .flims-title {
+        font-size: 1.2rem;
+        margin: 18px 0 0 0;
+    }
+    .flims-breadcrumbs {
+        font-size: 0.98rem;
+        padding: 10px 6px 10px 0;
+        margin: 10px 0 18px 0;
+    }
+    .flims-intro {
+        font-size: 0.98rem;
+        margin-bottom: 18px;
+    }
+    .flim-info-col {
+        padding: 12px 6px 12px 6px;
+    }
+    .flim-name {
+        font-size: 1.1rem;
+    }
+    .flim-type {
+        font-size: 0.98rem;
+    }
+    .flim-desc {
+        font-size: 0.98rem;
+    }
+    .flim-link {
+        font-size: 0.98rem;
+    }
+} 

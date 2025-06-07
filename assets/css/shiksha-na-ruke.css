@@ -1,0 +1,938 @@
+/* Shiksha Na Ruke Page Styles */
+
+/* Hero Section */
+.snr-hero-section {
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+    background: url('../assets/images/shiksha-na-ruke/hero.png') no-repeat center center/cover; /* Replace with actual image path */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.snr-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.snr-hero-title {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #ffffff;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+/* Support Section */
+.snr-support-section {
+    padding: 60px 0;
+    background-color: #f8f8f8;
+}
+
+.snr-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 40px;
+}
+
+.snr-support-content {
+    flex: 1;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+    text-align: justify;
+}
+
+.snr-support-content p {
+    margin-bottom: 20px;
+}
+
+.snr-support-form-container {
+    flex: 0.8;
+    background-color: #e6ffe6; /* Light green background */
+    border: 1px solid #c0e0c0; /* Slightly darker green border */
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.snr-support-form .snr-form-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    color: #4CAF50; /* Green */
+    text-align: center;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.snr-support-form .snr-form-subtitle {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    color: #555;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.snr-amount-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.snr-radio-label {
+    display: inline-flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.snr-radio-label input[type="radio"] {
+    margin-right: 8px;
+    accent-color: #4CAF50; /* Green accent for radio button */
+}
+
+.snr-radio-label:has(input[type="radio"]:checked) {
+    background-color: #4CAF50;
+    color: #fff;
+    border-color: #4CAF50;
+}
+
+.snr-donation-impact {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.1rem;
+    color: #4CAF50;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.snr-input-full, .snr-input-half {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+}
+
+.snr-input-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.snr-input-row .snr-input-half {
+    flex: 1;
+    margin-bottom: 0; /* Override individual margin */
+}
+
+.snr-tax-note {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.5;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.snr-checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.snr-checkbox-label input[type="checkbox"] {
+    margin-right: 10px;
+    margin-top: 3px;
+    accent-color: #4CAF50;
+}
+
+.snr-submit-button {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    background-color: #4CAF50; /* Green */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.snr-submit-button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .snr-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .snr-hero-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .snr-hero-section {
+        height: 300px;
+    }
+
+    .snr-hero-title {
+        font-size: 2rem;
+    }
+
+    .snr-support-section {
+        padding: 40px 0;
+    }
+
+    .snr-support-form-container {
+        padding: 20px;
+    }
+
+    .snr-input-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .snr-input-half {
+        margin-bottom: 15px; /* Re-add margin for stacked inputs */
+    }
+
+    .snr-tax-note, .snr-checkbox-label {
+        font-size: 0.8rem;
+    }
+
+    .snr-submit-button {
+        font-size: 1.1rem;
+        padding: 12px 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .snr-hero-section {
+        height: 250px;
+    }
+
+    .snr-hero-title {
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+    }
+
+    .snr-support-content {
+        font-size: 0.9rem;
+    }
+
+    .snr-support-form .snr-form-title {
+        font-size: 1.5rem;
+    }
+
+    .snr-support-form .snr-form-subtitle {
+        font-size: 1rem;
+    }
+
+    .snr-amount-options {
+        gap: 10px;
+    }
+
+    .snr-radio-label {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+
+    .snr-donation-impact {
+        font-size: 1rem;
+    }
+
+    .snr-input-full, .snr-input-half {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Key Interventions Section */
+.snr-interventions-section {
+    padding: 60px 0;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.snr-section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+.snr-interventions-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for desktop */
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.snr-intervention-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.snr-intervention-item img {
+    width: 80px; /* Icon size */
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.snr-intervention-item p {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Shiksha On Ground Section */
+.snr-on-ground-section {
+    padding: 60px 0;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.snr-on-ground-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Statistics Section */
+.snr-stats-section {
+    padding: 80px 0;
+    background-color: #4CAF50; /* Green background */
+    color: #ffffff;
+}
+
+.snr-stats-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.snr-stats-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.snr-stat-item {
+    text-align: left;
+}
+
+.snr-stat-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.snr-stat-text {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+}
+
+.snr-stats-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.snr-india-map {
+    max-width: 100%;
+    height: auto;
+}
+
+/* My Shiksha Story Section */
+.snr-shiksha-story-section {
+    padding: 60px 0;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.snr-story-slider {
+    padding-bottom: 40px; /* Space for pagination */
+}
+
+.snr-story-card {
+    display: flex;
+    background-color: #f0f0f0; /* Light gray background */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    max-width: 900px; /* Max width for story card */
+    text-align: left;
+}
+
+.snr-story-img {
+    width: 40%; /* Image takes 40% width */
+    height: auto;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.snr-story-content {
+    width: 60%; /* Content takes 60% width */
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.snr-story-location {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4CAF50; /* Green */
+    margin-bottom: 10px;
+}
+
+.snr-story-text {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.7;
+}
+
+.snr-story-pagination.swiper-pagination-bullets .swiper-pagination-bullet {
+    background-color: #4CAF50; /* Green dots */
+}
+
+/* Shiksha In News Section */
+.snr-news-section {
+    padding: 60px 0;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.snr-news-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.snr-news-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.snr-news-logo {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.snr-news-text {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.snr-read-more {
+    display: inline-block;
+    background-color: #4CAF50; /* Green */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.snr-read-more:hover {
+    background-color: #45a049;
+}
+
+/* Frequently Asked Questions Section */
+.snr-faq-section {
+    padding: 60px 0;
+    background-color: #ffffff;
+}
+
+.snr-faq-accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.snr-faq-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.snr-faq-header {
+    background-color: #f9f9f9;
+    padding: 18px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: bold;
+    position: relative;
+}
+
+.snr-faq-header:hover {
+    background-color: #f0f0f0;
+}
+
+.snr-faq-icon {
+    font-size: 1.5rem;
+    color: #4CAF50; /* Green */
+    transition: transform 0.3s ease;
+}
+
+.snr-faq-item.active .snr-faq-icon {
+    transform: rotate(45deg); /* Change plus to cross */
+}
+
+.snr-faq-content {
+    padding: 0 25px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.snr-faq-item.active .snr-faq-content {
+    max-height: 200px; /* Adjust as needed, should be larger than content */
+    padding: 15px 25px 25px;
+}
+
+/* Responsive Styles for all new sections */
+@media (max-width: 1200px) {
+    .snr-interventions-grid {
+        gap: 20px;
+    }
+    .snr-stats-left {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .snr-section-title {
+        font-size: 2.2rem;
+    }
+    .snr-interventions-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    }
+    .snr-stats-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .snr-stats-left {
+        align-items: center;
+    }
+    .snr-story-card {
+        flex-direction: column; /* Stack image and content on tablets */
+        max-width: 500px;
+    }
+    .snr-story-img {
+        width: 100%;
+        height: 250px;
+        border-radius: 10px 10px 0 0; /* Adjust border radius */
+    }
+    .snr-story-content {
+        width: 100%;
+        padding: 20px;
+    }
+    .snr-news-grid {
+        grid-template-columns: 1fr; /* Single column on tablets */
+        max-width: 500px;
+    }
+    .snr-news-card {
+        padding: 25px;
+    }
+    .snr-faq-header {
+        font-size: 1rem;
+        padding: 15px 20px;
+    }
+    .snr-faq-content {
+        font-size: 0.9rem;
+        padding: 0 20px;
+    }
+    .snr-faq-item.active .snr-faq-content {
+        padding: 10px 20px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .snr-section-title {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+    .snr-on-ground-section, .snr-interventions-section, .snr-stats-section, .snr-shiksha-story-section, .snr-news-section, .snr-faq-section {
+        padding: 40px 0;
+    }
+    .snr-stat-number {
+        font-size: 2.5rem;
+    }
+    .snr-stat-text {
+        font-size: 1.1rem;
+    }
+    .snr-story-img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .snr-section-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+    .snr-interventions-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+    }
+    .snr-on-ground-image {
+        border-radius: 4px;
+    }
+    .snr-stat-number {
+        font-size: 2rem;
+    }
+    .snr-stat-text {
+        font-size: 1rem;
+    }
+    .snr-story-img {
+        height: 180px;
+    }
+    .snr-story-location {
+        font-size: 1.1rem;
+    }
+    .snr-story-text {
+        font-size: 0.9rem;
+    }
+    .snr-news-card {
+        padding: 20px;
+    }
+    .snr-news-logo {
+        max-width: 120px;
+    }
+    .snr-news-text {
+        font-size: 0.9rem;
+    }
+    .snr-read-more {
+        padding: 8px 15px;
+        font-size: 0.8rem;
+    }
+    .snr-faq-header {
+        font-size: 0.95rem;
+        padding: 12px 15px;
+    }
+    .snr-faq-content {
+        font-size: 0.85rem;
+        padding: 0 15px;
+    }
+    .snr-faq-item.active .snr-faq-content {
+        padding: 8px 15px 15px;
+    }
+}
+
+/* Stories In Motion Section */
+.snr-stories-motion-section {
+    padding: 60px 0;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.snr-stories-video-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two videos side-by-side */
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.snr-video-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.snr-video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    background-color: #000;
+}
+
+.snr-video-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.snr-video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Dark overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.snr-play-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark semi-transparent circle */
+    border: none;
+    color: #ffffff;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.snr-play-button:hover {
+    background-color: #4CAF50;
+    transform: scale(1.1);
+}
+
+.snr-video-controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+    z-index: 3;
+}
+
+.snr-control-left,
+.snr-control-right {
+    display: flex;
+    align-items: center;
+}
+
+.snr-control-center {
+    flex-grow: 1;
+    margin: 0 10px;
+}
+
+.snr-play-pause,
+.snr-mute,
+.snr-settings,
+.snr-pip,
+.snr-fullscreen {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 12px;
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+.snr-time-display {
+    color: #ffffff;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.snr-progress-bar {
+    width: 100%;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.snr-progress-filled {
+    height: 100%;
+    background-color: #4CAF50;
+    border-radius: 2px;
+}
+
+/* Knowledge Hub Section */
+.snr-knowledge-hub-section {
+    padding: 60px 0;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.snr-knowledge-hub-content {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.snr-knowledge-hub-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.snr-knowledge-hub-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    color: #ffffff;
+    padding: 20px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.snr-knowledge-hub-text h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.snr-knowledge-hub-text p {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* Responsive Styles for all new sections */
+@media (max-width: 1200px) {
+    /* Existing responsive styles */
+}
+
+@media (max-width: 992px) {
+    /* Existing responsive styles */
+    .snr-stories-video-gallery {
+        grid-template-columns: 1fr; /* Single column on tablets */
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Existing responsive styles */
+    .snr-stories-motion-section, .snr-knowledge-hub-section {
+        padding: 40px 0;
+    }
+    .snr-play-button {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+    .snr-video-controls {
+        height: 35px;
+    }
+    .snr-knowledge-hub-text h3 {
+        font-size: 1.3rem;
+    }
+    .snr-knowledge-hub-text p {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Existing responsive styles */
+    .snr-stories-motion-section, .snr-knowledge-hub-section {
+        padding: 30px 0;
+    }
+    .snr-play-button {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+    .snr-video-controls {
+        height: 30px;
+        padding: 0 5px;
+    }
+    .snr-control-left,
+    .snr-control-right {
+        font-size: 10px;
+    }
+    .snr-knowledge-hub-text h3 {
+        font-size: 1.1rem;
+    }
+    .snr-knowledge-hub-text p {
+        font-size: 0.8rem;
+    }
+    .snr-knowledge-hub-text .snr-read-more {
+        padding: 6px 12px;
+        font-size: 0.75rem;
+    }
+} 
