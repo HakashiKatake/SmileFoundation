@@ -1,6 +1,9 @@
 /* Import Mobile Menu Styles */
 @import url('mobile-menu.css');
 
+/* Import Chatbot Styles */
+@import url('chatbot.css');
+
 
 @font-face {
   font-family: 'Railway';

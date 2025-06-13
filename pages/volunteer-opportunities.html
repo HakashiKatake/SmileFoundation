@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Opportunities - Smile Foundation</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/volunteer-opportunities.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Opportunities Hero Section -->
+    <section class="opportunities-hero">
+        <div class="hero-background">
+            <div class="floating-elements">
+                <div class="floating-icon" style="top: 15%; left: 10%;"><i class="fas fa-graduation-cap"></i></div>
+                <div class="floating-icon" style="top: 25%; right: 15%;"><i class="fas fa-heartbeat"></i></div>
+                <div class="floating-icon" style="bottom: 30%; left: 20%;"><i class="fas fa-laptop"></i></div>
+                <div class="floating-icon" style="bottom: 20%; right: 10%;"><i class="fas fa-hands-helping"></i></div>
+                <div class="floating-icon" style="top: 40%; left: 50%;"><i class="fas fa-seedling"></i></div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Find Your Perfect <span class="highlight">Volunteer Opportunity</span></h1>
+                    <p class="hero-subtitle">Discover meaningful ways to make a difference in your community. From education to healthcare, find opportunities that match your passion and skills.</p>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" id="total-opportunities">247</span>
+                            <span class="stat-label">Active Opportunities</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="volunteers-needed">1,250</span>
+                            <span class="stat-label">Volunteers Needed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="locations-count">28</span>
+                            <span class="stat-label">Locations</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-search">
+                    <div class="search-container">
+                        <div class="search-box">
+                            <i class="fas fa-search search-icon"></i>
+                            <input type="text" id="opportunity-search" placeholder="Search opportunities..." class="search-input">
+                        </div>
+                        <button class="search-btn" onclick="searchOpportunities()">
+                            <i class="fas fa-search"></i> Search
+                        </button>
+                    </div>
+                    
+                    <div class="quick-filters">
+                        <span class="filter-label">Quick Filters:</span>
+                        <button class="quick-filter active" data-filter="all">All</button>
+                        <button class="quick-filter" data-filter="education">Education</button>
+                        <button class="quick-filter" data-filter="healthcare">Healthcare</button>
+                        <button class="quick-filter" data-filter="urgent">Urgent</button>
+                        <button class="quick-filter" data-filter="remote">Remote</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters and Opportunities Section -->
+    <section class="opportunities-main">
+        <div class="container">
+            <div class="opportunities-layout">
+                
+                <!-- Filters Sidebar -->
+                <div class="filters-sidebar">
+                    <div class="filters-header">
+                        <h3><i class="fas fa-filter"></i> Filters</h3>
+                        <button class="clear-filters" onclick="clearAllFilters()">Clear All</button>
+                    </div>
+                    
+                    <!-- Location Filter -->
+                    <div class="filter-group">
+                        <h4>Location</h4>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" name="location" value="mumbai">
+                                <span class="checkmark"></span>
+                                Mumbai <span class="count">(45)</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="location" value="delhi">
+                                <span class="checkmark"></span>
+                                Delhi <span class="count">(38)</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="location" value="pune">
+                                <span class="checkmark"></span>
+                                Pune <span class="count">(29)</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="location" value="bangalore">
+                                <span class="checkmark"></span>
+                                Bangalore <span class="count">(32)</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="location" value="remote">
+                                <span class="checkmark"></span>
+                                Remote <span class="count">(18)</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Category Filter -->
+                    <div class="filter-group">
+                        <h4>Category</h4>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="education">
+                                <span class="checkmark"></span>
+                                Education <span class="count">(89)</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="healthcare">
+                                <span class="checkmark"></span>
+                                Healthcare <span class="count">(67)</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="women-empowerment">
+                                <span class="checkmark"></span>
+                                Women Empowerment <span class="count">(34)</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="digital-literacy">
+                                <span class="checkmark"></span>
+                                Digital Literacy <span class="count">(28)</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="environment">
+                                <span class="checkmark"></span>
+                                Environment <span class="count">(19)</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="disaster-relief">
+                                <span class="checkmark"></span>
+                                Disaster Relief <span class="count">(10)</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Time Commitment Filter -->
+                    <div class="filter-group">
+                        <h4>Time Commitment</h4>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" name="time" value="1-2">
+                                <span class="checkmark"></span>
+                                1-2 hours/week <span class="count">(56)</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="time" value="3-5">
+                                <span class="checkmark"></span>
+                                3-5 hours/week <span class="count">(78)</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="time" value="6-10">
+                                <span class="checkmark"></span>
+                                6-10 hours/week <span class="count">(45)</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="time" value="10+">
+                                <span class="checkmark"></span>
+                                10+ hours/week <span class="count">(23)</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="time" value="one-time">
+                                <span class="checkmark"></span>
+                                One-time event <span class="count">(45)</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Skills Filter -->
+                    <div class="filter-group">
+                        <h4>Skills Required</h4>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" name="skills" value="teaching">
+                                <span class="checkmark"></span>
+                                Teaching <span class="count">(67)</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="skills" value="medical">
+                                <span class="checkmark"></span>
+                                Medical Knowledge <span class="count">(34)</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="skills" value="technology">
+                                <span class="checkmark"></span>
+                                Technology <span class="count">(28)</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="skills" value="counseling">
+                                <span class="checkmark"></span>
+                                Counseling <span class="count">(19)</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="skills" value="no-skills">
+                                <span class="checkmark"></span>
+                                No Special Skills <span class="count">(89)</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Urgency Filter -->
+                    <div class="filter-group">
+                        <h4>Urgency</h4>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" name="urgency" value="urgent">
+                                <span class="checkmark"></span>
+                                Urgent Need <span class="count">(23)</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="urgency" value="high">
+                                <span class="checkmark"></span>
+                                High Priority <span class="count">(45)</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="urgency" value="normal">
+                                <span class="checkmark"></span>
+                                Normal <span class="count">(179)</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Opportunities Content -->
+                <div class="opportunities-content">
+                    
+                    <!-- Results Header -->
+                    <div class="results-header">
+                        <div class="results-info">
+                            <h3>Showing <span id="results-count">247</span> opportunities</h3>
+                            <p>Find the perfect match for your skills and availability</p>
+                        </div>
+                        
+                        <div class="sort-options">
+                            <label for="sort-select">Sort by:</label>
+                            <select id="sort-select" onchange="sortOpportunities()">
+                                <option value="relevance">Relevance</option>
+                                <option value="date">Date Posted</option>
+                                <option value="urgency">Urgency</option>
+                                <option value="location">Location</option>
+                                <option value="time-commitment">Time Commitment</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- Featured Opportunities -->
+                    <div class="featured-section">
+                        <h3><i class="fas fa-star"></i> Featured Opportunities</h3>
+                        <div class="featured-grid">
+                            <div class="opportunity-card featured">
+                                <div class="card-header">
+                                    <div class="urgency-badge urgent">Urgent Need</div>
+                                    <div class="category-tag education">Education</div>
+                                </div>
+                                <div class="card-content">
+                                    <h4>Mathematics Tutor - Government School</h4>
+                                    <p class="organization">Smile Foundation • Mumbai, Maharashtra</p>
+                                    <p class="description">Help Grade 8-10 students improve their mathematics skills through personalized tutoring sessions.</p>
+                                    
+                                    <div class="opportunity-details">
+                                        <div class="detail-item">
+                                            <i class="fas fa-clock"></i>
+                                            <span>4-6 hours/week</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <i class="fas fa-calendar"></i>
+                                            <span>Ongoing</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <i class="fas fa-users"></i>
+                                            <span>5 volunteers needed</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="skills-required">
+                                        <span class="skill-tag">Mathematics</span>
+                                        <span class="skill-tag">Teaching</span>
+                                        <span class="skill-tag">Hindi/English</span>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="impact-info">
+                                        <span class="impact-text">Impact: <strong>50+ students</strong></span>
+                                    </div>
+                                    <button class="apply-btn" onclick="applyForOpportunity('math-tutor-1')">
+                                        Apply Now <i class="fas fa-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="opportunity-card featured">
+                                <div class="card-header">
+                                    <div class="urgency-badge high">High Priority</div>
+                                    <div class="category-tag healthcare">Healthcare</div>
+                                </div>
+                                <div class="card-content">
+                                    <h4>Health Awareness Campaign</h4>
+                                    <p class="organization">Smile Foundation • Delhi</p>
+                                    <p class="description">Conduct health awareness sessions in urban slums focusing on hygiene and preventive care.</p>
+                                    
+                                    <div class="opportunity-details">
+                                        <div class="detail-item">
+                                            <i class="fas fa-clock"></i>
+                                            <span>6-8 hours/week</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <i class="fas fa-calendar"></i>
+                                            <span>3 months</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <i class="fas fa-users"></i>
+                                            <span>8 volunteers needed</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="skills-required">
+                                        <span class="skill-tag">Public Speaking</span>
+                                        <span class="skill-tag">Health Knowledge</span>
+                                        <span class="skill-tag">Community Work</span>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="impact-info">
+                                        <span class="impact-text">Impact: <strong>500+ families</strong></span>
+                                    </div>
+                                    <button class="apply-btn" onclick="applyForOpportunity('health-campaign-1')">
+                                        Apply Now <i class="fas fa-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- All Opportunities -->
+                    <div class="opportunities-list" id="opportunities-list">
+                        <!-- Opportunities will be populated by JavaScript -->
+                    </div>
+                    
+                    <!-- Load More -->
+                    <div class="load-more-section">
+                        <button class="load-more-btn" onclick="loadMoreOpportunities()">
+                            <i class="fas fa-plus"></i> Load More Opportunities
+                        </button>
+                        <p class="load-info">Showing 20 of 247 opportunities</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-text">
+                    <h2>Can't Find the Right Opportunity?</h2>
+                    <p>Let us know what you're passionate about and we'll help you find the perfect volunteer match.</p>
+                </div>
+                <div class="cta-actions">
+                    <button class="btn-primary" onclick="createCustomRequest()">
+                        <i class="fas fa-lightbulb"></i> Create Custom Request
+                    </button>
+                    <button class="btn-secondary" onclick="contactUs()">
+                        <i class="fas fa-phone"></i> Contact Us
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/volunteer-opportunities.js"></script>
+    
+    <script>
+        // Load header and footer
+        loadComponent('header-placeholder', '../components/header.html');
+        loadComponent('footer-placeholder', '../components/footer.html');
+    </script>
+</body>
+</html>

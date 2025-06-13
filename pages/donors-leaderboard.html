@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donors Leaderboard | Smile Foundation</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/donors-leaderboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Font Face Declarations -->
+    <style>
+        @font-face {
+            font-family: 'Bebas Neue';
+            src: url('../assets/fonts/BebasNeue-Bold.otf') format('opentype'),
+                 url('../assets/fonts/BebasNeue-Bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Railway';
+            src: url('../assets/fonts/Raleway-Regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header will be loaded by load-components.js -->
+    <header id="header"></header>
+    
+    <main>
+        <!-- Donors Leaderboard Header Section -->
+        <div class="page-wrapper">
+            <section class="donors-header">
+                <div class="container">
+                    <h1 class="donors-title">CHAMPIONS OF CHANGE</h1>
+                    <p class="donors-subtitle">Celebrating Our Top Donors Who Make Impact Possible</p>
+                    <div class="donors-breadcrumb">
+                        <a href="../index.html"><i class="fas fa-home"></i> HOME</a>
+                        <span class="breadcrumb-separator">></span>
+                        <a href="#" class="breadcrumb-pages">GET INVOLVED</a>
+                        <span class="breadcrumb-separator">></span>
+                        <span class="breadcrumb-current">DONORS LEADERBOARD</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Introduction Section -->
+        <section class="donors-intro">
+            <div class="container">
+                <p class="intro-text">
+                    Our donors are the backbone of our mission to create lasting change in the lives of underprivileged children and communities. 
+                    This leaderboard celebrates the generosity and commitment of our top supporters who have made extraordinary contributions 
+                    to our cause. Together, we are building a better tomorrow for millions of children across India.
+                </p>
+            </div>
+        </section>
+
+        <!-- Impact Statistics -->
+        <section class="donors-impact-section">
+            <div class="container">
+                <h2 class="section-title">COLLECTIVE IMPACT</h2>
+                <div class="impact-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">
+                            <span class="counter" data-target="150">0</span><span class="plus">+</span>
+                        </div>
+                        <div class="stat-label">CRORES</div>
+                        <div class="stat-description">
+                            Total donations<br>
+                            received this year
+                        </div>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <div class="stat-number">
+                            <span class="counter" data-target="500">0</span><span class="plus">+</span>
+                        </div>
+                        <div class="stat-label">DONORS</div>
+                        <div class="stat-description">
+                            Active contributors<br>
+                            supporting our mission
+                        </div>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <div class="stat-number">
+                            <span class="counter" data-target="25">0</span><span class="plus">+</span>
+                        </div>
+                        <div class="stat-label">LAKH</div>
+                        <div class="stat-description">
+                            Lives impacted<br>
+                            through donations
+                        </div>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <div class="stat-number">
+                            <span class="counter" data-target="85">0</span><span class="plus">%</span>
+                        </div>
+                        <div class="stat-label">DIRECT</div>
+                        <div class="stat-description">
+                            Funds directly<br>
+                            reaching beneficiaries
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leaderboard Toggle Section -->
+        <section class="leaderboard-toggle-section">
+            <div class="container">
+                <div class="toggle-buttons">
+                    <button class="toggle-btn active" data-category="corporate">
+                        <i class="fas fa-building"></i>
+                        Corporate Partners
+                    </button>
+                    <button class="toggle-btn" data-category="individual">
+                        <i class="fas fa-user-heart"></i>
+                        Individual Donors
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Corporate Donors Leaderboard -->
+        <section class="leaderboard-section corporate-leaderboard active" id="corporate-leaderboard">
+            <div class="container">
+                <h2 class="leaderboard-title">TOP CORPORATE PARTNERS</h2>
+                <p class="leaderboard-subtitle">Companies leading the way in corporate social responsibility</p>
+                
+                <!-- Top 3 Podium -->
+                <div class="podium-section">
+                    <div class="podium-container">
+                        <!-- 2nd Place -->
+                        <div class="podium-item second-place">
+                            <div class="podium-rank">2</div>
+                            <div class="podium-content">
+                                <div class="donor-logo">
+                                    <img src="../assets/images/getinvolved/tata-logo.png" alt="Tata Group" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                    <div class="logo-placeholder" style="display:none;">TATA</div>
+                                </div>
+                                <h3 class="donor-name">Tata Group</h3>
+                                <div class="donation-amount">₹12.5 Crores</div>
+                                <div class="impact-metric">62,500 children impacted</div>
+                            </div>
+                        </div>
+                        
+                        <!-- 1st Place -->
+                        <div class="podium-item first-place">
+                            <div class="podium-rank">1</div>
+                            <div class="crown-icon">👑</div>
+                            <div class="podium-content">
+                                <div class="donor-logo">
+                                    <img src="../assets/images/getinvolved/reliance-logo.png" alt="Reliance Industries" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                    <div class="logo-placeholder" style="display:none;">RELIANCE</div>
+                                </div>
+                                <h3 class="donor-name">Reliance Industries</h3>
+                                <div class="donation-amount">₹18.2 Crores</div>
+                                <div class="impact-metric">91,000 children impacted</div>
+                            </div>
+                        </div>
+                        
+                        <!-- 3rd Place -->
+                        <div class="podium-item third-place">
+                            <div class="podium-rank">3</div>
+                            <div class="podium-content">
+                                <div class="donor-logo">
+                                    <img src="../assets/images/getinvolved/infosys-logo.png" alt="Infosys Foundation" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                    <div class="logo-placeholder" style="display:none;">INFOSYS</div>
+                                </div>
+                                <h3 class="donor-name">Infosys Foundation</h3>
+                                <div class="donation-amount">₹8.7 Crores</div>
+                                <div class="impact-metric">43,500 children impacted</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Remaining Corporate Donors -->
+                <div class="leaderboard-list">
+                    <div class="leaderboard-item">
+                        <div class="rank">4</div>
+                        <div class="donor-info">
+                            <div class="donor-logo-small">
+                                <img src="../assets/images/getinvolved/wipro-logo.png" alt="Wipro" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <div class="logo-placeholder-small" style="display:none;">WIPRO</div>
+                            </div>
+                            <div class="donor-details">
+                                <h4 class="donor-name">Wipro Foundation</h4>
+                                <p class="donor-sector">Technology & IT Services</p>
+                            </div>
+                        </div>
+                        <div class="donation-info">
+                            <div class="donation-amount">₹6.8 Crores</div>
+                            <div class="impact-metric">34,000 children impacted</div>
+                        </div>
+                    </div>
+
+                    <div class="leaderboard-item">
+                        <div class="rank">5</div>
+                        <div class="donor-info">
+                            <div class="donor-logo-small">
+                                <img src="../assets/images/getinvolved/hdfc-logo.png" alt="HDFC Bank" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <div class="logo-placeholder-small" style="display:none;">HDFC</div>
+                            </div>
+                            <div class="donor-details">
+                                <h4 class="donor-name">HDFC Bank</h4>
+                                <p class="donor-sector">Banking & Financial Services</p>
+                            </div>
+                        </div>
+                        <div class="donation-info">
+                            <div class="donation-amount">₹5.2 Crores</div>
+                            <div class="impact-metric">26,000 children impacted</div>
+                        </div>
+                    </div>
+
+                    <div class="leaderboard-item">
+                        <div class="rank">6</div>
+                        <div class="donor-info">
+                            <div class="donor-logo-small">
+                                <img src="../assets/images/getinvolved/mahindra-logo.png" alt="Mahindra Group" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <div class="logo-placeholder-small" style="display:none;">MAHINDRA</div>
+                            </div>
+                            <div class="donor-details">
+                                <h4 class="donor-name">Mahindra Foundation</h4>
+                                <p class="donor-sector">Automotive & Manufacturing</p>
+                            </div>
+                        </div>
+                        <div class="donation-info">
+                            <div class="donation-amount">₹4.5 Crores</div>
+                            <div class="impact-metric">22,500 children impacted</div>
+                        </div>
+                    </div>
+
+                    <div class="leaderboard-item">
+                        <div class="rank">7</div>
+                        <div class="donor-info">
+                            <div class="donor-logo-small">
+                                <img src="../assets/images/getinvolved/icici-logo.png" alt="ICICI Bank" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <div class="logo-placeholder-small" style="display:none;">ICICI</div>
+                            </div>
+                            <div class="donor-details">
+                                <h4 class="donor-name">ICICI Foundation</h4>
+                                <p class="donor-sector">Banking & Financial Services</p>
+                            </div>
+                        </div>
+                        <div class="donation-info">
+                            <div class="donation-amount">₹3.8 Crores</div>
+                            <div class="impact-metric">19,000 children impacted</div>
+                        </div>
+                    </div>
+
+                    <div class="leaderboard-item">
+                        <div class="rank">8</div>
+                        <div class="donor-info">
+                            <div class="donor-logo-small">
+                                <img src="../assets/images/getinvolved/bajaj-logo.png" alt="Bajaj Group" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <div class="logo-placeholder-small" style="display:none;">BAJAJ</div>
+                            </div>
+                            <div class="donor-details">
+                                <h4 class="donor-name">Bajaj Foundation</h4>
+                                <p class="donor-sector">Financial Services & Auto</p>
+                            </div>
+                        </div>
+                        <div class="donation-info">
+                            <div class="donation-amount">₹3.2 Crores</div>
+                            <div class="impact-metric">16,000 children impacted</div>
+                        </div>
+                    </div>
+
+                    <div class="leaderboard-item">
+                        <div class="rank">9</div>
+                        <div class="donor-info">
+                            <div class="donor-logo-small">
+                                <img src="../assets/images/getinvolved/godrej-logo.png" alt="Godrej Group" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <div class="logo-placeholder-small" style="display:none;">GODREJ</div>
+                            </div>
+                            <div class="donor-details">
+                                <h4 class="donor-name">Godrej Foundation</h4>
+                                <p class="donor-sector">Consumer Goods & Real Estate</p>
+                            </div>
+                        </div>
+                        <div class="donation-info">
+                            <div class="donation-amount">₹2.9 Crores</div>
+                            <div class="impact-metric">14,500 children impacted</div>
+                        </div>
+                    </div>
+
+                    <div class="leaderboard-item">
+                        <div class="rank">10</div>
+                        <div class="donor-info">
+                            <div class="donor-logo-small">
+                                <img src="../assets/images/getinvolved/larsen-logo.png" alt="L&T Group" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <div class="logo-placeholder-small" style="display:none;">L&T</div>
+                            </div>
+                            <div class="donor-details">
+                                <h4 class="donor-name">L&T Foundation</h4>
+                                <p class="donor-sector">Engineering & Construction</p>
+                            </div>
+                        </div>
+                        <div class="donation-info">
+                            <div class="donation-amount">₹2.4 Crores</div>
+                            <div class="impact-metric">12,000 children impacted</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Individual Donors Leaderboard -->
+        <section class="leaderboard-section individual-leaderboard" id="individual-leaderboard">
+            <div class="container">
+                <h2 class="leaderboard-title">TOP INDIVIDUAL DONORS</h2>
+                <p class="leaderboard-subtitle">Compassionate individuals making extraordinary contributions</p>
+                
+                <!-- Top 3 Podium -->
+                <div class="podium-section">
+                    <div class="podium-container">
+                        <!-- 2nd Place -->
+                        <div class="podium-item second-place">
+                            <div class="podium-rank">2</div>
+                            <div class="podium-content">
+                                <div class="donor-avatar">
+                                    <img src="../assets/images/donors/priya-sharma.jpg" alt="Priya Sharma" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                    <div class="avatar-placeholder" style="display:none;">PS</div>
+                                </div>
+                                <h3 class="donor-name">Priya Sharma</h3>
+                                <p class="donor-title">Philanthropist & Social Entrepreneur</p>
+                                <div class="donation-amount">₹85 Lakhs</div>
+                                <div class="impact-metric">4,250 children impacted</div>
+                            </div>
+                        </div>
+                        
+                        <!-- 1st Place -->
+                        <div class="podium-item first-place">
+                            <div class="podium-rank">1</div>
+                            <div class="crown-icon">👑</div>
+                            <div class="podium-content">
+                                <div class="donor-avatar">
+                                    <img src="../assets/images/donors/rajesh-gupta.jpg" alt="Rajesh Gupta" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                    <div class="avatar-placeholder" style="display:none;">RG</div>
+                                </div>
+                                <h3 class="donor-name">Rajesh Gupta</h3>
+                                <p class="donor-title">Tech Entrepreneur & Angel Investor</p>
+                                <div class="donation-amount">₹1.2 Crores</div>
+                                <div class="impact-metric">6,000 children impacted</div>
+                            </div>
+                        </div>
+                        
+                        <!-- 3rd Place -->
+                        <div class="podium-item third-place">
+                            <div class="podium-rank">3</div>
+                            <div class="podium-content">
+                                <div class="donor-avatar">
+                                    <img src="../assets/images/donors/anita-mehta.jpg" alt="Anita Mehta" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                    <div class="avatar-placeholder" style="display:none;">AM</div>
+                                </div>
+                                <h3 class="donor-name">Anita Mehta</h3>
+                                <p class="donor-title">Healthcare Professional & Advocate</p>
+                                <div class="donation-amount">₹65 Lakhs</div>
+                                <div class="impact-metric">3,250 children impacted</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Remaining Individual Donors -->
+                <div class="leaderboard-list">
+                    <div class="leaderboard-item">
+                        <div class="rank">4</div>
+                        <div class="donor-info">
+                            <div class="donor-avatar-small">
+                                <img src="../assets/images/donors/vikram-singh.jpg" alt="Vikram Singh" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <div class="avatar-placeholder-small" style="display:none;">VS</div>
+                            </div>
+                            <div class="donor-details">
+                                <h4 class="donor-name">Vikram Singh</h4>
+                                <p class="donor-sector">Investment Banker, Mumbai</p>
+                            </div>
+                        </div>
+                        <div class="donation-info">
+                            <div class="donation-amount">₹52 Lakhs</div>
+                            <div class="impact-metric">2,600 children impacted</div>
+                        </div>
+                    </div>
+
+                    <div class="leaderboard-item">
+                        <div class="rank">5</div>
+                        <div class="donor-info">
+                            <div class="donor-avatar-small">
+                                <img src="../assets/images/donors/kavita-reddy.jpg" alt="Kavita Reddy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <div class="avatar-placeholder-small" style="display:none;">KR</div>
+                            </div>
+                            <div class="donor-details">
+                                <h4 class="donor-name">Kavita Reddy</h4>
+                                <p class="donor-sector">Software Engineer, Bangalore</p>
+                            </div>
+                        </div>
+                        <div class="donation-info">
+                            <div class="donation-amount">₹48 Lakhs</div>
+                            <div class="impact-metric">2,400 children impacted</div>
+                        </div>
+                    </div>
+
+                    <div class="leaderboard-item">
+                        <div class="rank">6</div>
+                        <div class="donor-info">
+                            <div class="donor-avatar-small">
+                                <img src="../assets/images/donors/amit-kumar.jpg" alt="Amit Kumar" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <div class="avatar-placeholder-small" style="display:none;">AK</div>
+                            </div>
+                            <div class="donor-details">
+                                <h4 class="donor-name">Amit Kumar</h4>
+                                <p class="donor-sector">Doctor & Medical Researcher, Delhi</p>
+                            </div>
+                        </div>
+                        <div class="donation-info">
+                            <div class="donation-amount">₹42 Lakhs</div>
+                            <div class="impact-metric">2,100 children impacted</div>
+                        </div>
+                    </div>
+
+                    <div class="leaderboard-item">
+                        <div class="rank">7</div>
+                        <div class="donor-info">
+                            <div class="donor-avatar-small">
+                                <img src="../assets/images/donors/sunita-jain.jpg" alt="Sunita Jain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <div class="avatar-placeholder-small" style="display:none;">SJ</div>
+                            </div>
+                            <div class="donor-details">
+                                <h4 class="donor-name">Sunita Jain</h4>
+                                <p class="donor-sector">Business Owner, Pune</p>
+                            </div>
+                        </div>
+                        <div class="donation-info">
+                            <div class="donation-amount">₹38 Lakhs</div>
+                            <div class="impact-metric">1,900 children impacted</div>
+                        </div>
+                    </div>
+
+                    <div class="leaderboard-item">
+                        <div class="rank">8</div>
+                        <div class="donor-info">
+                            <div class="donor-avatar-small">
+                                <img src="../assets/images/donors/rohit-agarwal.jpg" alt="Rohit Agarwal" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <div class="avatar-placeholder-small" style="display:none;">RA</div>
+                            </div>
+                            <div class="donor-details">
+                                <h4 class="donor-name">Rohit Agarwal</h4>
+                                <p class="donor-sector">Chartered Accountant, Chennai</p>
+                            </div>
+                        </div>
+                        <div class="donation-info">
+                            <div class="donation-amount">₹35 Lakhs</div>
+                            <div class="impact-metric">1,750 children impacted</div>
+                        </div>
+                    </div>
+
+                    <div class="leaderboard-item">
+                        <div class="rank">9</div>
+                        <div class="donor-info">
+                            <div class="donor-avatar-small">
+                                <img src="../assets/images/donors/meera-patel.jpg" alt="Meera Patel" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <div class="avatar-placeholder-small" style="display:none;">MP</div>
+                            </div>
+                            <div class="donor-details">
+                                <h4 class="donor-name">Meera Patel</h4>
+                                <p class="donor-sector">Architect & Urban Planner, Ahmedabad</p>
+                            </div>
+                        </div>
+                        <div class="donation-info">
+                            <div class="donation-amount">₹32 Lakhs</div>
+                            <div class="impact-metric">1,600 children impacted</div>
+                        </div>
+                    </div>
+
+                    <div class="leaderboard-item">
+                        <div class="rank">10</div>
+                        <div class="donor-info">
+                            <div class="donor-avatar-small">
+                                <img src="../assets/images/donors/deepak-shah.jpg" alt="Deepak Shah" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <div class="avatar-placeholder-small" style="display:none;">DS</div>
+                            </div>
+                            <div class="donor-details">
+                                <h4 class="donor-name">Deepak Shah</h4>
+                                <p class="donor-sector">Legal Consultant, Kolkata</p>
+                            </div>
+                        </div>
+                        <div class="donation-info">
+                            <div class="donation-amount">₹28 Lakhs</div>
+                            <div class="impact-metric">1,400 children impacted</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">JOIN OUR COMMUNITY OF CHANGEMAKERS</h2>
+                    <p class="cta-description">
+                        Every contribution, big or small, creates ripples of positive change. 
+                        Join our leaderboard and help us reach more children in need.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="../pages/donation.html" class="cta-btn primary">
+                            <i class="fas fa-heart"></i>
+                            DONATE NOW
+                        </a>
+                        <a href="../pages/corporate-partnership.html" class="cta-btn secondary">
+                            <i class="fas fa-handshake"></i>
+                            PARTNER WITH US
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer will be loaded by load-components.js -->
+    <footer id="footer"></footer>
+
+    <!-- Scripts -->
+    <script src="../components/load-components.js"></script>
+    <script src="../assets/js/donors-leaderboard.js"></script>
+</body>
+</html>

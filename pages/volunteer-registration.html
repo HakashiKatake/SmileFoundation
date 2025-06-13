@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Registration - Smile Foundation</title>
+    <meta name="description" content="Join Smile Foundation as a volunteer and make a difference in children's lives. Register now and start your journey of impact.">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/volunteer-registration.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+</head>
+<body>
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+            <div class="floating-elements">
+                <div class="floating-icon"><i class="fas fa-heart"></i></div>
+                <div class="floating-icon"><i class="fas fa-hands-helping"></i></div>
+                <div class="floating-icon"><i class="fas fa-graduation-cap"></i></div>
+                <div class="floating-icon"><i class="fas fa-users"></i></div>
+                <div class="floating-icon"><i class="fas fa-star"></i></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-trophy"></i>
+                    <span>Join 50,000+ Volunteers</span>
+                </div>
+                <h1 class="hero-title">
+                    Start Your <span class="highlight">Impact Journey</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Register as a volunteer and unlock a gamified experience with points, badges, and real impact tracking. Make a difference while earning recognition for your contributions.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">20L+</div>
+                        <div class="stat-label">Lives Impacted</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50K+</div>
+                        <div class="stat-label">Active Volunteers</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">27</div>
+                        <div class="stat-label">States Covered</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form Section -->
+    <section class="registration-section">
+        <div class="container">
+            <div class="registration-container">
+                <!-- Progress Indicator -->
+                <div class="progress-indicator">
+                    <div class="progress-step active" data-step="1">
+                        <div class="step-circle">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <span class="step-label">Personal Info</span>
+                    </div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step" data-step="2">
+                        <div class="step-circle">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <span class="step-label">Choose State</span>
+                    </div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step" data-step="3">
+                        <div class="step-circle">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <span class="step-label">Preferences</span>
+                    </div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step" data-step="4">
+                        <div class="step-circle">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <span class="step-label">Complete</span>
+                    </div>
+                </div>
+
+                <!-- Registration Form -->
+                <div class="registration-form-container">
+                    <form id="volunteer-registration-form" class="registration-form">
+                        
+                        <!-- Step 1: Personal Information -->
+                        <div class="form-step active" data-step="1">
+                            <div class="step-header">
+                                <h2>Personal Information</h2>
+                                <p>Tell us about yourself to get started</p>
+                            </div>
+                            
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                    <div class="input-icon"><i class="fas fa-user"></i></div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                    <div class="input-icon"><i class="fas fa-user"></i></div>
+                                </div>
+                                
+                                <div class="form-group full-width">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required>
+                                    <div class="input-icon"><i class="fas fa-envelope"></i></div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="phone">Phone Number *</label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                    <div class="input-icon"><i class="fas fa-phone"></i></div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="age">Age *</label>
+                                    <select id="age" name="age" required>
+                                        <option value="">Select Age Range</option>
+                                        <option value="16-20">16-20 years</option>
+                                        <option value="21-25">21-25 years</option>
+                                        <option value="26-30">26-30 years</option>
+                                        <option value="31-35">31-35 years</option>
+                                        <option value="36-40">36-40 years</option>
+                                        <option value="41-50">41-50 years</option>
+                                        <option value="50+">50+ years</option>
+                                    </select>
+                                    <div class="input-icon"><i class="fas fa-calendar"></i></div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="occupation">Occupation *</label>
+                                    <input type="text" id="occupation" name="occupation" required>
+                                    <div class="input-icon"><i class="fas fa-briefcase"></i></div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="education">Education Level *</label>
+                                    <select id="education" name="education" required>
+                                        <option value="">Select Education</option>
+                                        <option value="high-school">High School</option>
+                                        <option value="diploma">Diploma</option>
+                                        <option value="bachelors">Bachelor's Degree</option>
+                                        <option value="masters">Master's Degree</option>
+                                        <option value="phd">PhD</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                    <div class="input-icon"><i class="fas fa-graduation-cap"></i></div>
+                                </div>
+                                
+                                <div class="form-group full-width">
+                                    <label for="motivation">Why do you want to volunteer? *</label>
+                                    <textarea id="motivation" name="motivation" rows="4" required placeholder="Share your motivation to help us understand your passion..."></textarea>
+                                </div>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="button" class="btn-next" onclick="nextStep()">
+                                    Next Step <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: State Selection (will be populated dynamically) -->
+                        <div class="form-step" data-step="2">
+                            <div class="step-header">
+                                <h2>Choose Your Impact Zone</h2>
+                                <p>Select the state where you'd like to make a difference</p>
+                            </div>
+                            
+                            <div id="state-selection-container">
+                                <!-- This will be populated by JavaScript -->
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="button" class="btn-back" onclick="prevStep()">
+                                    <i class="fas fa-arrow-left"></i> Back
+                                </button>
+                                <button type="button" class="btn-next" onclick="nextStep()">
+                                    Next Step <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Volunteer Preferences -->
+                        <div class="form-step" data-step="3">
+                            <div class="step-header">
+                                <h2>Volunteer Preferences</h2>
+                                <p>Help us match you with the perfect opportunities</p>
+                            </div>
+                            
+                            <div class="preferences-container">
+                                <div class="preference-section">
+                                    <h3>Areas of Interest</h3>
+                                    <div class="interest-grid">
+                                        <div class="interest-card" data-interest="education">
+                                            <div class="interest-icon">
+                                                <i class="fas fa-graduation-cap"></i>
+                                            </div>
+                                            <h4>Education</h4>
+                                            <p>Teaching, tutoring, educational activities</p>
+                                        </div>
+                                        
+                                        <div class="interest-card" data-interest="healthcare">
+                                            <div class="interest-icon">
+                                                <i class="fas fa-heartbeat"></i>
+                                            </div>
+                                            <h4>Healthcare</h4>
+                                            <p>Medical camps, health awareness</p>
+                                        </div>
+                                        
+                                        <div class="interest-card" data-interest="women-empowerment">
+                                            <div class="interest-icon">
+                                                <i class="fas fa-female"></i>
+                                            </div>
+                                            <h4>Women Empowerment</h4>
+                                            <p>Skill training, awareness programs</p>
+                                        </div>
+                                        
+                                        <div class="interest-card" data-interest="livelihood">
+                                            <div class="interest-icon">
+                                                <i class="fas fa-tools"></i>
+                                            </div>
+                                            <h4>Livelihood</h4>
+                                            <p>Skill development, job training</p>
+                                        </div>
+                                        
+                                        <div class="interest-card" data-interest="disaster-response">
+                                            <div class="interest-icon">
+                                                <i class="fas fa-hands-helping"></i>
+                                            </div>
+                                            <h4>Disaster Response</h4>
+                                            <p>Emergency relief, rehabilitation</p>
+                                        </div>
+                                        
+                                        <div class="interest-card" data-interest="digital-marketing">
+                                            <div class="interest-icon">
+                                                <i class="fas fa-laptop"></i>
+                                            </div>
+                                            <h4>Digital Marketing</h4>
+                                            <p>Social media, content creation</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="preference-section">
+                                    <h3>Availability</h3>
+                                    <div class="availability-options">
+                                        <div class="availability-card" data-availability="weekends">
+                                            <i class="fas fa-calendar-week"></i>
+                                            <h4>Weekends Only</h4>
+                                            <p>Saturday & Sunday</p>
+                                        </div>
+                                        
+                                        <div class="availability-card" data-availability="weekdays">
+                                            <i class="fas fa-calendar-day"></i>
+                                            <h4>Weekdays</h4>
+                                            <p>Monday to Friday</p>
+                                        </div>
+                                        
+                                        <div class="availability-card" data-availability="flexible">
+                                            <i class="fas fa-clock"></i>
+                                            <h4>Flexible</h4>
+                                            <p>Any time available</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="preference-section">
+                                    <h3>Time Commitment</h3>
+                                    <div class="commitment-slider">
+                                        <label for="timeCommitment">Hours per week: <span id="commitmentValue">5</span></label>
+                                        <input type="range" id="timeCommitment" name="timeCommitment" min="2" max="40" value="5" step="1">
+                                        <div class="slider-labels">
+                                            <span>2 hrs</span>
+                                            <span>40 hrs</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="button" class="btn-back" onclick="prevStep()">
+                                    <i class="fas fa-arrow-left"></i> Back
+                                </button>
+                                <button type="button" class="btn-next" onclick="nextStep()">
+                                    Complete Registration <i class="fas fa-check"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Completion -->
+                        <div class="form-step" data-step="4">
+                            <div class="completion-container">
+                                <div class="completion-animation">
+                                    <div class="success-icon">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <div class="confetti"></div>
+                                </div>
+                                
+                                <h2>Welcome to Team Smile!</h2>
+                                <p>Your registration is complete. Get ready to start your impact journey!</p>
+                                
+                                <div class="welcome-benefits">
+                                    <div class="benefit-item">
+                                        <i class="fas fa-trophy"></i>
+                                        <h4>Earn Points & Badges</h4>
+                                        <p>Get rewarded for every hour of volunteering</p>
+                                    </div>
+                                    
+                                    <div class="benefit-item">
+                                        <i class="fas fa-chart-line"></i>
+                                        <h4>Track Your Impact</h4>
+                                        <p>See real-time data on lives you've touched</p>
+                                    </div>
+                                    
+                                    <div class="benefit-item">
+                                        <i class="fas fa-users"></i>
+                                        <h4>Join Community</h4>
+                                        <p>Connect with like-minded volunteers</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="next-steps">
+                                    <h3>What's Next?</h3>
+                                    <div class="steps-list">
+                                        <div class="step-item">
+                                            <span class="step-number">1</span>
+                                            <div class="step-content">
+                                                <h4>Check Your Email</h4>
+                                                <p>We've sent you a welcome email with login details</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="step-item">
+                                            <span class="step-number">2</span>
+                                            <div class="step-content">
+                                                <h4>Complete Profile</h4>
+                                                <p>Add more details to get better opportunities</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="step-item">
+                                            <span class="step-number">3</span>
+                                            <div class="step-content">
+                                                <h4>Start Volunteering</h4>
+                                                <p>Browse and apply for volunteer opportunities</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="completion-actions">
+                                    <button type="button" class="btn-primary" onclick="goToDashboard()">
+                                        Go to Dashboard <i class="fas fa-arrow-right"></i>
+                                    </button>
+                                    <button type="button" class="btn-secondary" onclick="exploreOpportunities()">
+                                        Explore Opportunities
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="../assets/js/volunteer-registration.js"></script>
+    <script src="../assets/js/state-selection.js"></script>
+    <script>
+        // Load header and footer
+        fetch('../components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+
+        fetch('../components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>

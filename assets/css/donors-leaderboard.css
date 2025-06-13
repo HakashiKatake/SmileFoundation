@@ -1,0 +1,605 @@
+/* Donors Leaderboard Styles */
+
+/* Header Section */
+.donors-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #7ab52e 100%);
+    color: white;
+    padding: 80px 0 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.donors-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../images/pattern-overlay.png') repeat;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.donors-header .container {
+    position: relative;
+    z-index: 2;
+}
+
+.donors-title {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.donors-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.donors-breadcrumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.donors-breadcrumb a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.donors-breadcrumb a:hover {
+    opacity: 0.8;
+}
+
+.breadcrumb-separator {
+    opacity: 0.7;
+}
+
+.breadcrumb-current {
+    opacity: 0.8;
+}
+
+/* Introduction Section */
+.donors-intro {
+    padding: 60px 0;
+    background: #f8f9fa;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    color: var(--dark-gray);
+}
+
+/* Impact Statistics Section */
+.donors-impact-section {
+    padding: 80px 0;
+    background: white;
+}
+
+.donors-impact-section .section-title {
+    color: var(--dark-gray);
+    margin-bottom: 60px;
+}
+
+/* Toggle Section */
+.leaderboard-toggle-section {
+    padding: 40px 0;
+    background: #f8f9fa;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.toggle-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.toggle-btn {
+    flex: 1;
+    padding: 15px 30px;
+    background: white;
+    border: 2px solid #ddd;
+    border-radius: 50px;
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.toggle-btn i {
+    font-size: 1.2rem;
+}
+
+.toggle-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-btn.active {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 5px 20px rgba(140, 198, 63, 0.3);
+}
+
+/* Leaderboard Sections */
+.leaderboard-section {
+    padding: 80px 0;
+    background: white;
+    display: none;
+}
+
+.leaderboard-section.active {
+    display: block;
+}
+
+.leaderboard-title {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--dark-gray);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.leaderboard-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 60px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Podium Section */
+.podium-section {
+    margin-bottom: 80px;
+}
+
+.podium-container {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.podium-item {
+    background: white;
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    min-width: 250px;
+}
+
+.podium-item:hover {
+    transform: translateY(-5px);
+}
+
+.first-place {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    color: white;
+    transform: scale(1.1);
+    z-index: 3;
+}
+
+.second-place {
+    background: linear-gradient(135deg, #C0C0C0 0%, #A8A8A8 100%);
+    color: white;
+    z-index: 2;
+}
+
+.third-place {
+    background: linear-gradient(135deg, #CD7F32 0%, #B8860B 100%);
+    color: white;
+    z-index: 1;
+}
+
+.podium-rank {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background: var(--dark-gray);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.crown-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.donor-logo, .donor-avatar {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+}
+
+.donor-logo img, .donor-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logo-placeholder, .avatar-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-color), #7ab52e);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.podium-content .donor-name {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.donor-title {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 15px;
+}
+
+.donation-amount {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.impact-metric {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Leaderboard List */
+.leaderboard-list {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.leaderboard-item {
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 15px;
+    padding: 25px 30px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.leaderboard-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-color);
+}
+
+.leaderboard-item .rank {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    min-width: 60px;
+    text-align: center;
+}
+
+.donor-info {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    gap: 20px;
+}
+
+.donor-logo-small, .donor-avatar-small {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #eee;
+}
+
+.donor-logo-small img, .donor-avatar-small img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logo-placeholder-small, .avatar-placeholder-small {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-color), #7ab52e);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: white;
+    font-size: 1rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.donor-details .donor-name {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--dark-gray);
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.donor-sector {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.donation-info {
+    text-align: right;
+}
+
+.donation-info .donation-amount {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.donation-info .impact-metric {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Call to Action Section */
+.cta-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #7ab52e 100%);
+    color: white;
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-title {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.cta-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-family: var(--font-primary);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.cta-btn.primary {
+    background: white;
+    color: var(--primary-color);
+}
+
+.cta-btn.primary:hover {
+    background: #f8f9fa;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-btn.secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.cta-btn.secondary:hover {
+    background: white;
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .donors-title {
+        font-size: 2.8rem;
+    }
+    
+    .podium-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .first-place {
+        transform: none;
+        order: -1;
+    }
+    
+    .podium-item {
+        min-width: 280px;
+        max-width: 350px;
+    }
+    
+    .toggle-buttons {
+        flex-direction: column;
+        max-width: 400px;
+    }
+    
+    .leaderboard-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .donor-info {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .donation-info {
+        text-align: center;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-btn {
+        min-width: 250px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .donors-header {
+        padding: 60px 0 40px;
+    }
+    
+    .donors-title {
+        font-size: 2.2rem;
+    }
+    
+    .donors-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .leaderboard-title {
+        font-size: 2.2rem;
+    }
+    
+    .podium-item {
+        min-width: 250px;
+        padding: 25px 15px;
+    }
+    
+    .donor-logo, .donor-avatar {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .donation-amount {
+        font-size: 1.5rem;
+    }
+    
+    .leaderboard-item {
+        padding: 20px 15px;
+    }
+    
+    .leaderboard-item .rank {
+        font-size: 1.5rem;
+        min-width: 50px;
+    }
+    
+    .cta-title {
+        font-size: 2rem;
+    }
+    
+    .cta-description {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .donors-breadcrumb {
+        flex-wrap: wrap;
+        font-size: 0.8rem;
+    }
+    
+    .toggle-btn {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .podium-item {
+        min-width: 220px;
+    }
+    
+    .donor-details .donor-name {
+        font-size: 1.1rem;
+    }
+    
+    .donation-info .donation-amount {
+        font-size: 1.3rem;
+    }
+}

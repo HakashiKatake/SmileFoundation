@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Test - Smile Foundation</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Railway', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f8f9fa;
+        }
+        
+        .test-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .test-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .test-header h1 {
+            color: var(--primary-color);
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .test-header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        
+        .test-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .test-section h3 {
+            color: var(--primary-color);
+            font-family: var(--font-heading);
+            margin-bottom: 15px;
+        }
+        
+        .test-queries {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .test-query {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .test-query:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .test-query strong {
+            color: var(--primary-color);
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .chatbot-notice {
+            background: linear-gradient(135deg, var(--primary-color), #7ab52e);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .chatbot-notice h2 {
+            margin: 0 0 10px 0;
+            font-family: var(--font-heading);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-card i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .feature-card h4 {
+            color: var(--dark-gray);
+            margin-bottom: 10px;
+            font-family: var(--font-heading);
+        }
+        
+        .feature-card p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <div class="test-header">
+            <h1>🤖 Smile Foundation Chatbot</h1>
+            <p>Test our AI-powered assistant with voice capabilities</p>
+        </div>
+        
+        <div class="chatbot-notice">
+            <h2>Simple Chatbot is Live! 🎉</h2>
+            <p>Look for the green chat button in the bottom-right corner. Uses pre-made responses for instant answers!</p>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-comments"></i>
+                <h4>Text Chat</h4>
+                <p>Type your questions and get instant AI-powered responses</p>
+            </div>
+            
+            <div class="feature-card">
+                <i class="fas fa-microphone"></i>
+                <h4>Voice Chat</h4>
+                <p>Speak your questions and hear responses (Chrome/Edge)</p>
+            </div>
+            
+            <div class="feature-card">
+                <i class="fas fa-brain"></i>
+                <h4>Smart Responses</h4>
+                <p>Pre-made answers for instant and accurate responses</p>
+            </div>
+            
+            <div class="feature-card">
+                <i class="fas fa-mobile-alt"></i>
+                <h4>Mobile Ready</h4>
+                <p>Works perfectly on all devices and screen sizes</p>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h3>💝 Donation Queries</h3>
+            <p>Test these donation-related questions:</p>
+            <div class="test-queries">
+                <div class="test-query" onclick="testQuery('How can I donate to Smile Foundation?')">
+                    <strong>Donation Process</strong>
+                    "How can I donate to Smile Foundation?"
+                </div>
+                <div class="test-query" onclick="testQuery('Is my donation tax deductible?')">
+                    <strong>Tax Benefits</strong>
+                    "Is my donation tax deductible?"
+                </div>
+                <div class="test-query" onclick="testQuery('What is the minimum donation amount?')">
+                    <strong>Minimum Amount</strong>
+                    "What is the minimum donation amount?"
+                </div>
+                <div class="test-query" onclick="testQuery('How is my donation used?')">
+                    <strong>Fund Utilization</strong>
+                    "How is my donation used?"
+                </div>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h3>🤝 Volunteer Queries</h3>
+            <p>Test these volunteering questions:</p>
+            <div class="test-queries">
+                <div class="test-query" onclick="testQuery('How can I volunteer with Smile Foundation?')">
+                    <strong>Volunteer Process</strong>
+                    "How can I volunteer with Smile Foundation?"
+                </div>
+                <div class="test-query" onclick="testQuery('What volunteer opportunities are available?')">
+                    <strong>Opportunities</strong>
+                    "What volunteer opportunities are available?"
+                </div>
+                <div class="test-query" onclick="testQuery('Do I need specific qualifications to volunteer?')">
+                    <strong>Requirements</strong>
+                    "Do I need specific qualifications to volunteer?"
+                </div>
+                <div class="test-query" onclick="testQuery('How much time commitment is required?')">
+                    <strong>Time Commitment</strong>
+                    "How much time commitment is required?"
+                </div>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h3>📚 Program Queries</h3>
+            <p>Test these program-related questions:</p>
+            <div class="test-queries">
+                <div class="test-query" onclick="testQuery('What programs does Smile Foundation run?')">
+                    <strong>All Programs</strong>
+                    "What programs does Smile Foundation run?"
+                </div>
+                <div class="test-query" onclick="testQuery('Tell me about Shiksha Na Ruke program')">
+                    <strong>Education Program</strong>
+                    "Tell me about Shiksha Na Ruke program"
+                </div>
+                <div class="test-query" onclick="testQuery('How does Smile on Wheels work?')">
+                    <strong>Healthcare Program</strong>
+                    "How does Smile on Wheels work?"
+                </div>
+                <div class="test-query" onclick="testQuery('What is Mission Education?')">
+                    <strong>Mission Education</strong>
+                    "What is Mission Education?"
+                </div>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h3>🏢 Partnership Queries</h3>
+            <p>Test these corporate partnership questions:</p>
+            <div class="test-queries">
+                <div class="test-query" onclick="testQuery('How can my company partner with Smile Foundation?')">
+                    <strong>Corporate Partnership</strong>
+                    "How can my company partner with Smile Foundation?"
+                </div>
+                <div class="test-query" onclick="testQuery('What are the benefits of corporate partnership?')">
+                    <strong>Partnership Benefits</strong>
+                    "What are the benefits of corporate partnership?"
+                </div>
+                <div class="test-query" onclick="testQuery('Can schools partner with Smile Foundation?')">
+                    <strong>School Partnership</strong>
+                    "Can schools partner with Smile Foundation?"
+                </div>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h3>ℹ️ General Queries</h3>
+            <p>Test these general questions:</p>
+            <div class="test-queries">
+                <div class="test-query" onclick="testQuery('What is Smile Foundation?')">
+                    <strong>About Us</strong>
+                    "What is Smile Foundation?"
+                </div>
+                <div class="test-query" onclick="testQuery('Where does Smile Foundation work?')">
+                    <strong>Our Reach</strong>
+                    "Where does Smile Foundation work?"
+                </div>
+                <div class="test-query" onclick="testQuery('How many people does Smile Foundation help?')">
+                    <strong>Our Impact</strong>
+                    "How many people does Smile Foundation help?"
+                </div>
+                <div class="test-query" onclick="testQuery('How can I contact Smile Foundation?')">
+                    <strong>Contact Info</strong>
+                    "How can I contact Smile Foundation?"
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Chatbot Script -->
+    <script src="assets/js/chatbot.js"></script>
+    
+    <script>
+        function testQuery(query) {
+            // Wait for chatbot to be initialized
+            setTimeout(() => {
+                if (window.smileChatbot) {
+                    // Open chatbot if not already open
+                    if (!window.smileChatbot.isOpen) {
+                        window.smileChatbot.toggleChatbot();
+                    }
+                    
+                    // Send the test query
+                    setTimeout(() => {
+                        window.smileChatbot.sendMessage(query);
+                    }, 500);
+                } else {
+                    alert('Chatbot is still loading. Please wait a moment and try again.');
+                }
+            }, 100);
+        }
+        
+        // Add some helpful instructions
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🤖 Chatbot Test Page Loaded');
+            console.log('💡 Tips:');
+            console.log('1. Click the green chat button to open the chatbot');
+            console.log('2. Try voice chat by clicking the microphone icon');
+            console.log('3. Use quick action buttons for common queries');
+            console.log('4. Click any test query above to automatically send it');
+        });
+    </script>
+</body>
+</html>
