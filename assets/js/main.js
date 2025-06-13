@@ -21,7 +21,63 @@ window.initializeNavigation = function() {
             }
         });
     });
+    
 }
+document.addEventListener('DOMContentLoaded', function() {
+    // Create an intersection observer to detect when the stats section is visible
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            // If the section is visible
+            if (entry.isIntersecting) {
+                // Start the counters animation
+                startCounters();
+                // Unobserve to prevent retriggering
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 }); // Trigger when at least 10% of the element is visible
+
+    // Observe the stats section
+    const statsSection = document.querySelector('.impact-stats');
+    if (statsSection) {
+        observer.observe(statsSection);
+    }
+
+    // Function to animate counters
+    function startCounters() {
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200; // Lower = faster
+        
+        counters.forEach(counter => {
+            const targetValue = parseInt(counter.getAttribute('data-target'));
+            
+            // Calculate animation speed based on target value
+            // Larger numbers get faster increments
+            const increment = targetValue > 100 ? Math.ceil(targetValue / speed) : 1;
+            
+            // Create the animation function
+            function updateCount() {
+                const currentValue = parseInt(counter.innerText);
+                if (currentValue < targetValue) {
+                    // Increment but don't exceed target
+                    counter.innerText = Math.min(currentValue + increment, targetValue);
+                    // Continue animation
+                    setTimeout(updateCount, 30);
+                }
+            }
+            
+            // Start counting
+            updateCount();
+        });
+    }
+
+    // If IntersectionObserver isn't supported or fails, fallback to start on page load
+    if (!window.IntersectionObserver) {
+        setTimeout(startCounters, 500);
+    }
+});
+
+
 
 // Initialize mobile menu toggle
 window.initializeMobileMenu = function() {
@@ -245,37 +301,7 @@ function loadCarouselDependencies() {
     }
 }
 
-// Animate numbers counting up
-function animateNumbers() {
-    const statNumbers = document.querySelectorAll('.stat-number');
-    const windowHeight = window.innerHeight;
-    
-    statNumbers.forEach(stat => {
-        const statPosition = stat.getBoundingClientRect().top;
-        const animationTrigger = windowHeight - 100; // Start animation 100px from bottom
-        
-        if (statPosition < animationTrigger && !stat.classList.contains('animated')) {
-            const target = parseInt(stat.getAttribute('data-count'));
-            const duration = 2000; // 2 seconds
-            const step = target / (duration / 16); // 60fps
-            let current = 0;
-            
-            stat.classList.add('animated');
-            
-            const updateCount = () => {
-                current += step;
-                if (current < target) {
-                    stat.textContent = Math.ceil(current).toLocaleString();
-                    requestAnimationFrame(updateCount);
-                } else {
-                    stat.textContent = target.toLocaleString();
-                }
-            };
-            
-            updateCount();
-        }
-    });
-}
+
 
 // Initialize Awards Carousel
 function initializeAwardsCarousel() {

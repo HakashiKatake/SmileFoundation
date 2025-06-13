@@ -15,7 +15,7 @@ $(document).ready(function() {
         }
     });
 
-    // Regional Offices Tab Switcher
+    
     $('.visit-tab').click(function() {
         var tab = $(this).data('tab');
         $('.visit-tab').removeClass('active');

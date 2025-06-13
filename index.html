@@ -8,7 +8,7 @@
     <!-- Owl Carousel CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-    
+
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Google Fonts -->
@@ -19,10 +19,12 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- Main CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
+  
     <link rel="stylesheet" href="./assets/css/mobile-menu.css">
     <!-- Owl Carousel CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 </head>
 <body>
     <!-- Header will be loaded here by load-components.js -->
@@ -34,8 +36,7 @@
             <div class="hero-slide" style="background-image: url('assets/images/Banner1-scaled.jpg.webp');">
                 <div class="container">
                     <div class="hero-slide-content">
-                        <h1>BRINGING SMILES<br>THROUGH EDUCATION<br>& EMPOWERMENT</h1>
-                        <a href="#" class="hero-know-more">know more <span>&#8250;</span></a>
+                    
                     </div>
                 </div>
             </div>
@@ -44,8 +45,7 @@
             <div class="hero-slide" style="background-image: url('assets/images/Banner2-1.jpg.webp');">
                 <div class="container">
                     <div class="hero-slide-content">
-                        <h1>ENABLING LIVELIHOODS<br>THROUGH SKILL TRAINING<br>& DEVELOPMENT</h1>
-                        <a href="#" class="hero-know-more">know more <span>&#8250;</span></a>
+                       
                     </div>
                 </div>
             </div>
@@ -54,22 +54,12 @@
             <div class="hero-slide" style="background-image: url('assets/images/Banner3-1.jpg.webp');">
                 <div class="container">
                     <div class="hero-slide-content">
-                        <h1>EMPOWERING WOMEN<br>THROUGH SKILL DEVELOPMENT<br>& ENTREPRENEURSHIP</h1>
-                        <a href="#" class="hero-know-more">know more <span>&#8250;</span></a>
+                      
                     </div>
                 </div>
             </div>
             
-            <!-- Additional Slide Example (commented out)
-            <div class="hero-slide" style="background-image: url('assets/images/health-banner.jpg');">
-                <div class="container">
-                    <div class="hero-slide-content">
-                        <h1>IMPROVING HEALTHCARE<br>ACCESS IN UNDERSERVED<br>COMMUNITIES</h1>
-                        <a href="#" class="hero-know-more">know more <span>&#8250;</span></a>
-                    </div>
-                </div>
-            </div>
-            -->
+             
         </div>
     </section>
 
@@ -78,393 +68,747 @@
 
 
 
-    <section class="impact-section">
-    <div class="container">
-        <div class="impact-content">
-            <p class="impact-text">
-                Established in 2002, Smile Foundation is an Indian development organization, impacting the lives of over 15 lakh children and their families every year. We have more than 400 projects on education, healthcare, livelihood, and women empowerment in over 2,000 remote villages and urban slums across 27 states of India.
-                Smile Foundation works as a catalyst in the cycle of change, complementing and supplementing government efforts to achieve the Sustainable Development Goals. We sensitize and partner with like-minded institutions and individuals to implement high-impact programmes that enable access, enhance quality and help bring long term behavioural change at the grassroots.
+    <section class="intro-section">
+        <div class="container">
+            <p class="intro-text">
+                Established in 2002, Smile Foundation is an Indian development organization, impacting the lives of over 20 lakh children and their families every year. We have more than 400 projects on education, healthcare, livelihood, and women empowerment in over 2,000 remote villages and urban slums across 27 states of India.
             </p>
             
+            <p class="intro-text">
+                Smile Foundation works as a catalyst in the cycle of change, complementing and supplementing government efforts <span class="view-details">(view details)</span> to achieve the Sustainable Development Goals. We sensitize and partner with like-minded institutions and individuals to implement high-impact programmes that enable access, enhance quality and help bring long term behavioural change at the grassroots.
+            </p>
+            
+            <!-- <a href="#" class="read-more">read more ></a> -->
+        </div>
+    </section>
+    
+    <!-- Our Impact Section -->
+    <section class="impact-section">
+        <div class="container">
+            <h2 class="impact-title">OUR IMPACT</h2>
+            
             <div class="impact-stats">
+                <!-- Stat 1 -->
                 <div class="stat-item">
-                    <div class="stat-number" data-count="15">0</div>
-                    <div class="stat-label">LAC+</div>
-                    <div class="stat-description">children and their families are impacted every year</div>
+                    <div class="stat-number">
+                        <span class="counter" data-target="20">0</span><span class="plus">+</span>
+                    </div>
+                    <div class="stat-label">LAC</div>
+                    <div class="stat-description">
+                        children and<br>
+                        their families are<br>
+                        impacted every year
+                    </div>
                 </div>
                 
+                <!-- Stat 2 -->
                 <div class="stat-item">
-                    <div class="stat-number" data-count="1564">0</div>
-                    <div class="stat-label">VILLAGES+</div>
-                    <div class="stat-description">and slums are reached out to across the country</div>
+                    <div class="stat-number">
+                        <span class="counter" data-target="2000">0</span><span class="plus">+</span>
+                    </div>
+                    <div class="stat-label">VILLAGES</div>
+                    <div class="stat-description">
+                        and slums<br>
+                        are reached out<br>
+                        to across the country
+                    </div>
                 </div>
                 
+                <!-- Stat 3 -->
                 <div class="stat-item">
-                    <div class="stat-number" data-count="312">0</div>
-                    <div class="stat-label">PROJECTS+</div>
-                    <div class="stat-description">focused on education, healthcare, and women empowerment</div>
+                    <div class="stat-number">
+                        <span class="counter" data-target="400">0</span><span class="plus">+</span>
+                    </div>
+                    <div class="stat-label">PROJECTS</div>
+                    <div class="stat-description">
+                        focused on<br>
+                        education, healthcare,<br>
+                        and women empowerment
+                    </div>
                 </div>
                 
+                <!-- Stat 4 -->
                 <div class="stat-item">
-                    <div class="stat-number" data-count="21">0</div>
-                    <div class="stat-label">STATES+</div>
-                    <div class="stat-description">are reached including the remotest areas</div>
+                    <div class="stat-number">
+                        <span class="counter" data-target="27">0</span><span class="plus">+</span>
+                    </div>
+                    <div class="stat-label">STATES</div>
+                    <div class="stat-description">
+                        are reached<br>
+                        including the<br>
+                        remotest areas
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
     
 
     <!-- Our Programmes Section Component -->
+   
     <section id="our-programmes">
-        <div class="programmes-container">
-            <h2 class="programmes-title">OUR PROGRAMMES</h2>
+        <div class="container">
+            <h2 class="section-title">OUR PROGRAMMES</h2>
+            
             <div class="programmes-grid">
+                <!-- Row 1 -->
+                <!-- Education -->
                 <div class="programme-item">
-                    <div class="programme-icon"><img src="./assets/images/education_icon.webp" alt="Education"></div>
+                    <div class="programme-icon education-icon">
+                        <img src="./assets/images/education_icon.webp" alt="Education">
+                    </div>
                     <div class="programme-content">
-                        <div class="programme-title education">EDUCATION</div>
-                        <div class="programme-description">Education, nutrition and holistic development of children</div>
+                        <h3 class="programme-title education">EDUCATION</h3>
+                        <p class="programme-description">Education, nutrition and holistic development of children</p>
                     </div>
                 </div>
+                
+                <!-- Healthcare -->
                 <div class="programme-item">
-                    <div class="programme-icon"><img src="./assets/images/healthcare_icon.webp" alt="Healthcare"></div>
+                    <div class="programme-icon healthcare-icon">
+                        <img src="./assets/images/healthcare_icon.webp" alt="Healthcare">
+                    </div>
                     <div class="programme-content">
-                        <div class="programme-title healthcare">HEALTHCARE</div>
-                        <div class="programme-description">Taking healthcare services to doorsteps of hard to reach communities</div>
+                        <h3 class="programme-title healthcare">HEALTHCARE</h3>
+                        <p class="programme-description">Taking healthcare services to doorsteps of hard to reach communities</p>
                     </div>
                 </div>
+                
+                <!-- Women Empowerment -->
                 <div class="programme-item">
-                    <div class="programme-icon"><img src="./assets/images/women_empowerment_icon.webp" alt="Women Empowerment"></div>
+                    <div class="programme-icon women-icon">
+                        <img src="./assets/images/women_empowerment_icon.webp" alt="Women Empowerment">
+                    </div>
                     <div class="programme-content">
-                        <div class="programme-title women">WOMEN EMPOWERMENT</div>
-                        <div class="programme-description">Empowering adolescent girls & women through community engagement</div>
+                        <h3 class="programme-title women">WOMEN EMPOWERMENT</h3>
+                        <p class="programme-description">Empowering adolescent girls & women through community engagement</p>
                     </div>
                 </div>
+                
+                <!-- Row 2 -->
+                <!-- Livelihood -->
                 <div class="programme-item">
-                    <div class="programme-icon"><img src="./assets/images/livelihood_icon.png" alt="Livelihood"></div>
+                    <div class="programme-icon livelihood-icon">
+                        <img src="./assets/images/livelihood.webp" alt="Livelihood">
+                    </div>
                     <div class="programme-content">
-                        <div class="programme-title livelihood">LIVELIHOOD</div>
-                        <div class="programme-description">Skill training and placement support for underprivileged youth</div>
+                        <h3 class="programme-title livelihood">LIVELIHOOD</h3>
+                        <p class="programme-description">Skill training and placement support for underprivileged youth</p>
                     </div>
                 </div>
+                
+                <!-- Empowering Grassroots -->
                 <div class="programme-item">
-                    <div class="programme-icon"><img src="./assets/images/empowering_grassroots_icon.webp" alt="Empowering Grassroots"></div>
+                    <div class="programme-icon grassroots-icon">
+                        <img src="./assets/images/empowering.webp" alt="Empowering Grassroots">
+                    </div>
                     <div class="programme-content">
-                        <div class="programme-title grassroots">EMPOWERING GRASSROOTS</div>
-                        <div class="programme-description">Helping community-based organizations become locally sustainable</div>
+                        <h3 class="programme-title grassroots">EMPOWERING GRASSROOTS</h3>
+                        <p class="programme-description">Helping community-based organizations become locally sustainable</p>
                     </div>
                 </div>
+                
+                <!-- Disaster Response -->
                 <div class="programme-item">
-                    <div class="programme-icon"><img src="./assets/images/disaster_response_icon.png" alt="Disaster Response"></div>
+                    <div class="programme-icon disaster-icon">
+                        <img src="./assets/images/disaster.webp" alt="Disaster Response">
+                    </div>
                     <div class="programme-content">
-                        <div class="programme-title disaster">DISASTER RESPONSE</div>
-                        <div class="programme-description">Reach out and respond to the needs of the disaster-affected people</div>
+                        <h3 class="programme-title disaster">DISASTER RESPONSE</h3>
+                        <p class="programme-description">Reach out and respond to the needs of the disaster-affected people</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
    
 
     <!-- Stories in Motion Section Component -->
     <!-- Stories in Motion Section Component -->
-<div class="stories-container">
-    <h2 class="section-title">STORIES IN MOTION</h2>
-    
-    <div class="stories-slider">
-        <div class="stories-track">
-            <div class="story-item">
-                <div class="story-thumbnail">
-                    <img src="assets/images/video_thumbnail_1.png" alt="Tayyari Kal Ki">
-                    <div class="play-button">
-                        <i class="fas fa-play"></i>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="story-item">
-                <div class="story-thumbnail">
-                    <img src="assets/images/video_thumbnail_2.png" alt="Shiksha Na Ruke">
-                    <div class="play-button">
-                        <i class="fas fa-play"></i>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="story-item">
-                <div class="story-thumbnail">
-                    <img src="assets/images/video_thumbnail_3.png" alt="She Can Fly">
-                    <div class="play-button">
-                        <i class="fas fa-play"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!-- Sustainable Development Goals Section -->
+<section class="sdg-section">
+    <div class="container">
+        <h2 class="section-title">TOWARDS ACHIEVING</h2>
+        <h2 class="section-subtitle">SUSTAINABLE DEVELOPMENT GOALS</h2>
         
-        <div class="slider-controls">
-            <div class="slider-prev">
-                <i class="fas fa-chevron-left"></i>
-                <span>Previous</span>
+        <div class="sdg-icons">
+            <!-- SDG 3 -->
+            <div class="sdg-item sdg-health">
+                <div class="hex-container">
+                    <div class="hex-icon">
+                        <img src="./assets/images/sdg_health_icon.webp" alt="Good Health Icon">
+                    </div>
+                    <div class="hex-content">
+                        <h3>GOOD HEALTH &<br>WELL BEING</h3>
+                        <span class="sdg-number">#3</span>
+                    </div>
+                </div>
             </div>
-            <div class="slider-indicators">
-                <span class="indicator active" data-slide="0"></span>
-                <span class="indicator" data-slide="1"></span>
-                <span class="indicator" data-slide="2"></span>
+            
+            <!-- SDG 5 -->
+            <div class="sdg-item sdg-gender">
+                <div class="hex-container">
+                    <div class="hex-icon">
+                        <img src="./assets/images/sdg/gender-icon.svg" alt="Gender Equality Icon">
+                    </div>
+                    <div class="hex-content">
+                        <h3>GENDER<br>EQUALITY</h3>
+                        <span class="sdg-number">#5</span>
+                    </div>
+                </div>
             </div>
-            <div class="slider-next">
-                <span>Next</span>
-                <i class="fas fa-chevron-right"></i>
+            
+            <!-- SDG 4 -->
+            <div class="sdg-item sdg-education">
+                <div class="hex-container">
+                    <div class="hex-icon">
+                        <img src="./assets/images/sdg/education-icon.svg" alt="Quality Education Icon">
+                    </div>
+                    <div class="hex-content">
+                        <h3>QUALITY<br>EDUCATION</h3>
+                        <span class="sdg-number">#4</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- SDG 8 -->
+            <div class="sdg-item sdg-work">
+                <div class="hex-container">
+                    <div class="hex-icon">
+                        <img src="./assets/images/sdg/work-icon.svg" alt="Decent Work Icon">
+                    </div>
+                    <div class="hex-content">
+                        <h3>DECENT WORK &<br>ECONOMIC GROWTH</h3>
+                        <span class="sdg-number">#8</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- SDG 10 -->
+            <div class="sdg-item sdg-inequality">
+                <div class="hex-container">
+                    <div class="hex-icon">
+                        <img src="./assets/images/sdg/inequality-icon.svg" alt="Reduced Inequalities Icon">
+                    </div>
+                    <div class="hex-content">
+                        <h3>REDUCED<br>INEQUALITIES</h3>
+                        <span class="sdg-number">#10</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- SDG 17 -->
+            <div class="sdg-item sdg-partnership">
+                <div class="hex-container">
+                    <div class="hex-icon">
+                        <img src="./assets/images/sdg/partnership-icon.svg" alt="Partnerships Icon">
+                    </div>
+                    <div class="hex-content">
+                        <h3>PARTNERSHIPS<br>FOR THE GOALS</h3>
+                        <span class="sdg-number">#17</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</section>
 
+<!-- Stories in Motion Section -->
+<section class="stories-section">
+    <div class="container">
+        <h2 class="section-title">STORIES IN MOTION</h2>
+        
+        <div class="stories-grid">
+            <!-- Story 1 -->
+            <div class="story-item">
+                <div class="story-thumbnail">
+                    <img src="./assets/images/getinvolved/vid1.png" alt="Talwe Ram">
+                 
+                </div>
+                <div class="story-caption">
+                    <h3>TALWE RAM</h3>
+                    <p>JETHANI VILLAGE, KULLU</p>
+                </div>
+            </div>
+            
+            <!-- Story 2 -->
+            <div class="story-item">
+                <div class="story-thumbnail">
+                    <img src="./assets/images/getinvolved/vid2.png" alt="Woman with Children">
+                    
+                </div>
+                <div class="story-caption">
+                    <h3>TALWE RAM</h3>
+                    <p>JETHANI VILLAGE, KULLU</p>
+                </div>
+            </div>
+            
+            <!-- Story 3 -->
+            <div class="story-item">
+                <div class="story-thumbnail">
+                    <img src="./assets/images/getinvolved/vid3.png" alt="Shiksha Na Ruke">
+                   
+                
+                    
+                   
+                </div>
+                <div class="story-caption">
+                    <h3>TALWE RAM</h3>
+                    <p>JETHANI VILLAGE, KULLU</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Campaign Cards Section Component -->
    <!-- Campaign Cards Section Component -->
-<div class="campaign-container">
-    <h2 class="section-title">SUPPORT A CAUSE</h2>
-    
-    <div class="campaign-grid">
-        <div class="campaign-card">
-            <div class="campaign-image">
-                <img src="assets/images/campaign_tayyari_kal_ki.png" alt="Tayyari Kal Ki">
-                <div class="campaign-title">
-                    <h3>TAYYARI<br>KAL KI</h3>
-                </div>
-            </div>
-            <div class="campaign-description">
-                <p>Our campaign 'Tayyari Kal Ki' aims at Training & Up Skilling the youth between the age of 18-32 years for employment and empowering them with a secure livelihood.</p>
-                <a href="#" class="know-more">know more ></a>
-            </div>
-        </div>
-        
-        <div class="campaign-card">
-            <div class="campaign-image">
-                <img src="assets/images/campaign_health_cannot_wait.png" alt="Health Cannot Wait">
-                <div class="campaign-title">
-                    <h3>HEALTH<br>CANNOT WAIT</h3>
-                </div>
-            </div>
-            <div class="campaign-description">
-                <p>Realising the need for accessible and quality healthcare for all, our campaign 'Health Cannot Wait' aims at providing people from the under-privileged sections</p>
-                <a href="#" class="know-more">know more ></a>
-            </div>
-        </div>
-        
-        <div class="campaign-card">
-            <div class="campaign-image">
-                <img src="assets/images/campaign_shiksha_na_ruke.png" alt="Shiksha Na Ruke">
-                <div class="campaign-title">
-                    <h3>SHIKSHA<br>NA RUKE</h3>
-                </div>
-            </div>
-            <div class="campaign-description">
-                <p>Smile Foundation, through its 'Shiksha Na Ruke' initiative, has been helping children from difficult circumstances get back to school and restart their lives</p>
-                <a href="#" class="know-more">know more ></a>
-            </div>
-        </div>
-        
-        <div class="campaign-card">
-            <div class="campaign-image">
-                <img src="assets/images/campaign_she_can_fly.png" alt="She Can Fly">
-                <div class="campaign-title">
-                    <h3>SHE CAN<br>FLY</h3>
-                </div>
-            </div>
-            <div class="campaign-description">
-                <p>Smile Foundation's initiative 'She Can Fly' is an effort to enable, equip and empower girl children with quality education, proper nutrition, good health</p>
-                <a href="#" class="know-more">know more ></a>
-            </div>
-        </div>
-    </div>
-</div>
-
-    </section>
- <!-- Partners Section -->
- <section class="partners-section"style="background-color: aqua" >
+<!-- Support a Cause Section -->
+<section class="support-section">
     <div class="container">
-        <h2 class="section-title">Our Partners</h2>
-        <p class="section-subtitle">Together with our partners, we create lasting impact</p>
+        <h2 class="section-title">SUPPORT A CAUSE</h2>
         
-        <div class="partners-container" >
-            <div class="partners-track">
-               
-                <div class="partners-group">
-                    <div class="partner-logo">
-                        <img src="./assets/images/partners/partner1.png" alt="Partner 1">
-                    </div>
-                    <div class="partner-logo">
-                        <img src="./assets/images/partners/partner2.png" alt="Partner 2">
-                    </div>
-                    <div class="partner-logo">
-                        <img src="./assets/images/partners/partner3.png" alt="Partner 3">
-                    </div>
-                    <div class="partner-logo">
-                        <img src="./assets/images/partners/partner4.png" alt="Partner 4">
-                    </div>
-                    <div class="partner-logo">
-                        <img src="./assets/images/partners/partner5.png" alt="Partner 5">
-                    </div>
+        <div class="causes-grid">
+            <!-- Cause 1: Tayyari Kal Ki -->
+            <div class="cause-card">
+                <div class="cause-image">
+                    <img src="./assets/images/Banner1-scaled.jpg.webp" alt="Tayyari Kal Ki">
+                    <div class="image-overlay"></div>
+                    <h3 class="cause-title">TAYYARI<br>KAL KI</h3>
                 </div>
-                
-                <!-- Duplicate set for continuous scrolling -->
-                <div class="partners-group">
-                    <div class="partner-logo">
-                        <img src="./assets/images/partners/partner1.png" alt="Partner 1">
-                    </div>
-                    <div class="partner-logo">
-                        <img src="./assets/images/partners/partner2.png" alt="Partner 2">
-                    </div>
-                    <div class="partner-logo">
-                        <img src="./assets/images/partners/partner3.png" alt="Partner 3">
-                    </div>
-                    <div class="partner-logo">
-                        <img src="./assets/images/partners/partner4.png" alt="Partner 4">
-                    </div>
-                    <div class="partner-logo">
-                        <img src="./assets/images/partners/partner5.png" alt="Partner 5">
-                    </div>
+                <div class="cause-content">
+                    <p class="cause-description">
+                        Our campaign 'Tayyari Kal Ki' aims at Training & Up Skilling the youth between the age of 18-32 years for employment and empowering them with a secure livelihood.
+                    </p>
+                    <a href="#" class="know-more">know more ></a>
                 </div>
             </div>
             
-            <div class="partners-track partners-track-reverse">
-                <!-- Second set of logos (different partners) -->
-                <div class="partners-group">
-                    <div class="partner-logo">
-                        <img src="./assets/images/partners/partner6.png" alt="Partner 6">
-                    </div>
-                    <div class="partner-logo">
-                        <img src="./assets/images/partners/partner7.png" alt="Partner 7">
-                    </div>
-                    <div class="partner-logo">
-                        <img src="./assets/images/partners/partner8.png" alt="Partner 8">
-                    </div>
-                    <div class="partner-logo">
-                        <img src="./assets/images/partners/partner9.png" alt="Partner 9">
-                    </div>
-                    <div class="partner-logo">
-                        <img src="./assets/images/partners/partner10.png" alt="Partner 10">
-                    </div>
+            <!-- Cause 2: Health Cannot Wait -->
+            <div class="cause-card">
+                <div class="cause-image">
+                    <img src="./assets/images/Banner2-1.jpg.webp" alt="Health Cannot Wait">
+                    <div class="image-overlay"></div>
+                    <h3 class="cause-title">HEALTH<br>CANNOT WAIT</h3>
                 </div>
-                
-                <!-- Duplicate set for continuous scrolling -->
-                <div class="partners-group">
-                    <div class="partner-logo">
-                        <img src="./assets/images/partners/partner6.png" alt="Partner 6">
-                    </div>
-                    <div class="partner-logo">
-                        <img src="./assets/images/partners/partner7.png" alt="Partner 7">
-                    </div>
-                    <div class="partner-logo">
-                        <img src="./assets/images/partners/partner8.png" alt="Partner 8">
-                    </div>
-                    <div class="partner-logo">
-                        <img src="./assets/images/partners/partner9.png" alt="Partner 9">
-                    </div>
-                    <div class="partner-logo">
-                        <img src="./assets/images/partners/partner10.png" alt="Partner 10">
-                    </div>
+                <div class="cause-content">
+                    <p class="cause-description">
+                        Realising the need for accessible and quality healthcare for all, our campaign 'Health Cannot Wait' aims at providing people from the under-privileged sections
+                    </p>
+                    <a href="#" class="know-more">know more ></a>
+                </div>
+            </div>
+            
+            <!-- Cause 3: Shiksha Na Ruke -->
+            <div class="cause-card">
+                <div class="cause-image">
+                    <img src="./assets/images/Banner3-1.jpg.webp" alt="Shiksha Na Ruke">
+                    <div class="image-overlay"></div>
+                </div>
+                <div class="cause-content">
+                    <p class="cause-description">
+                        Smile Foundation, through its 'Shiksha Na Ruke' initiative, has been helping children from difficult circumstances get back to school and restart their lives
+                    </p>
+                    <a href="#" class="know-more">know more ></a>
+                </div>
+            </div>
+            
+            <!-- Cause 4: She Can Fly -->
+            <div class="cause-card">
+                <div class="cause-image">
+                    <img src="./assets/images/getinvolved/cause/cause1.png" alt="She Can Fly">
+                    <div class="image-overlay"></div>
+                    <h3 class="cause-title">SHE CAN<br>FLY</h3>
+                </div>
+                <div class="cause-content">
+                    <p class="cause-description">
+                        Smile Foundation's initiative 'She Can Fly' is an effort to enable, equip and empower girl children with quality education, proper nutrition, good health
+                    </p>
+                    <a href="#" class="know-more">know more ></a>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+
+<!--partners-->
+<section class="partners-section">
+    <div class="container">
+        <h2 class="section-title">OUR PARTNERS IN CHANGE</h2>
+        
+        <div class="logo-carousel-container">
+            <!-- Column 1 -->
+            <div class="logo-column column-1">
+                <div class="logo-item">
+                    <img src="./assets/images/getinvolved/3M.png" alt="Ericsson">
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/getinvolved/allianz.png" alt="Otis">
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/getinvolved/anz.png" alt="Deutsche Bank">
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/getinvolved/athena.png alt="HDB Financial">
+                </div>
+                <!-- Duplicate logos for continuous scrolling -->
+                <div class="logo-item">
+                    <img src="./assets/images/getinvolved/bajaj.png" alt="Ericsson">
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/getinvolved/berger.webp" alt="Otis">
+                </div>
+            </div>
+            
+            <!-- Column 2 -->
+            <div class="logo-column column-2">
+                <div class="logo-item">
+                    <img src="./assets/images/getinvolved/birlasoft.png" alt="Reliance">
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/getinvolved/bmc.png" alt="SBI Card">
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/getinvolved/cdsl.webp" alt="Airbus">
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/getinvolved/ditto-logo-black.png" alt="IndiGo">
+                </div>
+                <!-- Duplicate logos for continuous scrolling -->
+                <div class="logo-item">
+                    <img src="./assets/images/getinvolved/erricson.png" alt="Reliance">
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/getinvolved/euronet.png" alt="SBI Card">
+                </div>
+            </div>
+            
+            <!-- Column 3 -->
+            <div class="logo-column column-3">
+                <div class="logo-item">
+                    <img src="./assets/images/getinvolved/gsk.webp" alt="Disney">
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/getinvolved/sbi-caps.png" alt="KFC">
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/getinvolved/wells-forgo.webp" alt="Cisco">
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/getinvolved/wsp.png" alt="Convergys">
+                </div>
+                <!-- Duplicate logos for continuous scrolling -->
+                <div class="logo-item">
+                    <img src="./assets/images/getinvolved/children.png" alt="Disney">
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/getinvolved/ingerll.png" alt="KFC">
+                </div>
+            </div>
+            
+            <!-- Column 4 -->
+            <div class="logo-column column-4">
+                <div class="logo-item">
+                    <img src="./assets/images/getinvolved/interactive-brokers.png" alt="Puma">
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/getinvolved/mars.webp" alt="MEL">
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/getinvolved/nova.png" alt="Mitsubishi Electric">
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/getinvolved/nttdata.png" alt="Dow">
+                </div>
+                <!-- Duplicate logos for continuous scrolling -->
+                <div class="logo-item">
+                    <img src="./assets/images/getinvolved/r1.png" alt="Puma">
+                </div>
+                <div class="logo-item">
+                    <img src="./assets/images/getinvolved/ewrh.webp" alt="MEL">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+                   
 
 
     <!-- Awards Section Component -->
-<section class="awards-section">
-    <div class="awards-carousel owl-carousel owl-theme">
-        <!-- Award Item 1 -->
-        <div class="awards-container">
-            <div class="awards-content">
-                <div class="awards-text">
-                    <h2 class="awards-title">BEST CSR EXCELLENCE IN HEALTHCARE AWARD' BY ASSOCHAM</h2>
-                    <p class="awards-description">This award recognizes our healthcare program's extensive reach across 17 states in India, including aspirational districts, remote villages, and underserved urban communities. Our comprehensive and community-centric health program delivers primary healthcare services directly to the doorsteps of underserved populations.</p>
-                    <a href="#" class="view-all">view all ></a>
-                </div>
-                <div class="awards-image">
-                    <img src="assets/images/hero_background.png" alt="CSR Health Awards 2024">
+<!-- Awards Slider Section -->
+<section class="awards-slider-section">
+    <div class="swiper awards-swiper">
+        <div class="swiper-wrapper">
+            <!-- Award Slide 1 -->
+            <div class="swiper-slide">
+                <div class="award-slide-content">
+                    <div class="award-text">
+                        <h2 class="award-title">MOST IMPACTFUL NGO OF THE YEAR FOR MISSION EDUCATION PROGRAMME</h2>
+                        <p class="award-description">
+                            This award celebrates the tireless efforts of our team, supporters, and community in making quality education accessible to underprivileged children across India through our flagship programme Mission Education.
+                        </p>
+                        <a href="#" class="view-all-link">view all ></a>
+                    </div>
+                    <div class="award-image">
+                        <img src="./assets/images/aw1.png" alt="Mission Education Award">
+                    </div>
                 </div>
             </div>
-        </div>
-        
-        <!-- Add more award items here if needed -->
-        <div class="awards-container">
-            <div class="awards-content">
-                <div class="awards-text">
-                    <h2 class="awards-title">SMILE FOUNDATION RECEIVES AT CSR HEALTH AWARDS 2024 BY THE IHW COUNCIL</h2>
-                    <p class="awards-description">This award recognizes our healthcare program's extensive reach across 17 states in India, including aspirational districts, remote villages, and underserved urban communities. Our comprehensive and community-centric health program delivers primary healthcare services directly to the doorsteps of underserved populations.</p>
-                    <a href="#" class="view-all">view all ></a>
+            
+            <!-- Award Slide 2 (Add more slides as needed) -->
+            <div class="swiper-slide">
+                <div class="award-slide-content">
+                    <div class="award-text">
+                        <h2 class="award-title">BEST HEALTHCARE INITIATIVE AWARD FOR SMILE ON WHEELS</h2>
+                        <p class="award-description">
+                            Recognizing our innovative mobile healthcare program that brings quality medical services to remote and underserved communities across India, improving health outcomes for thousands.
+                        </p>
+                        <a href="#" class="view-all-link">view all ></a>
+                    </div>
+                    <div class="award-image">
+                        <img src="./assets/images/aw2.png" alt="Healthcare Award">
+                    </div>
                 </div>
-                <div class="awards-image">
-                    <img src="assets/images/hero_background.png" alt="CSR Health Awards 2024">
+            </div>
+            
+            <!-- Award Slide 3 (Add more slides as needed) -->
+            <div class="swiper-slide">
+                <div class="award-slide-content">
+                    <div class="award-text">
+                        <h2 class="award-title">EXCELLENCE IN WOMEN EMPOWERMENT PROGRAMS</h2>
+                        <p class="award-description">
+                            Awarded for our sustained commitment to women's empowerment through educational initiatives, skill development programs, and community-based interventions that transform lives.
+                        </p>
+                        <a href="#" class="view-all-link">view all ></a>
+                    </div>
+                    <div class="award-image">
+                        <img src="./assets/images/aw3.png" alt="Women Empowerment Award">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-    <!-- Empanelment Section Component -->
-<section class="empanelment-section">
+<!-- Accreditations Slider Section -->
+<section class="accreditations-section">
     <div class="container">
         <h2 class="section-title">EMPANELMENT & ACCREDITATIONS</h2>
         
-        <div class="empanelment-carousel owl-carousel owl-theme">
-            <!-- Empanelment Item 1 -->
-            <div class="empanelment-item">
-                <div class="empanelment-image">
-                    <img src="assets/images/hero_background.png" alt="United Nations Economic and Social Council">
+        <div class="accreditations-grid">
+            <!-- Accreditation 1 -->
+            <div class="accreditation-item">
+                <div class="accreditation-image">
+                    <img src="./assets/images/ec1.webp" alt="United Nations Global Compact Award">
                 </div>
-                <div class="empanelment-content">
-                    <h3 class="empanelment-title">Special Consultative Status with the United Nations Economic and Social Council</h3>
-                    <p class="empanelment-description">Organization in Special Consultative Status with the United Nations Economic and Social Council (ECOSOC) since 2012</p>
-                </div>
-            </div>
-            
-            <!-- Empanelment Item 2 -->
-            <div class="empanelment-item">
-                <div class="empanelment-image">
-                    <img src="assets/images/hero_background.png" alt="GlobalGiving">
-                </div>
-                <div class="empanelment-content">
-                    <h3 class="empanelment-title">Smile Foundation has been accredited as a GlobalGiving validated charity</h3>
-                    <p class="empanelment-description">GlobalGiving is the largest global crowdfunding community that connects nonprofits</p>
+                <div class="accreditation-content">
+                    <h3 class="accreditation-title">MEMBER OF THE UNITED NATIONS GLOBAL COMPACT</h3>
+                    <div class="accreditation-description">
+                        <p>SMILE FOUNDATION BECAME A PARTICIPANT MEMBER OF THE UNITED NATIONS GLOBAL COMPACT, A VOLUNTARY INITIATIVE TO ALIGN STRATEGIES AND OPERATIONS WITH UNIVERSAL SUSTAINABILITY PRINCIPLES AND SUPPORT SDGS.</p>
+                    </div>
                 </div>
             </div>
             
-            <!-- Empanelment Item 3 -->
-            <div class="empanelment-item">
-                <div class="empanelment-image">
-                    <img src="assets/images/hero_background.png" alt="United Nations Global Compact">
+            <!-- Accreditation 2 -->
+            <div class="accreditation-item">
+                <div class="accreditation-image">
+                    <img src="./assets/images/ec2.webp" alt="CSR Impact Award">
                 </div>
-                <div class="empanelment-content">
-                    <h3 class="empanelment-title">Member of the United Nations Global Compact</h3>
-                    <p class="empanelment-description">Smile Foundation became a participant member of the United Nations Global Compact, a voluntary initiative that aims to align strategies and operations with universal sustainability principles and support SDGs.</p>
+                <div class="accreditation-content">
+                    <h3 class="accreditation-title">SMILE FOUNDATION HAS BEEN ACCREDITED AS A GUIDESTAR INDIA PLATINUM</h3>
+                    <div class="accreditation-description">
+                        <p>THE ACCREDITATION RECOGNIZES AND VERIFIES THE TRANSPARENCY AND PUBLIC ACCOUNTABILITY OF ORGANIZATIONS.</p>
+                    </div>
                 </div>
             </div>
             
-            <!-- Add more empanelment items here if needed -->
+            <!-- Accreditation 3 -->
+            <div class="accreditation-item">
+                <div class="accreditation-image">
+                    <img src="./assets/images/ec3.webp" alt="Healthcare NGO Award">
+                </div>
+                <div class="accreditation-content">
+                    <h3 class="accreditation-title">SMILE FOUNDATION HAS BEEN ACCREDITED AS A CHARITIES AID FOUNDATION (CAF) AMERICA</h3>
+                    <div class="accreditation-description">
+                        <p>THE VALIDATION IS EXTENDED TO ORGANIZATIONS ON BASIS OF A 100-POINT DUE DILIGENCE REVIEW.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-        <div class="know-more-container">
-            <a href="#" class="know-more">know more ></a>
+
+        <!-- Certificate Accreditations -->
+        <div class="certificate-accreditations">
+            <div class="cert-item">
+                <div class="cert-image">
+                    <img src="./assets/images/ec1.webp" alt="GuideStar India Platinum Certificate">
+                </div>
+                <div class="cert-content">
+                    <h3 class="cert-title">Smile Foundation has been accredited as a Guidestar India Platinum</h3>
+                    <div class="cert-description">
+                        <p>The accreditation recognizes and verifies the transparency and public accountability of organizations.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cert-item">
+                <div class="cert-image">
+                    <img src="./assets/images/ec2.webp" alt="CAF America Certificate">
+                </div>
+                <div class="cert-content">
+                    <h3 class="cert-title">Smile Foundation has been accredited as a Charities Aid Foundation (CAF) America</h3>
+                    <div class="cert-description">
+                        <p>The validation is extended to organizations on basis of a 100 point due diligence review.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cert-item">
+                <div class="cert-image">
+                    <img src="./assets/images/ec3.webp" alt="ECOSOC Meeting">
+                </div>
+                <div class="cert-content">
+                    <h3 class="cert-title">Special Consultative Status with the United Nations Economic and Social Council</h3>
+                    <div class="cert-description">
+                        <p>Organization in Special Consultative Status with the United Nations Economic and Social Council (ECOSOC) since 2012</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
-
+ 
+                        
+                    
+                
 
   
 
     <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <!-- Load Components -->
     <script src="./components/load-components.js"></script>
     <!-- Main JS -->
     <script src="./assets/js/main.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+    // Function to handle potential toggle between different views
+    function setupAccreditationViews() {
+        const awardsView = document.querySelector('.accreditations-grid');
+        const certificatesView = document.querySelector('.certificate-accreditations');
+        
+        // Optional: Create toggle buttons if you want to switch between views
+        const viewToggleContainer = document.createElement('div');
+        viewToggleContainer.className = 'view-toggle-container';
+        viewToggleContainer.innerHTML = `
+            <button class="view-toggle active" data-view="awards">Award Photos</button>
+            <button class="view-toggle" data-view="certificates">Certificates</button>
+        `;
+        
+        // Insert toggle buttons before the accreditations grid
+        const sectionTitle = document.querySelector('.accreditations-section .section-title');
+        sectionTitle.insertAdjacentElement('afterend', viewToggleContainer);
+        
+        // Add event listeners to toggle buttons
+        const toggleButtons = document.querySelectorAll('.view-toggle');
+        toggleButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                toggleButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                // Show/hide appropriate view
+                if (this.getAttribute('data-view') === 'awards') {
+                    awardsView.style.display = 'grid';
+                    certificatesView.style.display = 'none';
+                } else {
+                    awardsView.style.display = 'none';
+                    certificatesView.style.display = 'grid';
+                }
+            });
+        });
+    }
+    
+    // Optional: Add animation when scrolling to the accreditation items
+    function setupScrollAnimations() {
+        const accreditationItems = document.querySelectorAll('.accreditation-item, .cert-item');
+        
+        // Create an intersection observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                    observer.unobserve(entry.target); // Stop observing once animated
+                }
+            });
+        }, {
+            threshold: 0.2 // Trigger when 20% of the element is visible
+        });
+        
+        // Observe each accreditation item
+        accreditationItems.forEach(item => {
+            observer.observe(item);
+        });
+    }
+    
+    // Initialize functionality
+    setupAccreditationViews();
+    setupScrollAnimations();
+    
+    // Add CSS for animations and toggle buttons
+    const style = document.createElement('style');
+    style.textContent = `
+        /* Toggle Buttons Styles */
+        .view-toggle-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            gap: 15px;
+        }
+        
+        .view-toggle {
+            padding: 8px 16px;
+            border: 1px solid #ccc;
+            background: #f5f5f5;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .view-toggle.active {
+            background: #333;
+            color: white;
+            border-color: #333;
+        }
+        
+        /* Animation Styles */
+        .accreditation-item, .cert-item {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .accreditation-item.animated, .cert-item.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Staggered animation delay */
+        .accreditation-item:nth-child(2), .cert-item:nth-child(2) {
+            transition-delay: 0.2s;
+        }
+        
+        .accreditation-item:nth-child(3), .cert-item:nth-child(3) {
+            transition-delay: 0.4s;
+        }
+    `;
+    document.head.appendChild(style);
+});
+    </script>
+
 </body>
 </html>

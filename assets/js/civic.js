@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize Swiper
+    
     const actionSlider = new Swiper('.action-slider', {
         slidesPerView: 1,
         spaceBetween: 20,

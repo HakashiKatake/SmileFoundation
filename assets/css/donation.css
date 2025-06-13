@@ -1,0 +1,296 @@
+body {
+    margin: 0;
+    background-color: #fff;
+    color: #333;
+}
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.section-padding {
+    padding: 80px 0;
+}
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: #444;
+    text-transform: uppercase;
+}
+.placeholder-img {
+    display: block;
+    width: 100%;
+    background-color: #f0f0f0;
+    border: 2px dashed #dcdcdc;
+    box-sizing: border-box;
+}
+
+/* --- HERO SECTION --- */
+.hero-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- DONATION & SUPPORT SECTION --- */
+.donation-section-wrapper {
+    background-color: #f9f9f9;
+}
+.donation-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: flex-start;
+}
+.donation-text h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+.donation-text p {
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 15px;
+}
+.donation-form-container {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    padding: 25px;
+}
+.donation-tabs {
+    display: flex;
+    margin-bottom: 25px;
+}
+.tab-btn {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    background-color: #f0f0f0;
+    color: #666;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.tab-btn.active {
+    background-color: #8cc63f;
+    color: white;
+}
+.form-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+.form-subtitle {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.amount-options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.amount-options label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.amount-options input[type="radio"] {
+    margin-right: 5px;
+}
+.donation-impact-text {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: #444;
+}
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+.form-row.full-width {
+    grid-template-columns: 1fr;
+}
+.form-row input, .form-row select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 0.95rem;
+}
+.form-row input.error {
+    border-color: red;
+}
+.disclaimer-text {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 20px 0;
+    line-height: 1.5;
+}
+.agreement-box {
+    display: flex;
+    align-items: flex-start;
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+.agreement-box input {
+    margin-right: 10px;
+    margin-top: 3px;
+}
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #8cc63f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.submit-btn:hover {
+    background-color: #7ab430;
+}
+
+/* --- WHAT DONATION SUPPORTS SECTION --- */
+.support-details-section {
+    background-color: #8cc63f;
+}
+.support-details-section .section-title {
+    color: white;
+}
+.support-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.support-item {
+    background-color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+.support-item .placeholder-img {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 20px auto;
+}
+.support-item p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: #555;
+}
+
+/* --- MAP & STATS SECTION --- */
+.map-stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+.stats-content .stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #8cc63f;
+}
+.stats-content .stat-description {
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 20px;
+}
+.map-container .placeholder-img {
+    min-height: 400px;
+}
+
+/* --- STORIES IN MOTION SECTION --- */
+.video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+.video-grid iframe {
+    width: 100%;
+    height: 315px;
+    border: 1px solid #ccc;
+}
+
+/* --- GLIMPSES SECTION --- */
+.glimpses-section .placeholder-img {
+    height: 450px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* --- FAQ SECTION --- */
+.faq-section {
+    background-color: #f9f9f9;
+}
+.accordion-item {
+    border: 1px solid #e0e0e0;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+.accordion-header {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.accordion-header::after {
+    content: '+';
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #8cc63f;
+}
+.accordion-item.active .accordion-header::after {
+    content: '−';
+}
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+.accordion-content p {
+    padding: 0 20px 20px 20px;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 992px) {
+    .donation-grid, .map-stats-grid, .video-grid {
+        grid-template-columns: 1fr;
+    }
+    .support-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .donation-text {
+        text-align: center;
+    }
+}
+@media (max-width: 768px) {
+    .section-padding { padding: 50px 0; }
+    .section-title { font-size: 1.6rem; margin-bottom: 30px; }
+    .support-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .form-row.full-width { margin-bottom: 0; }
+    .form-row input { margin-bottom: 15px; }
+}

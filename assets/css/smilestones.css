@@ -1,0 +1,178 @@
+.page-header {
+    background-color: #f5f5f5;
+    padding: 25px 0;
+    margin-bottom: 60px;
+}
+
+.page-header h1 {
+    margin: 0 0 10px 0;
+    font-size: 28px;
+    font-weight: 900;
+    color: #000;
+}
+
+.breadcrumbs {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.breadcrumbs a {
+    text-decoration: none;
+    color: #888;
+    transition: color 0.3s;
+}
+
+.breadcrumbs a:hover {
+    color: #000;
+}
+
+.home-icon {
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+.breadcrumbs .separator {
+    margin: 0 10px;
+    color: #aaa;
+}
+
+.breadcrumbs .current-page {
+    color: #555;
+}
+
+/* =================================== */
+/*          TIMELINE STYLES            */
+/* =================================== */
+.main-content {
+    padding-bottom: 60px;
+}
+
+.timeline-container {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* The central pink timeline */
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    width: 3px;
+    background-color: #e10098;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1.5px;
+}
+
+/* Base style for ALL items */
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+/* The white card containing content */
+.timeline-card {
+    padding: 25px;
+    background-color: #ffffff;
+    border: 1px solid #e7e7e7;
+    text-align: center;
+    position: relative;
+}
+
+/* The year markers */
+.timeline-year {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+    left: 50%;
+    font-size: 28px;
+    font-weight: 800;
+    color: #8cc63f;
+    margin: 20px 0 30px 0;
+}
+
+/* LEFT-SIDE ITEMS POINTER */
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-left-color: #ffd800; /* Points right */
+    top: 25px;
+    right: 20px;
+}
+
+/* RIGHT-SIDE ITEMS SPECIFIC STYLES */
+.timeline-item-right {
+    left: 50%; /* Pushes the item to the right half */
+}
+
+/* RIGHT-SIDE ITEMS POINTER */
+.timeline-item-right::after {
+    border-left-color: transparent; /* Reset left-side pointer */
+    border-right-color: #ffd800; /* Points left */
+    left: 20px;
+    right: auto;
+}
+
+
+.timeline-card h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+    color: #333;
+    line-height: 1.3;
+}
+
+.timeline-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.timeline-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+    margin: 0;
+}
+
+/* =================================== */
+/*      RESPONSIVE MEDIA QUERIES       */
+/* =================================== */
+
+@media (max-width: 768px) {
+    /* Move the timeline to the left */
+    .timeline-container::before {
+        left: 30px;
+        margin-left: 0;
+    }
+
+    /* Make ALL items (left and right) and years full-width and aligned left */
+    .timeline-item,
+    .timeline-year {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 15px;
+        left: 0; /* This overrides the left: 50% on right-side items */
+    }
+    
+    .timeline-year {
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    /* Make ALL pointers point from the left to the right */
+    .timeline-item::after {
+        left: 10px; /* Position it just outside the timeline line */
+        right: auto;
+        border-left-color: transparent; /* Ensure left is clear */
+        border-right-color: #ffd800; /* Point right */
+    }
+}

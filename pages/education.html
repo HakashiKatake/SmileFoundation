@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education | Smile Foundation</title>
+    
+    <!-- You can move these styles to an external CSS file -->
+    <style>
+        /* Basic Reset and Font Styles */
+        body, h1, h2, h3, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #333;
+            background-color: #fff;
+        }
+
+        /* --- Hero Section --- */
+        .hero-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60vh; /* Adjust height as needed */
+            color: white;
+            text-align: center;
+            
+            /* --- IMPORTANT: Replace 'path/to/your/image.jpg' with the actual image path --- */
+            background-image: url('https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2132&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            /* Adds a subtle shadow to make text more readable against the image */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        /* --- Content Section --- */
+        .content-section {
+            /* This light blue-grey background color matches the image */
+            background-color: #f3f7fa;
+            padding: 80px 20px; /* 80px top/bottom, 20px left/right */
+        }
+
+        .content-container {
+            max-width: 900px; /* Controls the width of the text content */
+            margin: 0 auto; /* Centers the container */
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #000;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+        }
+
+        .content-container p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #555;
+        }
+        
+        /* Adds space between the 'WHY' and 'WHAT' sections */
+        .what-we-do-section {
+            margin-top: 60px;
+        }
+
+        /* --- Sub-Programs Grid --- */
+        .sub-programs-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Two equal columns */
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        .sub-program h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #111;
+        }
+
+        /* General spacing for new sections */
+        .new-section {
+            margin-top: 80px;
+        }
+
+        /* --- Process Flowchart Image Section --- */
+        .process-flow-image {
+            width: 100%;
+            height: auto;
+            /* Placeholder styles */
+            display: block;
+            background-color: #e9e9e9;
+            border: 2px dashed #ccc;
+            min-height: 200px;
+        }
+
+        /* --- 4-Pronged Approach Section --- */
+        .approach-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .approach-item {
+            padding: 15px 20px;
+            font-weight: 600;
+            color: #333;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Individual colors for approach items */
+        .approach-item.yellow { background-color: #fef5d8; }
+        .approach-item.purple { background-color: #e8e0f1; }
+        .approach-item.green  { background-color: #e8fadc; }
+        .approach-item.cyan   { background-color: #dff7f6; }
+
+        .approach-item::before {
+            content: '▶';
+            font-size: 0.7em;
+            margin-right: 10px;
+            color: #000;
+        }
+        
+        /* --- Impact 2023-24 Section --- */
+        .impact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr; /* Image takes less space than stats */
+            gap: 40px;
+            align-items: center;
+        }
+
+        .impact-image {
+            width: 100%;
+            height: auto;
+            /* Placeholder styles */
+            display: block;
+            background-color: #e9e9e9;
+            border: 2px dashed #ccc;
+            min-height: 300px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .stat-item .number {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #82c996; /* Green color from image */
+            line-height: 1.1;
+        }
+
+        .stat-item .description {
+            margin-top: 5px;
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.4;
+        }
+        
+        /* --- Responsive Design for All Sections --- */
+        @media (max-width: 768px) {
+            .hero-section { height: 40vh; }
+            .hero-section h1 { font-size: 2.5rem; }
+            .content-section { padding: 60px 20px; }
+            .section-title { font-size: 1.3rem; }
+            .new-section { margin-top: 60px; }
+
+            .sub-programs-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                text-align: center;
+            }
+
+            .approach-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .impact-grid {
+                grid-template-columns: 1fr; /* Stack image on top of stats */
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stats-grid {
+                grid-template-columns: 1fr; /* Stack stats on smallest screens */
+            }
+            .stat-item .number {
+                font-size: 2.2rem;
+            }
+        }
+
+        /* --- Responsive Design for Smaller Screens --- */
+        @media (max-width: 768px) {
+            .hero-section {
+                height: 40vh;
+            }
+
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+
+            .content-section {
+                padding: 60px 20px;
+            }
+
+            .section-title {
+                font-size: 1.3rem;
+            }
+
+            .sub-programs-grid {
+                grid-template-columns: 1fr; /* Stack columns on smaller screens */
+                gap: 30px;
+                text-align: center;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header can be loaded here if needed -->
+    <header id="header"></header>
+
+    <main>
+        <!-- ========= HERO SECTION START ========= -->
+        <section class="hero-section">
+            <h1>EDUCATION IS EMPOWERMENT</h1>
+        </section>
+        <!-- ========= HERO SECTION END ========= -->
+
+        <!-- ========= CONTENT SECTION START ========= -->
+        <section class="content-section">
+            <div class="content-container">
+                
+                <!-- WHY EDUCATION -->
+                <div class="why-education-section">
+                    <h2 class="section-title">WHY EDUCATION</h2>
+                    <p>
+                        If we need to address healthcare, poverty, population control, unemployment and human rights, there’s no better way to
+                        start than providing education to children in need. Education not only empowers children to have a secure future but also
+                        helps them grow up as responsible national and global citizens. The Right to Education (RTE) Act which came into force in
+                        2010 made education free and compulsory for all children in the age group of 6-14 years. But even a decade later, the
+                        learning curve has not been steady for many children in the country. The socio-economic conditions of parents and lack of
+                        proper learning in schools are hindrances which prevent many children from having education.
+                    </p>
+                </div>
+
+                <!-- WHAT WE DO -->
+                <div class="what-we-do-section">
+                    <h2 class="section-title">WHAT WE DO</h2>
+                    <p>
+                        Smile Foundation’s flagship programme Mission Education works with the objective of empowering underprivileged
+                        children by providing education, nutrition, and wellness support. The programme is well aligned to the New Education
+                        Policy (2020), and the SDG Goal 4 (Ensure inclusive and equitable quality education and promote lifelong learning
+                        opportunities for all). Mission Education works with children (3-18 years) living in difficult circumstances, children from poor
+                        families, differently abled children, disaster-struck children, abandoned and street children, and children living in tribal
+                        belts, remote villages and hard to reach areas.
+                    </p>
+
+                   
+
+                </div>
+
+                <div class="new-section process-flow-section">
+                   
+                    <img src="/assets/images/edu.webp" alt="Education Programme Process Flowchart" class="process-flow-image">
+                </div>
+                <!-- ========= PROCESS FLOWCHART SECTION END ========= -->
+
+                <!-- ========= NEW: 4-PRONGED APPROACH SECTION START ========= -->
+                <div class="new-section approach-section">
+                    <h2 class="section-title">4-PRONGED APPROACH</h2>
+                    <div class="approach-grid">
+                        <div class="approach-item yellow">Improving Learning Outcomes</div>
+                        <div class="approach-item green">Capacity Building of Teachers</div>
+                        <div class="approach-item purple">Creating Enabling Learning Enviroment</div>
+                        <div class="approach-item cyan">Community Enagagement</div>
+                    </div>
+                </div>
+                <!-- ========= 4-PRONGED APPROACH SECTION END ========= -->
+
+                <!-- ========= NEW: IMPACT 2023-24 SECTION START ========= -->
+                <div class="new-section impact-section">
+                    <h2 class="section-title">IMPACT 2023-24</h2>
+                    <div class="impact-grid">
+                        <div class="impact-image-container">
+                            <!-- Placeholder for the impact section image -->
+                            <img src="path/to/your/classroom-image.jpg" alt="Children in an outdoor classroom" class="impact-image">
+                        </div>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <p class="number">160,000+</p>
+                                <p class="description">children received quality education</p>
+                            </div>
+                            <div class="stat-item">
+                                <p class="number">44,000+</p>
+                                <p class="description">girls received vocational training support</p>
+                            </div>
+                            <div class="stat-item">
+                                <p class="number">25,000+</p>
+                                <p class="description">children benefitted through infrastructure support</p>
+                            </div>
+                            <div class="stat-item">
+                                <p class="number">2000+</p>
+                                <p class="description">girls received scholarship support for higher studies</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- ========= CONTENT SECTION END ========= -->
+    </main>
+
+    <!-- Footer can be loaded here if needed -->
+    <footer id="footer"></footer>
+
+    <!-- Your script to load header/footer can go here -->
+    <!-- <script src="../components/load-components.js"></script> -->
+</body>
+</html>
