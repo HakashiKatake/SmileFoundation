@@ -741,6 +741,8 @@ select.form-input {
     margin: 0;
 }
 
+
+
 @media (max-width: 768px) {
     .faq-question h3 {
         font-size: 0.95rem;

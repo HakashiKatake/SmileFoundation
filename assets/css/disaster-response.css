@@ -1,0 +1,210 @@
+/* ==========================================================================
+   DISASTER RESPONSE SECTIONS
+   ========================================================================== */
+
+/* --- Utility Class --- */
+.text-center {
+    text-align: center;
+}
+
+/* --- Hero Section --- */
+.disaster-hero {
+    position: relative;
+    height: 450px;
+    background-image: url('../images/disaster-hero.png'); /* Placeholder hero image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Dark overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-title {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* --- Text Content Sections --- */
+.disaster-text-section {
+    padding: 5rem 0;
+}
+
+.disaster-text-section .section-container {
+    max-width: 960px; /* Constrain text width for readability */
+}
+
+.disaster-text-section .section-title {
+    margin-bottom: 2rem;
+}
+
+.disaster-text-section p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+.disaster-text-section p:last-child {
+    margin-bottom: 0;
+}
+
+.why-disaster-section {
+    background-color: #f4c369; /* Mustard yellow */
+}
+
+.what-we-do-disaster-section {
+    background-color: #f7f7f7; /* Light grey */
+}
+
+/* --- Projects Section --- */
+.projects-section {
+    padding: 5rem 0;
+    background-color: #fff;
+}
+
+.projects-slider-wrapper {
+    position: relative;
+    margin-top: 3rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: #f7f7f7;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.project-card-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    background-color: #e0e0e0; /* BG for broken images */
+}
+
+.project-card-content {
+    padding: 1.5rem;
+}
+
+.project-card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+.project-card-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin: 0;
+}
+
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.next-arrow {
+    right: -20px;
+}
+
+/* --- Inspire Video Section --- */
+.inspire-video-section {
+    padding: 5rem 0;
+    background-color: #fff;
+}
+
+.inspire-video-section .section-title {
+    margin-bottom: 3rem;
+}
+
+.inspire-video-wrapper {
+    position: relative;
+    max-width: 960px;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    /* This creates the 16:9 aspect ratio box */
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16) */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px; /* Optional: rounds the corners of the iframe */
+}
+
+.inspire-video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+    .projects-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .slider-arrow.next-arrow {
+        right: -15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .disaster-hero {
+        height: 350px;
+    }
+    .hero-title {
+        font-size: 2rem;
+        padding: 0 1rem;
+        text-align: center;
+    }
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    .slider-arrow {
+        display: none; /* Hide arrows on mobile */
+    }
+    .video-text-overlay h3 {
+        font-size: 1.5rem;
+    }
+}

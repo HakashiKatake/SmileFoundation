@@ -2,31 +2,71 @@ body, .faq-main-bg {
     background: #f8ebc7;
     min-height: 100vh;
 }
-.faq-breadcrumb-section {
-    padding-top: 24px;
+.breadcrumb-wrapper {
+            background-color: #f5e9c9;
+            padding: 2rem 1rem;
+        }
+
+      
+.breadcrumb-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            background-color: #f7f7f7;
+            padding: 1rem 2rem;
+            border-radius: 4px;
 }
-.faq-breadcrumb-container {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 24px;
-}
+
 .breadcrumb {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 1rem;
-    color: #222;
-    margin-bottom: 0;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            list-style: none; 
+            padding: 0;
+            margin: 0;
+            font-size: 1rem;
+            font-weight: 800;
+            text-transform: uppercase;
 }
-.breadcrumb a {
-    color: #111;
-    text-decoration: none;
-    font-weight: 600;
-}
-.breadcrumb .active {
-    color: #8bc34a;
-    font-weight: 700;
-}
+
+       
+.breadcrumb-item {
+            display: flex;
+            align-items: center;
+ }
+
+        
+.breadcrumb-item + .breadcrumb-item::before {
+            content: "\>"; 
+            font-weight: 900;
+            margin: 0 1rem;
+            color: #000000;
+            font-size: 0.8em;
+        }
+        
+.breadcrumb-item a {
+            color: inherit; 
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem; 
+            transition: opacity 0.3s ease;
+        }
+        
+.breadcrumb-item a:hover {
+            opacity: 0.7;
+        }
+
+        
+.breadcrumb-item a {
+            color: #000000; 
+        }
+.breadcrumb-item.link a {
+             color: #8cc63f; 
+        }
+
+.breadcrumb-item.active {
+            color: #8cc63f; 
+        }
 .faq-content-section {
     max-width: 1280px;
     margin: 32px auto 0 auto;
@@ -87,6 +127,7 @@ body, .faq-main-bg {
     border-radius: 6px;
     font-size: 1.15rem;
     font-weight: 700;
+    font-family: 'Bebas Neue', sans-serif;
     text-align: left;
     padding: 18px 18px;
     display: flex;
@@ -122,6 +163,7 @@ body, .faq-main-bg {
     border: 1.5px solid #e0e0e0;
     border-top: none;
     display: none;
+    font-family: 'Railwa', sans-serif;
 }
 .faq-item.active .faq-answer {
     display: block;

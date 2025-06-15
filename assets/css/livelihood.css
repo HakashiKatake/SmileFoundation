@@ -1,0 +1,521 @@
+ .section-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+.text-section {
+            padding: 5rem 2rem;
+        }
+
+        .container {
+            max-width: 960px; 
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        
+        .section-title {
+           
+            font-weight: 800;
+            font-size: 2.5rem;
+            color: #000;
+            text-align: left;
+            margin-top: 0;
+            margin-bottom: 2rem;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+        }
+
+      
+        .section-text {
+            font-size: 1.1rem;
+            color: #3a3a3a;
+            margin: 0;
+        }
+
+       
+        .why-skilling-section {
+            background-color: #ffffff;
+        }
+
+       
+        .what-we-do-section {
+            background-color: #94b97a; 
+        }
+
+        
+        .what-we-do-section .section-title {
+            color: #000;
+        }
+
+        .what-we-do-section .section-text {
+            color: #212121; 
+        }
+
+        .courses-module-section .section-title {
+            text-align: center;
+        }
+
+        .timeline-image-wrapper {
+            width: 100%;
+            text-align: center; /* Center the image if it's smaller than the container */
+        }
+
+        .timeline-image-wrapper img {
+            max-width: 100%;
+            height: auto;
+            background-color: #f0f0f0; /* Gives the broken image a placeholder background */
+        }
+
+        /* --- HOW WE WORK Section --- */
+        .how-we-work-section {
+            background-color: #f7f7f7; /* Light grey background from the image */
+        }
+
+        .how-we-work-section .section-title {
+            text-align: center;
+        }
+
+        .work-process-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 1.5rem;
+        }
+
+        .process-item {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .icon-circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+            transition: transform 0.3s ease;
+        }
+        
+        .process-item:hover .icon-circle {
+            transform: translateY(-5px);
+        }
+
+       
+.bg-white { background-color: #ffffff; }
+.bg-green { background-color: #a8d787; }
+
+.icon-circle img {
+            
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+
+.process-label {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #333;
+            line-height: 1.4;
+            margin: 0;
+        }
+
+
+
+.impact-section,
+.partners-section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.impact-section {
+    background-color: #f7f7f7; /* Light grey background */
+}
+
+.partners-section {
+    background-color: #d1e6e3; /* Light teal background from the image */
+}
+
+/* --- General styling for titles within these sections --- */
+.impact-section .section-title,
+.partners-section .section-title {
+    text-align: left;
+    margin-bottom: 3rem;
+}
+
+/* --- Impact Section Grid --- */
+.impact-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.impact-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: #e0e0e0; 
+    border-radius: 8px;
+}
+
+.impact-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem 2rem;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #9aca3c; 
+    line-height: 1;
+}
+
+.stat-description {
+    font-size: 1.1rem;
+    color: #3a3a3a;
+    margin-top: 0.75rem;
+    line-height: 1.5;
+}
+
+/* --- Employment Partners Scroller --- */
+.partner-scroller {
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0));
+    mask-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0));
+}
+
+.partner-logos-track {
+    display: flex;
+    /* (Width of logo item + gap) * total number of logos (10 * 2 = 20) */
+    width: calc(250px * 20);
+    animation: scroll-ten 50s linear infinite; /* Updated animation name and duration */
+}
+
+.partner-logos-track:hover {
+    animation-play-state: paused;
+}
+
+.partner-logo-item {
+    flex-shrink: 0;
+    width: 220px;
+    height: 110px;
+    margin-right: 30px; /* Gap between items */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white; 
+    border: 1px solid #e7e7e7;
+    border-radius: 4px;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.partner-logo-item img {
+    max-width: 100%;
+    max-height: 60px;
+    object-fit: contain;
+}
+
+/* --- Scrolling Animation (Updated for 10 logos) --- */
+@keyframes scroll-ten {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        /* Move track left by the width of the first set (10 logos) */
+        transform: translateX(calc(-250px * 10));
+    }
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+    .impact-content-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .stat-number {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .impact-section .section-title,
+    .partners-section .section-title {
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .impact-stats-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .stat-number {
+        font-size: 3rem;
+    }
+
+    .stat-description {
+        font-size: 1rem;
+    }
+    
+    .partner-logo-item {
+        width: 180px;
+        height: 90px;
+        margin-right: 20px;
+    }
+
+    
+    .partner-logos-track {
+        width: calc(200px * 20);
+    }
+    @keyframes scroll-ten {
+        from { transform: translateX(0); }
+        to { transform: translateX(calc(-200px * 10)); }
+    }
+}
+
+        /* --- RESPONSIVE DESIGN --- */
+        @media (max-width: 1024px) {
+            .work-process-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 2rem 1.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 1.8rem;
+            }
+            .work-process-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+             .icon-circle {
+                width: 100px;
+                height: 100px;
+            }
+            .icon-circle img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section-container {
+                padding: 3rem 1rem;
+            }
+            .work-process-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem 1rem;
+            }
+        }
+        
+    
+        @media (max-width: 768px) {
+            .text-section {
+                padding: 4rem 1.5rem;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .section-text {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .text-section {
+                padding: 3rem 1rem;
+            }
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+
+
+
+
+/* ==========================================================================
+   ITRAIN & REACH SECTIONS
+   ========================================================================== */
+
+/* --- iTrain on Wheels Section --- */
+.itrain-section {
+    background-color: #f7f7f7;
+    padding: 6rem 0;
+}
+
+.itrain-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.itrain-text-content p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.itrain-text-content p:last-child {
+    margin-bottom: 0;
+}
+
+.itrain-text-content strong {
+    color: #222;
+    font-weight: 700;
+}
+
+.itrain-video-wrapper {
+    position: relative;
+    cursor: pointer;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.video-thumbnail {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.itrain-video-wrapper:hover .video-thumbnail {
+    transform: scale(1.05);
+}
+
+.play-button-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    pointer-events: none; /* Allows hover on the wrapper to work */
+}
+
+.itrain-video-wrapper:hover .play-button-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.play-icon {
+    width: 40px;
+    height: 40px;
+    margin-left: 5px; /* Optically center the triangle */
+}
+
+
+/* --- Reach & Presence Section --- */
+.reach-section {
+    padding: 6rem 0;
+    background-color: #ffffff;
+}
+
+.reach-section .section-title {
+    text-align: center;
+}
+
+.reach-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.reach-card {
+    background-color: #a8c7c3; /* Muted teal color */
+    border-radius: 10px;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.reach-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.reach-number {
+    font-size: 6rem;
+    font-weight: 800;
+    color: #f9d849; /* Bright yellow */
+    line-height: 1;
+}
+
+.reach-icon {
+    /* Placeholder styles for broken images */
+    width: 180px;
+    height: 120px;
+    object-fit: contain;
+    background-color: rgba(255, 255, 255, 0.2); /* Make the broken image box visible */
+    border-radius: 8px;
+}
+
+.reach-label {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+    .itrain-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .reach-grid {
+        grid-template-columns: 1fr;
+    }
+    .reach-number {
+        font-size: 5rem;
+    }
+    .reach-icon {
+        width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .reach-card-top {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .reach-number {
+        font-size: 4rem;
+    }
+    .reach-icon {
+        width: 120px;
+        height: 80px;
+    }
+}
