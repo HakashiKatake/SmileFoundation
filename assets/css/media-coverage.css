@@ -1,4 +1,4 @@
-/* Base styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -36,7 +36,7 @@ body {
     padding: 0 15px;
 }
 
-/* Header styles */
+
 .po-header {
     background-color: #f2f2f2;
     padding: 25px;
@@ -71,7 +71,7 @@ body {
     color: #666;
 }
 
-/* Introduction text */
+
 .po-intro {
     padding: 30px 0;
 }
@@ -81,7 +81,7 @@ body {
     line-height: 1.7;
 }
 
-/* Year tabs */
+
 .po-year-tabs {
     display: flex;
     gap: 16px;
@@ -111,7 +111,7 @@ body {
     box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
-/* Media cards - REVISED to match image layout */
+
 .po-year-content {
     display: flex;
     flex-direction: column;
@@ -162,7 +162,7 @@ body {
     font-size: 14px;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
     .po-media-card {
         flex-direction: column;

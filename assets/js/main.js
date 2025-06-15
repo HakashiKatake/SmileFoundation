@@ -1,11 +1,17 @@
-// Main JavaScript file for Smile Foundation Clone
 
-// Main JavaScript for Smile Foundation
+document.addEventListener('DOMContentLoaded', function() {
+    initializeNavigation();
+    initializeMobileMenu();
+    initializeCarousels();
+    setupCounters();
+    setupAccreditationViews();
+    setupScrollAnimations();
+});
 
-// Make sure functions are available globally
-window.initializeNavigation = function() {
+
+function initializeNavigation() {
+  
     const navItems = document.querySelectorAll('.nav-item.dropdown');
-    
     navItems.forEach(item => {
         item.addEventListener('mouseenter', function() {
             if (window.innerWidth > 992) {
@@ -22,415 +28,7 @@ window.initializeNavigation = function() {
         });
     });
     
-}
-document.addEventListener('DOMContentLoaded', function() {
-    // Create an intersection observer to detect when the stats section is visible
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            // If the section is visible
-            if (entry.isIntersecting) {
-                // Start the counters animation
-                startCounters();
-                // Unobserve to prevent retriggering
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.1 }); // Trigger when at least 10% of the element is visible
-
-    // Observe the stats section
-    const statsSection = document.querySelector('.impact-stats');
-    if (statsSection) {
-        observer.observe(statsSection);
-    }
-
-    // Function to animate counters
-    function startCounters() {
-        const counters = document.querySelectorAll('.counter');
-        const speed = 200; // Lower = faster
-        
-        counters.forEach(counter => {
-            const targetValue = parseInt(counter.getAttribute('data-target'));
-            
-            // Calculate animation speed based on target value
-            // Larger numbers get faster increments
-            const increment = targetValue > 100 ? Math.ceil(targetValue / speed) : 1;
-            
-            // Create the animation function
-            function updateCount() {
-                const currentValue = parseInt(counter.innerText);
-                if (currentValue < targetValue) {
-                    // Increment but don't exceed target
-                    counter.innerText = Math.min(currentValue + increment, targetValue);
-                    // Continue animation
-                    setTimeout(updateCount, 30);
-                }
-            }
-            
-            // Start counting
-            updateCount();
-        });
-    }
-
-    // If IntersectionObserver isn't supported or fails, fallback to start on page load
-    if (!window.IntersectionObserver) {
-        setTimeout(startCounters, 500);
-    }
-});
-
-
-
-// Initialize mobile menu toggle
-window.initializeMobileMenu = function() {
-    const menuToggle = document.getElementById('mobileMenuToggle');
-    const closeButton = document.querySelector('.close-mobile-menu');
-    const mobileMenu = document.querySelector('.mobile-menu-overlay');
-    const body = document.body;
-    
-    if (!menuToggle || !mobileMenu) return;
-    
-    console.log('Mobile menu elements found:', { menuToggle, mobileMenu, closeButton });
-    
-    // Toggle mobile menu
-    function toggleMenu(e) {
-        if (e) e.stopPropagation();
-        mobileMenu.classList.toggle('active');
-        body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
-        console.log('Menu toggled. Active:', mobileMenu.classList.contains('active'));
-    }
-    
-    // Close menu when clicking outside
-    function closeMenuOnClickOutside(e) {
-        if (mobileMenu.classList.contains('active') && 
-            !mobileMenu.contains(e.target) && 
-            e.target !== menuToggle) {
-            toggleMenu(e);
-        }
-    }
-    
-    // Event listeners
-    menuToggle.addEventListener('click', toggleMenu);
-    
-    if (closeButton) {
-        closeButton.addEventListener('click', toggleMenu);
-    }
-    
-    // Close menu when clicking on nav links
-    const navLinks = document.querySelectorAll('.mobile-nav-list a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', toggleMenu);
-    });
-    
-    // Close menu when clicking outside
-    document.addEventListener('click', closeMenuOnClickOutside);
-    
-    // Prevent closing when clicking inside the menu
-    mobileMenu.addEventListener('click', function(e) {
-        e.stopPropagation();
-    });
-    
-    // Close menu on window resize if it becomes desktop view
-    window.addEventListener('resize', function() {
-        if (window.innerWidth > 991) {
-            mobileMenu.classList.remove('active');
-            body.style.overflow = '';
-        }
-    });
-    
-    return { menuToggle, mobileMenu, closeButton };
-};
-
-// Initialize Hero Carousel with Owl Carousel
-function initializeHeroCarousel() {
-    const heroCarousel = document.querySelector('.hero-carousel');
-    if (!heroCarousel) return;
-    
-    if (typeof $ !== 'undefined' && $.fn.owlCarousel) {
-        $(heroCarousel).owlCarousel({
-            loop: true,
-            items: 1,
-            nav: true,
-            dots: true,
-            autoplay: true,
-            autoplayTimeout: 6000,
-            autoplayHoverPause: true,
-            smartSpeed: 1000,
-            navText: [
-                '<i class="fas fa-chevron-left"></i>',
-                '<i class="fas fa-chevron-right"></i>'
-            ],
-            responsive: {
-                0: {
-                    nav: false
-                },
-                768: {
-                    nav: true
-                }
-            }
-        });
-    } else {
-        // Retry initialization after a short delay if jQuery isn't loaded yet
-        setTimeout(initializeHeroCarousel, 500);
-    }
-}
-
-// Initialize SDG carousel
-function initializeSDGCarousel() {
-    const sdgCarousel = document.querySelector('.sdg-carousel');
-    if (!sdgCarousel) return;
-    
-    if (typeof $ !== 'undefined' && $.fn.owlCarousel) {
-        $(sdgCarousel).owlCarousel({
-            loop: true,
-            margin: 30,
-            nav: true,
-            dots: true,
-            autoplay: true,
-            autoplayTimeout: 4000,
-            autoplayHoverPause: true,
-            smartSpeed: 800,
-            responsive: {
-                0: {
-                    items: 1,
-                    nav: false
-                },
-                576: {
-                    items: 1,
-                    nav: false
-                },
-                768: {
-                    items: 2,
-                    nav: true
-                },
-                992: {
-                    items: 3,
-                    nav: true
-                },
-                1200: {
-                    items: 4,
-                    nav: true
-                }
-            },
-            navText: [
-                '<i class="fas fa-chevron-left"></i>',
-                '<i class="fas fa-chevron-right"></i>'
-            ]
-        });
-    } else {
-        setTimeout(initializeSDGCarousel, 500);
-    }
-}
-
-// Initialize Stories carousel
-function initializeStoriesCarousel() {
-    const storiesCarousel = document.querySelector('.stories-carousel');
-    if (!storiesCarousel) return;
-    
-    if (typeof $ !== 'undefined' && $.fn.owlCarousel) {
-        $(storiesCarousel).owlCarousel({
-            loop: true,
-            margin: 30,
-            nav: true,
-            dots: true,
-            autoplay: true,
-            autoplayTimeout: 5000,
-            autoplayHoverPause: true,
-            smartSpeed: 800,
-            responsive: {
-                0: {
-                    items: 1,
-                    nav: false
-                },
-                576: {
-                    items: 1,
-                    nav: false
-                },
-                768: {
-                    items: 2,
-                    nav: true
-                },
-                992: {
-                    items: 2,
-                    nav: true
-                },
-                1200: {
-                    items: 3,
-                    nav: true
-                }
-            },
-            navText: [
-                '<i class="fas fa-chevron-left"></i>',
-                '<i class="fas fa-chevron-right"></i>'
-            ]
-        });
-    } else {
-        setTimeout(initializeStoriesCarousel, 500);
-    }
-}
-
-// Load jQuery and Owl Carousel if not already loaded
-function loadCarouselDependencies() {
-    if (typeof $ === 'undefined') {
-        const script = document.createElement('script');
-        script.src = 'https://code.jquery.com/jquery-3.6.0.min.js';
-        script.integrity = 'sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=';
-        script.crossOrigin = 'anonymous';
-        script.onload = function() {
-            // Load Owl Carousel after jQuery is loaded
-            const owlScript = document.createElement('script');
-            owlScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js';
-            owlScript.onload = function() {
-                initializeHeroCarousel();
-                initializeSDGCarousel();
-            };
-            document.head.appendChild(owlScript);
-        };
-        document.head.appendChild(script);
-    } else if (typeof $.fn.owlCarousel === 'undefined') {
-        // Load only Owl Carousel if jQuery is already loaded
-        const owlScript = document.createElement('script');
-        owlScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js';
-        owlScript.onload = function() {
-            initializeHeroCarousel();
-            initializeSDGCarousel();
-        };
-        document.head.appendChild(owlScript);
-    } else {
-        // Both are already loaded
-        initializeHeroCarousel();
-        initializeSDGCarousel();
-    }
-}
-
-
-
-// Initialize Awards Carousel
-function initializeAwardsCarousel() {
-    const awardsCarousel = document.querySelector('.awards-carousel');
-    if (!awardsCarousel) return;
-    
-    if (typeof $ !== 'undefined' && $.fn.owlCarousel) {
-        $(awardsCarousel).owlCarousel({
-            loop: true,
-            items: 1,
-            nav: true,
-            dots: true,
-            autoplay: true,
-            autoplayTimeout: 6000,
-            autoplayHoverPause: true,
-            smartSpeed: 800,
-            navText: [
-                '<i class="fas fa-chevron-left"></i>',
-                '<i class="fas fa-chevron-right"></i>'
-            ],
-            responsive: {
-                0: {
-                    nav: true
-                },
-                768: {
-                    nav: true
-                }
-            }
-        });
-    }
-}
-
-// Initialize Empanelment Carousel
-function initializeEmpanelmentCarousel() {
-    const empanelmentCarousel = document.querySelector('.empanelment-carousel');
-    if (!empanelmentCarousel) return;
-    
-    if (typeof $ !== 'undefined' && $.fn.owlCarousel) {
-        $(empanelmentCarousel).owlCarousel({
-            loop: true,
-            items: 3,
-            margin: 30,
-            nav: true,
-            dots: true,
-            autoplay: true,
-            autoplayTimeout: 5000,
-            autoplayHoverPause: true,
-            smartSpeed: 800,
-            navText: [
-                '<i class="fas fa-chevron-left"></i>',
-                '<i class="fas fa-chevron-right"></i>'
-            ],
-            responsive: {
-                0: {
-                    items: 1,
-                    nav: true
-                },
-                576: {
-                    items: 2,
-                    nav: true
-                },
-                992: {
-                    items: 3,
-                    nav: true
-                }
-            }
-        });
-    }
-}
-
-// Initialize everything when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
-    // Initialize navigation and mobile menu
-    initializeNavigation();
-    initializeMobileMenu();
-    
-    // Initialize carousels after dependencies are loaded
-    const carouselDependencies = [
-        'https://code.jquery.com/jquery-3.6.0.min.js',
-        'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'
-    ];
-    
-    // Check if jQuery is already loaded
-    if (typeof jQuery == 'undefined') {
-        loadScript(carouselDependencies[0], function() {
-            // After jQuery is loaded, load Owl Carousel
-            loadScript(carouselDependencies[1], function() {
-                initializeAwardsCarousel();
-                initializeEmpanelmentCarousel();
-            });
-        });
-    } else {
-        // If jQuery is already loaded, just load Owl Carousel
-        if (typeof $.fn.owlCarousel === 'undefined') {
-            loadScript(carouselDependencies[1], function() {
-                initializeAwardsCarousel();
-                initializeEmpanelmentCarousel();
-            });
-        } else {
-            // If both are already loaded, just initialize the carousels
-            initializeAwardsCarousel();
-            initializeEmpanelmentCarousel();
-        }
-    }
-    
-    // Initialize mobile menu
-    initializeMobileMenu();
-    
-    // Close mobile menu when clicking on a nav link
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            if (window.innerWidth <= 992) {
-                const mainNav = document.querySelector('.main-nav');
-                const overlay = document.querySelector('.overlay');
-                const menuToggle = document.querySelector('.menu-toggle i');
-                
-                if (mainNav) mainNav.classList.remove('active');
-                if (overlay) overlay.classList.remove('active');
-                if (menuToggle) {
-                    menuToggle.classList.remove('fa-times');
-                    menuToggle.classList.add('fa-bars');
-                }
-                document.body.classList.remove('menu-open');
-            }
-        });
-    });
-    
-    // Toggle dropdown on mobile
+ 
     const dropdownToggles = document.querySelectorAll('.dropdown > a');
     dropdownToggles.forEach(toggle => {
         toggle.addEventListener('click', function(e) {
@@ -440,83 +38,300 @@ document.addEventListener('DOMContentLoaded', function() {
                 const dropdown = this.nextElementSibling;
                 
                 if (parent && dropdown && dropdown.classList.contains('dropdown-content')) {
-                    // Close other dropdowns
-                    document.querySelectorAll('.dropdown').forEach(item => {
-                        if (item !== parent) {
-                            item.classList.remove('active');
-                            const otherDropdown = item.querySelector('.dropdown-content');
-                            if (otherDropdown) otherDropdown.style.display = 'none';
-                        }
-                    });
-                    
-                    // Toggle current dropdown
+              
                     parent.classList.toggle('active');
                     dropdown.style.display = parent.classList.contains('active') ? 'block' : 'none';
                 }
             }
         });
     });
+}
+
+
+function initializeMobileMenu() {
+    const menuToggle = document.getElementById('mobileMenuToggle');
+    const closeButton = document.querySelector('.close-mobile-menu');
+    const mobileMenu = document.querySelector('.mobile-menu-overlay');
+    const body = document.body;
     
-    // Initialize carousels
-    initializeHeroCarousel();
-    initializeSDGCarousel();
-    initializeStoriesCarousel();
+    if (!menuToggle || !mobileMenu) return;
     
-    // Load carousel dependencies
-    loadCarouselDependencies();
     
-    // Initialize impact numbers animation
-    animateNumbers();
+    function toggleMenu(e) {
+        if (e) e.stopPropagation();
+        mobileMenu.classList.toggle('active');
+        body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+    }
     
-    // Run on scroll with debounce for better performance
-    let isScrolling = false;
-    window.addEventListener('scroll', () => {
-        if (!isScrolling) {
-            window.requestAnimationFrame(() => {
-                animateNumbers();
-                isScrolling = false;
-            });
-            isScrolling = true;
+
+    menuToggle.addEventListener('click', toggleMenu);
+    if (closeButton) closeButton.addEventListener('click', toggleMenu);
+    
+    
+    document.querySelectorAll('.mobile-nav-list a').forEach(link => {
+        link.addEventListener('click', toggleMenu);
+    });
+    
+
+    document.addEventListener('click', function(e) {
+        if (mobileMenu.classList.contains('active') && 
+            !mobileMenu.contains(e.target) && 
+            e.target !== menuToggle) {
+            toggleMenu(e);
         }
     });
-});
+    
 
-// Handle window resize events
-let resizeTimer;
-window.addEventListener('resize', function() {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(function() {
-        // Close mobile menu when resizing to desktop
-        if (window.innerWidth > 992) {
-            const mainNav = document.querySelector('.main-nav');
-            const overlay = document.querySelector('.overlay');
-            const menuToggle = document.querySelector('.menu-toggle i');
-            
-            if (mainNav) mainNav.classList.remove('active');
-            if (overlay) overlay.classList.remove('active');
-            if (menuToggle) {
-                menuToggle.classList.remove('fa-times');
-                menuToggle.classList.add('fa-bars');
-            }
-            document.body.classList.remove('menu-open');
-            
-            // Reset dropdowns
-            document.querySelectorAll('.dropdown-content').forEach(dropdown => {
-                dropdown.style.display = 'none';
-            });
-            
-            document.querySelectorAll('.dropdown').forEach(item => {
-                item.classList.remove('active');
-            });
+    mobileMenu.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+    
+   
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 991) {
+            mobileMenu.classList.remove('active');
+            body.style.overflow = '';
         }
-    }, 250);
-});
+    });
+}
 
-$(document).ready(function() {
-  $('.menu-toggle').on('click', function() {
-    $('.mobile-nav-overlay').addClass('active');
-  });
-  $('.close-mobile-nav, .mobile-nav-list a').on('click', function() {
-    $('.mobile-nav-overlay').removeClass('active');
-  });
-});
+
+function initializeCarousels() {
+    
+    if (typeof jQuery === 'undefined') {
+        loadScript('https://code.jquery.com/jquery-3.6.0.min.js', function() {
+            loadOwlCarousel();
+        });
+    } else if (typeof $.fn.owlCarousel === 'undefined') {
+        loadOwlCarousel();
+    } else {
+        setupCarousels();
+    }
+}
+
+
+function loadOwlCarousel() {
+    loadScript('https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js', function() {
+        setupCarousels();
+    });
+}
+
+
+function setupCarousels() {
+  
+    const heroCarousel = document.querySelector('.hero-carousel');
+    if (heroCarousel && $.fn.owlCarousel) {
+        $(heroCarousel).owlCarousel({
+            loop: true,
+            items: 1,
+            nav: true,
+            dots: true,
+            autoplay: true,
+            autoplayTimeout: 6000,
+            navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
+            responsive: {
+                0: { nav: false },
+                768: { nav: true }
+            }
+        });
+    }
+    
+    
+    const sdgCarousel = document.querySelector('.sdg-carousel');
+    if (sdgCarousel && $.fn.owlCarousel) {
+        $(sdgCarousel).owlCarousel({
+            loop: true,
+            margin: 30,
+            nav: true,
+            dots: true,
+            autoplay: true,
+            responsive: {
+                0: { items: 1, nav: false },
+                768: { items: 2, nav: true },
+                992: { items: 3, nav: true },
+                1200: { items: 4, nav: true }
+            }
+        });
+    }
+    
+
+    const storiesCarousel = document.querySelector('.stories-carousel');
+    if (storiesCarousel && $.fn.owlCarousel) {
+        $(storiesCarousel).owlCarousel({
+            loop: true,
+            margin: 30,
+            nav: true,
+            dots: true,
+            autoplay: true,
+            responsive: {
+                0: { items: 1, nav: false },
+                768: { items: 2, nav: true },
+                1200: { items: 3, nav: true }
+            }
+        });
+    }
+}
+
+
+function loadScript(src, callback) {
+    const script = document.createElement('script');
+    script.src = src;
+    script.onload = callback;
+    document.head.appendChild(script);
+}
+
+
+function setupCounters() {
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounters();
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+    
+
+    const statsSection = document.querySelector('.impact-stats');
+    if (statsSection) {
+        observer.observe(statsSection);
+    }
+    
+   
+    if (!window.IntersectionObserver) {
+        setTimeout(animateCounters, 1000);
+    }
+}
+
+function animateCounters() {
+    const counters = document.querySelectorAll('.counter');
+    counters.forEach(counter => {
+        const targetValue = parseInt(counter.getAttribute('data-target'));
+        const increment = targetValue > 100 ? Math.ceil(targetValue / 200) : 1;
+        
+        function updateCount() {
+            const currentValue = parseInt(counter.innerText || '0');
+            if (currentValue < targetValue) {
+                counter.innerText = Math.min(currentValue + increment, targetValue);
+                setTimeout(updateCount, 30);
+            }
+        }
+        
+        updateCount();
+    });
+}
+
+
+
+    
+function setupAccreditationViews() {
+        const awardsView = document.querySelector('.accreditations-grid');
+        const certificatesView = document.querySelector('.certificate-accreditations');
+        
+        
+        const viewToggleContainer = document.createElement('div');
+        viewToggleContainer.className = 'view-toggle-container';
+        viewToggleContainer.innerHTML = `
+            <button class="view-toggle active" data-view="awards">Award Photos</button>
+            <button class="view-toggle" data-view="certificates">Certificates</button>
+        `;
+        
+      
+        const sectionTitle = document.querySelector('.accreditations-section .section-title');
+        sectionTitle.insertAdjacentElement('afterend', viewToggleContainer);
+        
+      
+        const toggleButtons = document.querySelectorAll('.view-toggle');
+        toggleButtons.forEach(button => {
+            button.addEventListener('click', function() {
+               
+                toggleButtons.forEach(btn => btn.classList.remove('active'));
+              
+                this.classList.add('active');
+                
+               
+                if (this.getAttribute('data-view') === 'awards') {
+                    awardsView.style.display = 'grid';
+                    certificatesView.style.display = 'none';
+                } else {
+                    awardsView.style.display = 'none';
+                    certificatesView.style.display = 'grid';
+                }
+            });
+        });
+    }
+    
+    
+    function setupScrollAnimations() {
+        const accreditationItems = document.querySelectorAll('.accreditation-item, .cert-item');
+        
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                    observer.unobserve(entry.target); 
+                }
+            });
+        }, {
+            threshold: 0.2 
+        });
+        
+      
+        accreditationItems.forEach(item => {
+            observer.observe(item);
+        });
+    }
+    
+   
+   
+    
+    
+    const style = document.createElement('style');
+    style.textContent = `
+        /* Toggle Buttons Styles */
+        .view-toggle-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            gap: 15px;
+        }
+        
+        .view-toggle {
+            padding: 8px 16px;
+            border: 1px solid #ccc;
+            background: #f5f5f5;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .view-toggle.active {
+            background: #333;
+            color: white;
+            border-color: #333;
+        }
+        
+        /* Animation Styles */
+        .accreditation-item, .cert-item {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .accreditation-item.animated, .cert-item.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Staggered animation delay */
+        .accreditation-item:nth-child(2), .cert-item:nth-child(2) {
+            transition-delay: 0.2s;
+        }
+        
+        .accreditation-item:nth-child(3), .cert-item:nth-child(3) {
+            transition-delay: 0.4s;
+        }
+    `;
+    document.head.appendChild(style);

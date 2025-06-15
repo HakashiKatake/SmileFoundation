@@ -7,7 +7,7 @@
 .disaster-hero {
     position: relative;
     height: 100vh;
-    background-image: url('../images/disaster-hero.png'); /* Placeholder hero image */
+    background-image: url('../images/disaster-hero.png'); 
     background-size: cover;
     background-position: center;
     display: flex;
@@ -21,7 +21,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3); /* Dark overlay */
+    background-color: rgba(0, 0, 0, 0.3); 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,13 +35,13 @@
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
 }
 
-/* --- Text Content Sections --- */
+
 .disaster-text-section {
     padding: 5rem 0;
 }
 
 .disaster-text-section .section-container {
-    max-width: 960px; /* Constrain text width for readability */
+    max-width: 960px; 
 }
 
 .disaster-text-section .section-title {
@@ -59,14 +59,14 @@
 }
 
 .why-disaster-section {
-    background-color: #f4c369; /* Mustard yellow */
+    background-color: #f4c369; 
 }
 
 .what-we-do-disaster-section {
-    background-color: #f7f7f7; /* Light grey */
+    background-color: #f7f7f7; 
 }
 
-/* --- Projects Section --- */
+
 .projects-section {
     padding: 5rem 0;
     background-color: #fff;
@@ -100,7 +100,7 @@
     width: 100%;
     height: 220px;
     object-fit: cover;
-    background-color: #e0e0e0; /* BG for broken images */
+    background-color: #e0e0e0; 
 }
 
 .project-card-content {
@@ -142,7 +142,7 @@
     right: -20px;
 }
 
-/* --- Inspire Video Section --- */
+
 .inspire-video-section {
     padding: 5rem 0;
     background-color: #fff;
@@ -157,11 +157,11 @@
     max-width: 960px;
     margin: 0 auto;
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    /* This creates the 16:9 aspect ratio box */
-    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16) */
+    
+    padding-top: 56.25%; 
     height: 0;
     overflow: hidden;
-    border-radius: 8px; /* Optional: rounds the corners of the iframe */
+    border-radius: 8px; 
 }
 
 .inspire-video-wrapper iframe {
@@ -175,7 +175,7 @@
 
 
 
-/* --- Responsive Design --- */
+
 @media (max-width: 992px) {
     .projects-grid {
         grid-template-columns: 1fr 1fr;
@@ -198,7 +198,7 @@
         grid-template-columns: 1fr;
     }
     .slider-arrow {
-        display: none; /* Hide arrows on mobile */
+        display: none; 
     }
     .video-text-overlay h3 {
         font-size: 1.5rem;

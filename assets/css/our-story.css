@@ -5,7 +5,7 @@ body {
   line-height: 1.6;
 }
 
-/* Hero Banner Section */
+
 .hero-banner {
   position: relative;
   width: 100%;
@@ -44,7 +44,7 @@ body {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-/* Menu Tabs Section */
+
 .menu-tabs {
   display: flex;
   width: 100%;
@@ -56,7 +56,7 @@ body {
   align-items: center;
   justify-content: center;
   flex: 1;
-  background-color: #fff04d; /* Yellow color */
+  background-color: #fff04d; 
   color: #333;
   font-weight: 600;
   text-align: center;
@@ -65,10 +65,10 @@ body {
 }
 
 .tab.active {
-  background-color: #8bc34a; /* Green color */
+  background-color: #8bc34a; 
 }
 
-/* Content Section */
+
 
 .story-section-wrapper {
   max-width: 1280px;
@@ -90,7 +90,7 @@ body {
   font-weight: 500;
   text-transform: uppercase;
   color: #333333;
-  background-color: #faff00; /* Yellow */
+  background-color: #faff00; 
   cursor: pointer;
   border-right: 1px solid #EAEAEA;
   display: flex;
@@ -104,19 +104,19 @@ body {
 }
 
 .tab-item.active {
-  background-color: #8cc63f; /* Green */
+  background-color: #8cc63f; 
   color: #ffffff;
 }
 
-/* =================================== */
-/*      CONTENT AREA & TYPOGRAPHY      */
-/* =================================== */
+
+
+
 
 .content-area {
   padding: 60px 40px;
 }
 
-/* For Our Story, Philosophy, Why Trust Us */
+
 .centered-text-block {
   text-align: center;
   max-width: 950px;
@@ -140,9 +140,9 @@ body {
   cursor: pointer;
 }
 
-/* =================================== */
-/* CORRECTED VISION & MISSION STYLES   */
-/* =================================== */
+
+
+
 
 .list-item-layout {
   display: flex;
@@ -164,7 +164,7 @@ body {
 
 .list-item-layout p {
   margin: 0;
-  padding-top: 5px; /* Align text better with the icon */
+  padding-top: 5px; 
   font-size: 16px;
   line-height: 1.5;
   font-weight: 700;
@@ -173,9 +173,9 @@ body {
 }
 
 
-/* =================================== */
-/* LIFECYCLE APPROACH SECTION STYLES   */
-/* =================================== */
+
+
+
 
 .lifecycle-items-container {
   display: flex;
@@ -252,9 +252,9 @@ body {
   z-index: 1;
 }
 
-/* =================================== */
-/*      HOW WE WORK SECTION STYLES     */
-/* =================================== */
+
+
+
 
 .two-column-layout {
   display: flex;
@@ -313,7 +313,7 @@ body {
 .feature-block h3 {
   margin: 0 0 10px 0;
   font-size: 20px;
-  color: #8cc63f; /* Green Title */
+  color: #8cc63f; 
   text-transform: uppercase;
 }
 
@@ -324,9 +324,9 @@ body {
   color: #3f3f3f;
 }
 
-/* =================================== */
-/*      RESPONSIVE MEDIA QUERIES       */
-/* =================================== */
+
+
+
 
 @media (max-width: 992px) {
   .two-column-layout {
@@ -357,7 +357,7 @@ body {
 }
   
  
-/* Responsive Styles */
+
 @media (max-width: 992px) {
   .hero-title {
       font-size: 3.5rem;
@@ -413,7 +413,7 @@ body {
 
 
 
-/* Common styles */
+
 body {
   margin: 0;
   padding: 0;
@@ -438,7 +438,7 @@ body {
   text-transform: uppercase;
 }
 
-/* Supporters Section */
+
 .supporters-section {
   padding: 70px 0;
   background-color: #f5f5f5;
@@ -467,10 +467,10 @@ body {
   height: 100%;
 }
 
-/* Awards Section */
+
 .awards-section {
   padding: 70px 0;
-  background-color: #d4c7db; /* Light purple background */
+  background-color: #d4c7db; 
 }
 
 .awards-grid {
@@ -500,7 +500,7 @@ body {
 }
 
 .laurel-right img {
-  transform: scaleX(-1); /* Flip the right laurel horizontally */
+  transform: scaleX(-1); 
 }
 
 .award-content {
@@ -516,7 +516,7 @@ body {
   color: #333;
 }
 
-/* Responsive Styles */
+
 @media (max-width: 992px) {
   .awards-grid {
       gap: 40px 30px;
@@ -607,7 +607,7 @@ body {
   }
 }
 
-/* Responsive styling */
+
 @media (max-width: 992px) {
   .hero-title {
       font-size: 3.5rem;

@@ -55,10 +55,10 @@ body {
 }
 
 .soc-nav a.active {
-    color: #f7df4c; /* Yellow color for EDUCATION */
+    color: #f7df4c; 
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 900px) {
     .soc-nav ul {
         flex-wrap: wrap;

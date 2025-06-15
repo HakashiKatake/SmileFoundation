@@ -105,11 +105,7 @@ b.prototype.keys=b.prototype.values;b.prototype[Symbol.iterator]=b.prototype.val
 return b});
 r("Array.prototype.find",function(a){return a?a:function(b,c){a:{var d=this;d instanceof String&&(d=String(d));for(var f=d.length,e=0;e<f;e++){var h=d[e];if(b.call(c,h,e,d)){b=h;break a}}b=void 0}return b}});
 r("Array.from",function(a){return a?a:function(b,c,d){c=c!=null?c:function(g){return g};
-var f=[],e=typeof Symbol!="undefined"&&Symbol.iterator&&b[Symbol.iterator];if(typeof e=="function"){b=e.call(b);for(var h=0;!(e=b.next()).done;)f.push(c.call(d,e.value,h++))}else for(e=b.length,h=0;h<e;h++)f.push(c.call(d,b[h],h));return f}});/*
-
- Copyright The Closure Library Authors.
- SPDX-License-Identifier: Apache-2.0
-*/
+var f=[],e=typeof Symbol!="undefined"&&Symbol.iterator&&b[Symbol.iterator];if(typeof e=="function"){b=e.call(b);for(var h=0;!(e=b.next()).done;)f.push(c.call(d,e.value,h++))}else for(e=b.length,h=0;h<e;h++)f.push(c.call(d,b[h],h));return f}});
 var G=this||self;function H(a){var b=typeof a;return b=="object"&&a!=null||b=="function"}
 function qa(a){return Object.prototype.hasOwnProperty.call(a,ra)&&a[ra]||(a[ra]=++sa)}
 var ra="closure_uid_"+(Math.random()*1E9>>>0),sa=0;function I(a,b){a=a.split(".");for(var c=G,d;a.length&&(d=a.shift());)a.length||b===void 0?c[d]&&c[d]!==Object.prototype[d]?c=c[d]:c=c[d]={}:c[d]=b}
@@ -136,11 +132,7 @@ J.prototype.i=!1;J.prototype.dispose=function(){this.i||(this.i=!0,this.B())};
 J.prototype[Symbol.dispose]=function(){this.dispose()};
 J.prototype.addOnDisposeCallback=function(a,b){this.i?b!==void 0?a.call(b):a():(this.j||(this.j=[]),b&&(a=a.bind(b)),this.j.push(a))};
 J.prototype.B=function(){if(this.j)for(;this.j.length;)this.j.shift()()};function Ka(a){var b={},c;for(c in a)b[c]=a[c];return b}
-;var La=/&/g,Ma=/</g,Na=/>/g,Oa=/"/g,Pa=/'/g,Qa=/\x00/g,Ra=/[\x00&<>"']/;/*
-
- Copyright Google LLC
- SPDX-License-Identifier: Apache-2.0
-*/
+;var La=/&/g,Ma=/</g,Na=/>/g,Oa=/"/g,Pa=/'/g,Qa=/\x00/g,Ra=/[\x00&<>"']/;
 function K(a){this.g=a}
 K.prototype.toString=function(){return this.g};
 var Sa=new K("about:invalid#zClosurez");function Ta(a){this.P=a}
@@ -162,11 +154,11 @@ n.C=function(a){var b=this.g[a];if(b){var c=this.h[b];this.m!=0?(this.l.push(a),
 n.F=function(a,b){var c=this.h[a];if(c){var d=Array(arguments.length-1),f=arguments.length,e;for(e=1;e<f;e++)d[e-1]=arguments[e];if(this.v)for(e=0;e<c.length;e++)f=c[e],jb(this.g[f+1],this.g[f+2],d);else{this.m++;try{for(e=0,f=c.length;e<f&&!this.i;e++){var h=c[e];this.g[h+1].apply(this.g[h+2],d)}}finally{if(this.m--,this.l.length>0&&this.m==0)for(;c=this.l.pop();)this.C(c)}}return e!=0}return!1};
 function jb(a,b,c){Ha(function(){a.apply(b,c)})}
 n.clear=function(a){if(a){var b=this.h[a];b&&(b.forEach(this.C,this),delete this.h[a])}else this.g.length=0,this.h={}};
-n.B=function(){T.G.B.call(this);this.clear();this.l.length=0};var kb=RegExp("^(?:([^:/?#.]+):)?(?://(?:([^\\\\/?#]*)@)?([^\\\\/?#]*?)(?::([0-9]+))?(?=[\\\\/?#]|$))?([^?#]+)?(?:\\?([^#]*))?(?:#([\\s\\S]*))?$");function lb(a){var b=a.match(kb);a=b[1];var c=b[2],d=b[3];b=b[4];var f="";a&&(f+=a+":");d&&(f+="//",c&&(f+=c+"@"),f+=d,b&&(f+=":"+b));return f}
+n.B=function(){T.G.B.call(this);this.clear();this.l.length=0};var kb=RegExp("^(?:([^:/?#.]+):)?(?:
 function mb(a,b,c){if(Array.isArray(b))for(var d=0;d<b.length;d++)mb(a,String(b[d]),c);else b!=null&&c.push(a+(b===""?"":"="+encodeURIComponent(String(b))))}
-var nb=/#|$/;var ob=["https://www.google.com"];function pb(){var a=this;this.g=[];this.h=function(){Promise.all(a.g.map(function(b){document.requestStorageAccessFor(b)})).then(function(){window.removeEventListener("click",a.h)})}}
+var nb=/#|$/;var ob=["https:
 function qb(){return oa(function(a){var b=a.return;var c=gb()>=119;return b.call(a,c&&!!navigator.permissions&&!!navigator.permissions.query&&"requestStorageAccessFor"in document)})}
-function rb(){var a=new pb,b=["https://www.youtube.com"];b=b===void 0?ob:b;oa(function(c){switch(c.g){case 1:return C(c,qb(),2);case 2:if(!c.m){c.g=3;break}return C(c,Promise.all(b.map(function(d){var f;return oa(function(e){if(e.g==1)return e.l=2,C(e,navigator.permissions.query({name:"top-level-storage-access",requestedOrigin:d}),4);e.g!=2?(f=e.m,f.state==="prompt"&&a.g.push(d),e.g=0,e.l=0):(e.l=0,e.i=null,e.g=0)})})),4);
+function rb(){var a=new pb,b=["https:
 case 4:a.g.length>0&&window.addEventListener("click",a.h);case 3:return c.return()}})}
 ;var V={},sb=[],U=new T,tb={};function ub(){for(var a=x(sb),b=a.next();!b.done;b=a.next())b=b.value,b()}
 function vb(a,b){return a.tagName.toLowerCase().substring(0,3)==="yt:"?a.getAttribute(b):a.dataset?a.dataset[b]:a.getAttribute("data-"+b)}
@@ -174,8 +166,8 @@ function wb(a){U.F.apply(U,arguments)}
 ;function xb(a){return(a.search("cue")===0||a.search("load")===0)&&a!=="loadModule"}
 function yb(a){return a.search("get")===0||a.search("is")===0}
 ;var W=window;
-function X(a,b){this.u={};this.playerInfo={};this.videoTitle="";this.i=this.g=null;this.h=0;this.m=!1;this.l=[];this.j=null;this.v={};this.options=null;if(!a)throw Error("YouTube player element ID required.");this.id=qa(this);b=Object.assign({title:"video player",videoId:"",width:640,height:360},b||{});var c=document;if(a=typeof a==="string"?c.getElementById(a):a){W.yt_embedsEnableRsaforFromIframeApi&&rb();c=a.tagName.toLowerCase()==="iframe";b.host||(b.host=c?lb(a.src):"https://www.youtube.com");this.options=
-b||{};b=[this.options,window.YTConfig||{}];for(var d=0;d<b.length;d++)b[d].host&&(b[d].host=b[d].host.toString().replace("http://","https://"));c||(W.yt_embedsEnableAutoplayAndVisibilitySignals?(b=document.createElement("iframe"),zb(this,b,a),this.i=a,hb(b,a),Ab(this,b,Bb(this,b)),a=b):(b=document.createElement("iframe"),zb(this,b,a),Ab(this,b,Bb(this)),this.i=a,hb(b,a),a=b));this.g=a;this.g.id||(this.g.id="widget"+qa(this.g));V[this.g.id]=this;if(window.postMessage){this.j=new T;Cb(this);a=Y(this,
+function X(a,b){this.u={};this.playerInfo={};this.videoTitle="";this.i=this.g=null;this.h=0;this.m=!1;this.l=[];this.j=null;this.v={};this.options=null;if(!a)throw Error("YouTube player element ID required.");this.id=qa(this);b=Object.assign({title:"video player",videoId:"",width:640,height:360},b||{});var c=document;if(a=typeof a==="string"?c.getElementById(a):a){W.yt_embedsEnableRsaforFromIframeApi&&rb();c=a.tagName.toLowerCase()==="iframe";b.host||(b.host=c?lb(a.src):"https:
+b||{};b=[this.options,window.YTConfig||{}];for(var d=0;d<b.length;d++)b[d].host&&(b[d].host=b[d].host.toString().replace("http:
 "events");for(var f in a)a.hasOwnProperty(f)&&this.addEventListener(f,a[f]);for(var e in tb)tb.hasOwnProperty(e)&&Db(this,e)}}}
 n=X.prototype;n.setSize=function(a,b){this.g.width=a.toString();this.g.height=b.toString();return this};
 n.getIframe=function(){return this.g};
@@ -192,9 +184,9 @@ n.D=function(){this.g&&this.g.contentWindow?this.sendMessage({event:"listening"}
 function Cb(a){Hb(a,a.id,String(Y(a,"host")));a.h=setInterval(a.D.bind(a),250);a.g&&(a.o=function(){clearInterval(a.h);a.h=setInterval(a.D.bind(a),250)},a.g.addEventListener("load",a.o))}
 function Ib(a){var b=a.getBoundingClientRect();a=Math.max(0,Math.min(b.bottom,window.innerHeight||document.documentElement.clientHeight)-Math.max(b.top,0))*Math.max(0,Math.min(b.right,window.innerWidth||document.documentElement.clientWidth)-Math.max(b.left,0));a=(b=b.height*b.width)?a/b:0;return document.visibilityState==="hidden"||a<.5?1:a<.75?2:a<.85?3:a<.95?4:a<1?5:6}
 function Eb(a,b){a.v[b]||(a.v[b]=!0,Fb(a,"addEventListener",[b]))}
-n.sendMessage=function(a){a.id=this.id;a.channel="widget";a=JSON.stringify(a);var b=lb(this.g.src||"").replace("http:","https:");if(this.g.contentWindow)try{this.g.contentWindow.postMessage(a,b)}catch(c){if(c.name&&c.name==="SyntaxError")c.message&&c.message.indexOf("target origin ''")>0||console&&console.warn&&console.warn(c);else throw c;}else console&&console.warn&&console.warn("The YouTube player is not attached to the DOM. API calls should be made after the onReady event. See more: https://developers.google.com/youtube/iframe_api_reference#Events")};
+n.sendMessage=function(a){a.id=this.id;a.channel="widget";a=JSON.stringify(a);var b=lb(this.g.src||"").replace("http:","https:");if(this.g.contentWindow)try{this.g.contentWindow.postMessage(a,b)}catch(c){if(c.name&&c.name==="SyntaxError")c.message&&c.message.indexOf("target origin ''")>0||console&&console.warn&&console.warn(c);else throw c;}else console&&console.warn&&console.warn("The YouTube player is not attached to the DOM. API calls should be made after the onReady event. See more: https:
 function Gb(a){if(W.yt_embedsEnableIframeApiVideoIdValidation){if((a=String(Y(a,"videoId")))&&(a.length!==11||!a.match(/^[a-zA-Z0-9\-_]+$/)))throw Error("Invalid video id");return"/embed/"+a}return"/embed/"+String(Y(a,"videoId"))}
-function Bb(a,b){var c=Y(a,"playerVars");c?c=Ka(c):c={};window!==window.top&&document.referrer&&(c.widget_referrer=document.referrer.substring(0,256));var d=Y(a,"embedConfig");if(d){if(H(d))try{d=JSON.stringify(d)}catch(f){console.error("Invalid embed config JSON",f)}c.embed_config=d}c.enablejsapi=window.postMessage?1:0;window.location.host&&(c.origin=window.location.protocol+"//"+window.location.host);c.widgetid=a.id;window.location.href&&va(["debugjs","debugcss"],function(f){var e=window.location.href;
+function Bb(a,b){var c=Y(a,"playerVars");c?c=Ka(c):c={};window!==window.top&&document.referrer&&(c.widget_referrer=document.referrer.substring(0,256));var d=Y(a,"embedConfig");if(d){if(H(d))try{d=JSON.stringify(d)}catch(f){console.error("Invalid embed config JSON",f)}c.embed_config=d}c.enablejsapi=window.postMessage?1:0;window.location.host&&(c.origin=window.location.protocol+"
 var h=e.search(nb);b:{var g=0;for(var k=f.length;(g=e.indexOf(f,g))>=0&&g<h;){var l=e.charCodeAt(g-1);if(l==38||l==63)if(l=e.charCodeAt(g+k),!l||l==61||l==38||l==35)break b;g+=k+1}g=-1}if(g<0)e=null;else{k=e.indexOf("&",g);if(k<0||k>h)k=h;g+=f.length+1;e=decodeURIComponent(e.slice(g,k!==-1?k:0).replace(/\+/g," "))}e!==null&&(c[f]=e)});
 W.yt_embedsEnableIframeApiSendFullEmbedUrl&&(window.location.href&&(c.forigin=window.location.href),a=window.location.ancestorOrigins,c.aoriginsup=a===void 0?0:1,a&&a.length>0&&(c.aorigins=Array.from(a).join(",")),window.document.referrer&&(c.gporigin=window.document.referrer));W.yt_embedsEnableAutoplayAndVisibilitySignals&&b&&(c.vf=Ib(b));return c}
 function Jb(a,b){if(H(b)){for(var c in b)b.hasOwnProperty(c)&&(a.playerInfo[c]=b[c]);a.playerInfo.hasOwnProperty("videoData")&&(b=a.playerInfo.videoData,b.hasOwnProperty("title")&&b.title?(b=b.title,b!==a.videoTitle&&(a.videoTitle=b,a.g.setAttribute("title",b))):(a.videoTitle="",a.g.setAttribute("title","YouTube "+Y(a,"title"))))}}

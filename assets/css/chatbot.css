@@ -1,6 +1,6 @@
-/* Smile Foundation Chatbot Styles */
 
-/* Chatbot Container */
+
+
 .chatbot-container {
     position: fixed;
     bottom: 20px;
@@ -9,7 +9,7 @@
     font-family: 'Railway', sans-serif;
 }
 
-/* Toggle Button */
+
 .chatbot-toggle {
     width: 60px;
     height: 60px;
@@ -68,7 +68,7 @@
     border-top: 5px solid white;
 }
 
-/* Chatbot Window */
+
 .chatbot-window {
     width: 380px;
     height: 600px;
@@ -91,7 +91,7 @@
     opacity: 1;
 }
 
-/* Header */
+
 .chatbot-header {
     background: linear-gradient(135deg, var(--primary-color), #7ab52e);
     color: white;
@@ -173,7 +173,7 @@
     animation: pulse 1s infinite;
 }
 
-/* Messages Area */
+
 .chatbot-messages {
     flex: 1;
     padding: 20px;
@@ -197,7 +197,7 @@
     border-radius: 2px;
 }
 
-/* Message Styles */
+
 .message {
     display: flex;
     gap: 10px;
@@ -266,7 +266,7 @@
     margin-top: 4px;
 }
 
-/* Quick Actions */
+
 .chatbot-quick-actions {
     padding: 16px 20px;
     background: white;
@@ -297,7 +297,7 @@
     transform: translateY(-1px);
 }
 
-/* Input Area */
+
 .chatbot-input-area {
     padding: 20px;
     background: white;
@@ -343,7 +343,7 @@
     transform: scale(1.1);
 }
 
-/* Voice Indicator */
+
 .voice-indicator {
     display: none;
     align-items: center;
@@ -382,7 +382,7 @@
     font-weight: 600;
 }
 
-/* Typing Indicator */
+
 .typing-indicator {
     display: none;
     padding: 0 20px;
@@ -411,7 +411,7 @@
     animation-delay: 0.4s;
 }
 
-/* Animations */
+
 @keyframes pulse {
     0% {
         box-shadow: 0 4px 20px rgba(140, 198, 63, 0.4);
@@ -466,7 +466,7 @@
     }
 }
 
-/* Mobile Responsive */
+
 @media (max-width: 768px) {
     .chatbot-container {
         bottom: 15px;
@@ -545,7 +545,7 @@
     }
 }
 
-/* Dark mode support */
+
 @media (prefers-color-scheme: dark) {
     .chatbot-window {
         background: #2d3748;
@@ -587,7 +587,7 @@
     }
 }
 
-/* Accessibility */
+
 .chatbot-toggle:focus,
 .send-btn:focus,
 .quick-action-btn:focus,
@@ -596,7 +596,7 @@
     outline-offset: 2px;
 }
 
-/* High contrast mode */
+
 @media (prefers-contrast: high) {
     .chatbot-toggle {
         border: 2px solid white;

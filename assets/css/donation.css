@@ -27,14 +27,14 @@ body {
     box-sizing: border-box;
 }
 
-/* --- HERO SECTION --- */
+
 .hero-banner img {
     width: 100%;
     height: auto;
     display: block;
 }
 
-/* --- DONATION & SUPPORT SECTION --- */
+
 .donation-section-wrapper {
     background-color: #f9f9f9;
 }
@@ -164,7 +164,7 @@ body {
     background-color: #7ab430;
 }
 
-/* --- WHAT DONATION SUPPORTS SECTION --- */
+
 .support-details-section {
     background-color: #8cc63f;
 }
@@ -192,7 +192,7 @@ body {
     color: #555;
 }
 
-/* --- MAP & STATS SECTION --- */
+
 .map-stats-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -213,7 +213,7 @@ body {
     min-height: 400px;
 }
 
-/* --- STORIES IN MOTION SECTION --- */
+
 .video-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -225,14 +225,14 @@ body {
     border: 1px solid #ccc;
 }
 
-/* --- GLIMPSES SECTION --- */
+
 .glimpses-section .placeholder-img {
     height: 450px;
     max-width: 800px;
     margin: 0 auto;
 }
 
-/* --- FAQ SECTION --- */
+
 .faq-section {
     background-color: #f9f9f9;
 }
@@ -274,7 +274,7 @@ body {
     color: #666;
 }
 
-/* --- RESPONSIVE DESIGN --- */
+
 @media (max-width: 992px) {
     .donation-grid, .map-stats-grid, .video-grid {
         grid-template-columns: 1fr;

@@ -40,9 +40,9 @@
     color: #555;
 }
 
-/* =================================== */
-/*          TIMELINE STYLES            */
-/* =================================== */
+
+
+
 .main-content {
     padding-bottom: 60px;
 }
@@ -53,7 +53,7 @@
     margin: 0 auto;
 }
 
-/* The central pink timeline */
+
 .timeline-container::before {
     content: '';
     position: absolute;
@@ -65,7 +65,7 @@
     margin-left: -1.5px;
 }
 
-/* Base style for ALL items */
+
 .timeline-item {
     padding: 10px 40px;
     position: relative;
@@ -74,7 +74,7 @@
     margin-bottom: 20px;
 }
 
-/* The white card containing content */
+
 .timeline-card {
     padding: 25px;
     background-color: #ffffff;
@@ -83,7 +83,7 @@
     position: relative;
 }
 
-/* The year markers */
+
 .timeline-year {
     padding: 10px 40px;
     position: relative;
@@ -96,27 +96,27 @@
     margin: 20px 0 30px 0;
 }
 
-/* LEFT-SIDE ITEMS POINTER */
+
 .timeline-item::after {
     content: '';
     position: absolute;
     width: 0;
     height: 0;
     border: 10px solid transparent;
-    border-left-color: #ffd800; /* Points right */
+    border-left-color: #ffd800; 
     top: 25px;
     right: 20px;
 }
 
-/* RIGHT-SIDE ITEMS SPECIFIC STYLES */
+
 .timeline-item-right {
-    left: 50%; /* Pushes the item to the right half */
+    left: 50%; 
 }
 
-/* RIGHT-SIDE ITEMS POINTER */
+
 .timeline-item-right::after {
-    border-left-color: transparent; /* Reset left-side pointer */
-    border-right-color: #ffd800; /* Points left */
+    border-left-color: transparent; 
+    border-right-color: #ffd800; 
     left: 20px;
     right: auto;
 }
@@ -143,24 +143,24 @@
     margin: 0;
 }
 
-/* =================================== */
-/*      RESPONSIVE MEDIA QUERIES       */
-/* =================================== */
+
+
+
 
 @media (max-width: 768px) {
-    /* Move the timeline to the left */
+    
     .timeline-container::before {
         left: 30px;
         margin-left: 0;
     }
 
-    /* Make ALL items (left and right) and years full-width and aligned left */
+    
     .timeline-item,
     .timeline-year {
         width: 100%;
         padding-left: 70px;
         padding-right: 15px;
-        left: 0; /* This overrides the left: 50% on right-side items */
+        left: 0; 
     }
     
     .timeline-year {
@@ -168,11 +168,11 @@
         margin-bottom: 20px;
     }
 
-    /* Make ALL pointers point from the left to the right */
+    
     .timeline-item::after {
-        left: 10px; /* Position it just outside the timeline line */
+        left: 10px; 
         right: auto;
-        border-left-color: transparent; /* Ensure left is clear */
-        border-right-color: #ffd800; /* Point right */
+        border-left-color: transparent; 
+        border-right-color: #ffd800; 
     }
 }

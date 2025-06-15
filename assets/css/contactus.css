@@ -1,4 +1,4 @@
-/* Contact Us Page Styles */
+
 .contactus-main {
     background: #fff;
     min-height: 100vh;
@@ -79,7 +79,7 @@
     justify-content: space-between;
 }
 
-/* Left Column - Contact Info Styles */
+
 .contact-info {
     width: 45%;
 }
@@ -116,7 +116,7 @@
     margin-bottom: 10px;
 }
 
-/* Right Column - Help Desk Form Styles */
+
 .helpdesk-form {
     width: 50%;
 }
@@ -193,7 +193,7 @@ textarea {
     background-color: #333;
 }
 
-/* Responsive Styles */
+
 @media (max-width: 768px) {
     .contact-wrapper {
         flex-direction: column;

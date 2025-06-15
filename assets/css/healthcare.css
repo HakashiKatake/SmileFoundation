@@ -11,14 +11,14 @@
     --font-primary: 'Montserrat', Arial, sans-serif;
 }
 
-/* Container */
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Healthcare Hero Section */
+
 .healthcare-hero {
     width: 100%;
     height: 100vh;
@@ -29,7 +29,7 @@
     background-repeat: no-repeat;
 }
 
-/* Why Health Cannot Wait Section */
+
 .health-cannot-wait {
     padding: 60px 0;
 }
@@ -40,7 +40,7 @@
     margin: 0 -15px;
 }
 
-/* Left Column - Information */
+
 .health-info-col {
     flex: 1;
     padding: 0 15px;
@@ -63,7 +63,7 @@
     margin-bottom: 20px;
 }
 
-/* Right Column - Donation Form */
+
 .health-donate-col {
     flex: 1;
     padding: 0 15px;
@@ -94,7 +94,7 @@
     margin-bottom: 25px;
 }
 
-/* Amount Options */
+
 .amount-options {
     display: flex;
     justify-content: center;
@@ -125,7 +125,7 @@
     line-height: 1.4;
 }
 
-/* Form Fields */
+
 .form-fields {
     display: flex;
     flex-direction: column;
@@ -215,7 +215,7 @@ select.form-input {
     background-color: var(--primary-dark);
 }
 
-/* Our Interventions Section */
+
 .interventions-section {
     padding: 60px 0;
     background-color: #ffffff;
@@ -306,7 +306,7 @@ select.form-input {
     width: 100px;
     opacity: 0.6;
 }
-/* Stories of Hope Section */
+
 .stories-section {
     padding: 60px 0;
     background-color: #ffffff;
@@ -395,7 +395,7 @@ select.form-input {
     background-color: #666;
 }
 
-/* Watch Us In Action Section */
+
 .watch-action-section {
     padding: 60px 0;
     background-color: #ffffff;
@@ -418,7 +418,7 @@ select.form-input {
 .video-container {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    padding-bottom: 56.25%; 
     height: 0;
     overflow: hidden;
     border-radius: 5px;
@@ -475,7 +475,7 @@ select.form-input {
 .video-dot.active {
     background-color: #666;
 }
-/* Smile In News Section */
+
 .news-section {
     padding: 60px 0;
     background-color: #ffffff;
@@ -571,7 +571,7 @@ select.form-input {
     background-color: #666;
 }
 
-/* Let's Talk About Health Section */
+
 .lets-talk-section {
     padding: 60px 0;
     background-color: #fff;
@@ -663,7 +663,7 @@ select.form-input {
     color: #8cc63f;
 }
 
-/* FAQ Section */
+
 .faq-section {
     padding: 60px 0;
     background-color: #fff;
@@ -861,7 +861,7 @@ select.form-input {
     }
 }
 
-/* Responsive Styles */
+
 @media (max-width: 1200px) {
     .interventions-container {
         justify-content: center;
@@ -909,7 +909,7 @@ select.form-input {
     }
 }
 
-/* Responsive Styles */
+
 @media (max-width: 992px) {
     .healthcare-hero {
         height: 250px;

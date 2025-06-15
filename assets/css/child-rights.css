@@ -117,7 +117,7 @@ body {
     text-transform: uppercase;
     font-weight: bold;
 }
-/* Add these styles to your existing CSS file */
+
 
 .cr-impact-section {
     margin-top: 40px;
@@ -234,7 +234,7 @@ body {
     line-height: 1.4;
 }
 
-/* Responsive adjustments */
+
 @media screen and (max-width: 768px) {
     .cr-impact-content, 
     .cr-world-content {
@@ -254,7 +254,7 @@ body {
     }
 }
 
-/* Add these styles to your existing CSS file */
+
 
 .cr-education-section {
     margin-top: 40px;
@@ -291,7 +291,7 @@ body {
     margin-right: auto;
 }
 
-/* Responsive adjustments */
+
 @media screen and (max-width: 768px) {
     .cr-education-section {
         padding: 0 10px;
@@ -323,7 +323,7 @@ body {
     }
 }
 
-/* Responsive design */
+
 @media screen and (max-width: 768px) {
     .cr-content-wrapper {
         flex-direction: column;

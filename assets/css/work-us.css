@@ -1,6 +1,6 @@
 
 
-/* Hero Section Styling */
+
 .wwu-hero {
     width: 100%;
     height: 100vh;
@@ -35,14 +35,14 @@
     text-align: center;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
-/* Container */
+
 .wwu-container {
 max-width: 1200px;
 margin: 0 auto;
 padding: 0 20px;
 }
 
-/* Introduction Section */
+
 .wwu-intro-section {
 padding: 60px 0;
 background-color: white;
@@ -68,7 +68,7 @@ margin-left: auto;
 margin-right: auto;
 }
 
-/* Positions Section */
+
 .wwu-positions-section {
 padding: 60px 0;
 background-color: #f5f5f5;
@@ -84,7 +84,7 @@ margin-bottom: 40px;
 letter-spacing: 1px;
 }
 
-/* Accordion Styles */
+
 .wwu-accordion {
 max-width: 900px;
 margin: 0 auto;
@@ -135,7 +135,7 @@ display: none;
 padding: 0 25px 25px;
 }
 
-/* Position Table Styles */
+
 .wwu-position-table {
 width: 100%;
 border-collapse: collapse;
@@ -156,7 +156,7 @@ text-align: left;
 font-weight: 600;
 }
 
-/* Responsive Styles */
+
 @media (max-width: 768px) {
 .wwu-intro-section,
 .wwu-positions-section {
@@ -196,7 +196,7 @@ font-size: 0.9rem;
     padding: 0 20px;
 }
 
-/* Section Title */
+
 .section-title {
     font-family: var(--font-heading);
     color: var(--black);
@@ -207,7 +207,7 @@ font-size: 0.9rem;
     letter-spacing: 1px;
 }
 
-/* Watch Smilians Section */
+
 .watch-smilians-section {
     padding: 60px 0;
     background-color: var(--light-gray);
@@ -358,7 +358,7 @@ font-size: 0.9rem;
     object-fit: contain;
 }
 
-/* Recent Activities Section */
+
 .recent-activities-section {
     padding: 60px 0;
     background-color: var(--white);
@@ -449,7 +449,7 @@ font-size: 0.9rem;
     transform: scale(1.05);
 }
 
-/* Responsive Styles */
+
 @media (max-width: 992px) {
     .section-title {
         font-size: 2.2rem;
@@ -533,7 +533,7 @@ font-size: 0.85rem;
 }
 }
 
-/* Responsive Styles */
+
 @media (max-width: 992px) {
     .wwu-hero {
         height: 250px;
@@ -564,7 +564,7 @@ font-size: 0.85rem;
     }
 }
 
-/* Smilians Forever Section (Customized Carousel) */
+
 .wwu-smilians-section {
     padding: 60px 0;
     background-color: #f8f8f8;
@@ -580,23 +580,23 @@ font-size: 0.85rem;
 }
 
 .wwu-smilians-slider {
-    padding-bottom: 40px; /* Space for pagination/navigation if needed */
+    padding-bottom: 40px; 
 }
 
 .wwu-smilians-card {
-    background-color: #e0f2f2; /* Light teal background */
+    background-color: #e0f2f2; 
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: left;
     display: flex;
     flex-direction: column;
-    height: 100%; /* Ensure cards take full height in swiper slide */
+    height: 100%; 
 }
 
 .wwu-smilians-img {
     width: 100%;
-    height: 250px; /* Adjust height as needed */
+    height: 250px; 
     object-fit: cover;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -606,13 +606,13 @@ font-size: 0.85rem;
     padding: 20px;
     display: flex;
     flex-direction: column;
-    flex-grow: 1; /* Allows content to expand and push elements */
+    flex-grow: 1; 
 }
 
 .wwu-smilians-name {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.6rem;
-    color: #008080; /* Dark teal for name */
+    color: #008080; 
     margin-bottom: 5px;
     text-transform: uppercase;
 }
@@ -620,7 +620,7 @@ font-size: 0.85rem;
 .wwu-smilians-title {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1rem;
-    color: #555; /* Slightly lighter for title */
+    color: #555; 
     margin-bottom: 15px;
 }
 
@@ -629,15 +629,15 @@ font-size: 0.85rem;
     font-size: 0.9rem;
     color: #333;
     line-height: 1.6;
-    flex-grow: 1; /* Allows quote to take available space */
+    flex-grow: 1; 
 }
 
-/* Swiper Navigation Arrows */
+
 .wwu-smilians-next, .wwu-smilians-prev {
-    color: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    color: rgba(0, 0, 0, 0.6); 
     width: 40px;
     height: 40px;
-    background-color: rgba(255, 255, 255, 0.8); /* White with transparency */
+    background-color: rgba(255, 255, 255, 0.8); 
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -659,11 +659,11 @@ font-size: 0.85rem;
 }
 
 .wwu-smilians-next:after, .wwu-smilians-prev:after {
-    font-size: 1.2rem; /* Adjust icon size */
+    font-size: 1.2rem; 
     font-weight: bold;
 }
 
-/* Responsive adjustments for Smilians Forever section */
+
 @media (max-width: 1200px) {
     .wwu-smilians-img {
         height: 220px;
@@ -675,7 +675,7 @@ font-size: 0.85rem;
         height: 200px;
     }
     .wwu-smilians-card {
-        margin: 0 10px; /* Add some horizontal margin for spacing */
+        margin: 0 10px; 
     }
 }
 

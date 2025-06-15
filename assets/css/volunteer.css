@@ -6,15 +6,15 @@
     --black: #000000;
     --dark-gray: #333333;
     --light-gray: #f5f5f5;
-    --light-green-bg: #e0f2e0; /* Light green for volunteer cards */
-    --light-blue-bg: #e0f2f2; /* Light blue for volunteer cards */
-    --light-pink-bg: #fce4ec; /* Light pink for volunteer cards */
-    --light-yellow-bg: #fffacd; /* Light yellow for volunteer cards */
+    --light-green-bg: #e0f2e0; 
+    --light-blue-bg: #e0f2f2; 
+    --light-pink-bg: #fce4ec; 
+    --light-yellow-bg: #fffacd; 
     --font-heading: 'Bebas Neue', sans-serif;
     --font-primary: 'Montserrat', Arial, sans-serif;
 }
 
-/* General Styles */
+
 .vol-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -32,7 +32,7 @@
     text-align: center;
 }
 
-/* Hero Section */
+
 .vol-hero {
     position: relative;
     width: 100%;
@@ -63,12 +63,12 @@
     letter-spacing: 2px;
     line-height: 1.2;
     max-width: 900px;
-    margin-bottom: 40px; /* Space between title and buttons */
+    margin-bottom: 40px; 
 }
 
 .vol-hero-buttons {
     position: absolute;
-    bottom: -25px; /* Pull buttons outside hero section */
+    bottom: -25px; 
     left: 50%;
     transform: translateX(-50%);
     z-index: 3;
@@ -96,10 +96,10 @@
     transform: translateY(-2px);
 }
 
-/* Introduction Section */
+
 .vol-intro-section {
     max-width: 1000px;
-    margin: 80px auto; /* Adjust margin to account for hero buttons */
+    margin: 80px auto; 
     padding: 0 20px;
     text-align: center;
     color: #444;
@@ -113,9 +113,9 @@
     text-align: left;
 }
 
-/* Volunteer Speak Section (Carousel) */
+
 .vol-volunteer-speak-section {
-    background-color: var(--white); /* White background */
+    background-color: var(--white); 
     padding: 80px 20px;
     text-align: center;
 }
@@ -149,16 +149,16 @@
 
 .vol-speak-img {
     width: 100%;
-    height: 250px; /* Consistent height for images */
+    height: 250px; 
     object-fit: cover;
     display: block;
-    border-radius: 8px 8px 0 0; /* Rounded top corners matching the card */
+    border-radius: 8px 8px 0 0; 
 }
 
 .vol-speak-content {
-    padding: 25px; /* Adjust padding to match image */
+    padding: 25px; 
     text-align: left;
-    flex-grow: 1; /* Allow content to take remaining space */
+    flex-grow: 1; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -181,7 +181,7 @@
     font-weight: 500;
 }
 
-/* Recent Activities Section (Carousel) */
+
 .vol-recent-activities-section {
     background-color: var(--light-gray);
     padding: 80px 20px;
@@ -198,10 +198,10 @@
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    height: 350px; /* Consistent height for activity cards */
+    height: 350px; 
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* Push title to bottom */
+    justify-content: flex-end; 
 }
 
 .vol-activity-img {
@@ -236,11 +236,11 @@
     line-height: 1.3;
 }
 
-/* Swiper Navigation Arrows (Specific for vol-speak-slider) */
+
 .vol-volunteer-speak-section .swiper-button-next,
 .vol-volunteer-speak-section .swiper-button-prev {
-    color: var(--primary-color) !important; /* Green arrows */
-    background-color: rgba(255, 255, 255, 0.8) !important; /* White background */
+    color: var(--primary-color) !important; 
+    background-color: rgba(255, 255, 255, 0.8) !important; 
     border-radius: 50% !important;
     width: 40px !important;
     height: 40px !important;
@@ -258,11 +258,11 @@
     font-size: 18px !important;
 }
 
-/* Swiper Navigation Arrows (Specific for recent-activities-slider) */
+
 .vol-recent-activities-section .swiper-button-next,
 .vol-recent-activities-section .swiper-button-prev {
-    color: var(--white) !important; /* White arrows */
-    background-color: rgba(0, 0, 0, 0.5) !important; /* Dark semi-transparent background */
+    color: var(--white) !important; 
+    background-color: rgba(0, 0, 0, 0.5) !important; 
     border-radius: 50% !important;
     width: 40px !important;
     height: 40px !important;
@@ -280,7 +280,7 @@
     font-size: 18px !important;
 }
 
-/* Responsive Styles */
+
 @media (max-width: 992px) {
     .vol-hero {
         height: 500px;
@@ -339,13 +339,13 @@
     }
     .vol-hero-buttons {
         bottom: -15px;
-        flex-direction: column; /* Stack buttons on smaller screens */
+        flex-direction: column; 
         gap: 10px;
     }
     .vol-hero-btn {
         padding: 10px 20px;
         font-size: 15px;
-        width: 100%; /* Full width when stacked */
+        width: 100%; 
     }
     .vol-intro-section {
         margin: 40px auto;
@@ -362,7 +362,7 @@
     }
     .volunteer-speak-slider,
     .recent-activities-slider {
-        /* Ensure full width or adjust based on Swiper settings for single view */
+        
     }
     .vol-speak-img {
         height: 180px;

@@ -170,13 +170,13 @@ body {
     gap: 2rem;
 }
 
-/* Accordion Header (the clickable button) */
+
 .pronged-header {
     width: 100%;
     padding: 1rem 1.5rem;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
-    background-color: #f9f9f9; /* Default BG */
+    background-color: #f9f9f9; 
     text-align: left;
     font-size: 1.2rem;
     font-weight: 700;
@@ -193,13 +193,13 @@ body {
     border-bottom-right-radius: 0;
 }
 
-/* Color variations for each header */
+
 .pronged-header.outcomes { background-color: #fff5d6; }
 .pronged-header.teachers { background-color: #e8fadf; }
 .pronged-header.environment { background-color: #e9e0f5; }
 .pronged-header.community { background-color: #dff6ff; }
 
-/* The little triangle icon */
+
 .pronged-icon {
     flex-shrink: 0;
     width: 0;
@@ -214,11 +214,11 @@ body {
     transform: rotate(90deg);
 }
 
-/* Accordion Content Panel */
+
 .pronged-content {
     background-color: #fff;
     overflow: hidden;
-    max-height: 0; /* Hidden by default */
+    max-height: 0; 
     transition: max-height 0.4s ease-out, padding 0.4s ease-out;
     padding: 0 1.5rem;
     border: 1px solid #e0e0e0;
@@ -228,8 +228,8 @@ body {
 }
 
 .pronged-content.active {
-    max-height: 500px; /* A value large enough to show all content */
-    padding: 1.5rem; /* Add padding when it becomes visible */
+    max-height: 500px; 
+    padding: 1.5rem; 
 }
 
 .pronged-content ul {

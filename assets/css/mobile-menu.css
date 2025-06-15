@@ -1,4 +1,4 @@
-/* Mobile Menu Styles */
+
 .hamburger {
     display: block;
     color: #fff;
@@ -90,7 +90,7 @@
     padding-left: 30px;
 }
 
-/* Show hamburger on mobile */
+
 @media (max-width: 991px) {
     .hamburger {
         display: block;
@@ -104,7 +104,7 @@
         margin-right: 10px;
     }
     
-    /* Add overlay when mobile menu is open */
+    
     .mobile-menu-overlay {
         display: block;
     }
@@ -126,7 +126,7 @@
     }
 }
 
-/* Prevent scrolling when menu is open */
+
 body.menu-open {
     overflow: hidden;
 }

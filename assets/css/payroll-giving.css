@@ -14,7 +14,7 @@
     --font-primary: 'Montserrat', Arial, sans-serif;
 }
 
-/* General Styles */
+
 .pg-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -31,7 +31,7 @@
     letter-spacing: 1px;
 }
 
-/* Hero Section */
+
 .pg-hero {
     width: 100%;
     height: 400px;
@@ -72,7 +72,7 @@
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
 }
 
-/* About Section */
+
 .pg-about-section {
     padding: 60px 0;
     background-color: var(--white);
@@ -91,7 +91,7 @@
     text-align: left;
 }
 
-/* Causes Section */
+
 .pg-causes-section {
     padding: 60px 0;
     background-color: var(--light-gray);
@@ -152,7 +152,7 @@
     line-height: 1.6;
 }
 
-/* Benefits for Corporates Section */
+
 .pg-benefits-corporates-section {
     padding: 60px 0;
     background-color: var(--white);
@@ -185,7 +185,7 @@
     color: var(--dark-gray);
 }
 
-/* Benefits for Employees Section */
+
 .pg-benefits-employees-section {
     padding: 60px 0;
     background-color: var(--light-gray);
@@ -252,7 +252,7 @@
     color: var(--dark-gray);
 }
 
-/* Benefits for Non-Profits Section */
+
 .pg-benefits-nonprofits-section {
     padding: 60px 0;
     background-color: var(--light-gray);
@@ -282,9 +282,9 @@
     color: var(--dark-gray);
 }
 
-/* Employee Experiences Section */
+
 .pg-employee-experiences-section {
-    background-color: #ffffff; /* White background */
+    background-color: #ffffff; 
     padding: 80px 20px;
     text-align: center;
 }
@@ -300,15 +300,15 @@
 .pg-employee-experiences-left {
     flex: 1;
     text-align: left;
-    padding-right: 20px; /* Space between text and cards */
+    padding-right: 20px; 
 }
 
 .pg-employee-experiences-right {
     flex: 2;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Two columns for cards */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
     gap: 40px;
-    padding-top: 60px; /* To account for the image pulling up */
+    padding-top: 60px; 
 }
 
 .pg-employee-experiences-title {
@@ -327,7 +327,7 @@
     line-height: 1.7;
     color: #555;
     text-align: left;
-    margin-bottom: 0; /* Remove bottom margin as it's not a slider */
+    margin-bottom: 0; 
 }
 
 .pg-experience-card {
@@ -335,31 +335,31 @@
     padding: 60px 40px 30px 40px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.1);
     position: relative;
-    text-align: left; /* Align content to the left */
-    min-height: 380px; /* Ensure consistent card height */
+    text-align: left; 
+    min-height: 380px; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start; /* Align content to the left */
+    align-items: flex-start; 
 }
 
 .pg-experience-card-light-blue {
-    background-color: #f0f8ff; /* Light blue background */
+    background-color: #f0f8ff; 
 }
 
 .pg-experience-card-light-yellow {
-    background-color: #fffacd; /* Light yellow background */
+    background-color: #fffacd; 
 }
 
 .pg-experience-img-container {
     position: absolute;
-    top: -60px; /* Pull image up outside the card */
-    left: 40px; /* Adjust left position for alignment */
-    transform: translateX(0%); /* Remove center transform */
+    top: -60px; 
+    left: 40px; 
+    transform: translateX(0%); 
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    background-color: #fff; /* White border/background for the circle */
+    background-color: #fff; 
     padding: 5px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     z-index: 10;
@@ -375,8 +375,8 @@
 
 .pg-quote-icon {
     position: absolute;
-    bottom: 0px; /* Adjust as needed */
-    right: 5px; /* Adjust as needed */
+    bottom: 0px; 
+    right: 5px; 
     background-color: #8cc63f;
     color: #fff;
     border-radius: 50%;
@@ -395,7 +395,7 @@
     font-weight: 700;
     color: #333;
     margin-bottom: 15px;
-    margin-top: 30px; /* Space after image */
+    margin-top: 30px; 
     line-height: 1.3;
     text-align: left;
     width: 100%;
@@ -407,7 +407,7 @@
     color: #666;
     margin-bottom: 25px;
     text-align: left;
-    flex-grow: 1; /* Allows quote to take available space */
+    flex-grow: 1; 
 }
 
 .pg-watch-video {
@@ -423,15 +423,15 @@
     color: #6a9b2e;
 }
 
-/* Responsive Styles for Employee Experiences Section */
+
 @media (max-width: 992px) {
     .pg-employee-experiences-container {
-        flex-direction: column; /* Stack columns on smaller screens */
-        gap: 0; /* Remove gap when stacked */
+        flex-direction: column; 
+        gap: 0; 
     }
     .pg-employee-experiences-left {
         padding-right: 0;
-        margin-bottom: 40px; /* Space between text and stacked cards */
+        margin-bottom: 40px; 
         text-align: center;
     }
     .pg-employee-experiences-title {
@@ -442,8 +442,8 @@
     }
     .pg-employee-experiences-right {
         padding-top: 60px;
-        grid-template-columns: 1fr; /* Single column for cards */
-        gap: 60px; /* Space between stacked cards */
+        grid-template-columns: 1fr; 
+        gap: 60px; 
     }
     .pg-employee-experiences-section {
         padding: 60px 15px;
@@ -454,17 +454,17 @@
     }
     .pg-employee-experiences-intro {
         font-size: 16px;
-        /* margin-bottom: 50px; */ /* Removed as handled by left margin-bottom */
+         
     }
     .pg-experience-card {
         padding: 50px 30px 25px 30px;
         min-height: 350px;
-        text-align: center; /* Center content when stacked */
-        align-items: center; /* Center content when stacked */
+        text-align: center; 
+        align-items: center; 
     }
     .pg-experience-img-container {
         top: -50px;
-        left: 50%; /* Center image container */
+        left: 50%; 
         transform: translateX(-50%);
         width: 100px;
         height: 100px;
@@ -500,11 +500,11 @@
     }
     .pg-employee-experiences-intro {
         font-size: 15px;
-        margin-bottom: 30px; /* Adjust margin for smaller screens */
+        margin-bottom: 30px; 
         text-align: center;
     }
     .pg-employee-experiences-right {
-        padding-top: 50px; /* Adjust padding for smaller screens */
+        padding-top: 50px; 
         gap: 50px;
     }
     .pg-experience-card {
@@ -534,7 +534,7 @@
     }
 }
 
-/* Contact Section */
+
 .pg-contact-section {
     padding: 60px 0;
     background-color: var(--primary-color);
@@ -576,7 +576,7 @@
     color: rgba(255, 255, 255, 0.3);
 }
 
-/* Partners Section */
+
 .pg-partners-section {
     padding: 60px 0;
     background-color: var(--light-pink);
@@ -604,7 +604,7 @@
     object-fit: contain;
 }
 
-/* Swiper custom styling */
+
 .swiper-pagination-bullet {
     background: var(--primary-color) !important;
 }
@@ -613,7 +613,7 @@
     background: var(--primary-dark) !important;
 }
 
-/* Responsive Styling */
+
 @media (max-width: 1200px) {
     .pg-partners-grid {
         grid-template-columns: repeat(4, 1fr);

@@ -1,18 +1,18 @@
- /* General styling for the body */
+ 
  body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     color: #333;
     line-height: 1.6;
 }
 
-/* Main container for the entire section */
+
 .governance-container {
     max-width: 1100px;
-    margin: 50px auto; /* Adds space top/bottom and centers the container */
-    padding: 20px; /* Padding for smaller screens */
+    margin: 50px auto; 
+    padding: 20px; 
 }
 
-/* --- Top Intro Section --- */
+
 .governance-intro {
     display: flex;
     justify-content: space-between;
@@ -22,7 +22,7 @@
 }
 
 .intro-text {
-    flex: 3; /* Allows the text to take up more space */
+    flex: 3; 
     font-size: 1rem;
     color: #555;
 }
@@ -36,16 +36,16 @@
 .governance-logo img {
     width: 100%;
     height: auto;
-    /* Style for a broken image to show a placeholder */
+    
     display: block;
     background: #f0f0f0;
     border: 1px dashed #ccc;
-    min-height: 120px; /* Ensure placeholder has size */
+    min-height: 120px; 
 }
 
-/* --- Common Section Title --- */
+
 .section-title {
-    font-size: 1.5rem; /* 24px */
+    font-size: 1.5rem; 
     font-weight: 700;
     color: #000;
     text-transform: uppercase;
@@ -54,10 +54,10 @@
     margin-bottom: 30px;
 }
 
-/* --- Registration Details Section --- */
+
 .details-grid {
     display: grid;
-    /* Creates 3 equal-width columns */
+    
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
@@ -73,22 +73,22 @@
     color: #444;
 }
 
-/* Adds space between the main text and the registration number */
+
 .detail-card p:last-of-type {
     margin-top: 20px; 
 }
 
-/* --- Audit System Section --- */
+
 .audit-grid {
     display: grid;
-    /* Creates 2 equal-width columns */
+    
     grid-template-columns: 1fr 1fr;
-    /* Sets gap between rows and columns */
+    
     gap: 40px 80px;
 }
 
 .audit-item h3 {
-    font-size: 1.05rem; /* 17px */
+    font-size: 1.05rem; 
     font-weight: 700;
     color: #000;
     margin: 0 0 10px 0;
@@ -100,7 +100,7 @@
     color: #555;
 }
 
-/* --- Responsive Design for smaller screens --- */
+
 @media (max-width: 992px) {
     .governance-intro {
         flex-direction: column;

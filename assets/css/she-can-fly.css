@@ -332,7 +332,7 @@
 
 .swiper-wrapper {
     display: flex;
-    flex-direction: row; /* Ensure horizontal alignment */
+    flex-direction: row; 
 }
 
 .swiper-slide {
@@ -345,7 +345,7 @@
     position: relative;
     width: 100%;
     height: 0;
-    padding-bottom: 75%; /* Maintain aspect ratio */
+    padding-bottom: 75%; 
 }
 
 .image-container img {
@@ -367,7 +367,7 @@
 
 .gray-strip {
     height: 50px;
-    background-color: rgba(80, 80, 80, 0.7); /* Semi-transparent gray */
+    background-color: rgba(80, 80, 80, 0.7); 
     width: 100%;
 }
 
@@ -506,7 +506,7 @@
 }
 
 .empower-section {
-    background-color: #f47a6e; /* Coral/salmon pink color */
+    background-color: #f47a6e; 
     width: 100%;
     padding: 80px 0;
     color: #fff;
@@ -566,7 +566,7 @@
     width: 100%;
     height: 100vh;
     min-height: 700px;
-    background-image: url('../images/hero-fly.png'); /* Replace with your actual background image */
+    background-image: url('../images/hero-fly.png'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -579,7 +579,7 @@
     margin: 0 auto;
     padding: 0 15px;
     display: flex;
-    justify-content: flex-end; /* Place the form on the right */
+    justify-content: flex-end; 
     height: 100%;
 }
 
@@ -601,7 +601,7 @@
 .support-heading {
     font-size: 20px;
     font-weight: bold;
-    color: #8bc53f; /* Green color as in image */
+    color: #8bc53f; 
     margin-bottom: 5px;
 }
 
@@ -692,7 +692,7 @@
 }
 
 .submit-button button {
-    background-color: #8bc53f; /* Green color as in image */
+    background-color: #8bc53f; 
     color: white;
     border: none;
     padding: 10px 35px;
@@ -706,7 +706,7 @@
     background-color: #7ab52f;
 }
 
-/* Responsive styles */
+
 @media (max-width: 768px) {
     .container {
         justify-content: center;
@@ -718,7 +718,7 @@
     }
 }
 
-/* Responsive Styles */
+
 @media (max-width: 992px) {
     .row {
         flex-direction: column;
@@ -752,7 +752,7 @@
     }
 }
 
-/* Responsive Styles */
+
 @media (max-width: 992px) {
     .content-wrapper {
         width: 100%;
@@ -777,7 +777,7 @@
     }
 }
 
-/* Responsive Styles */
+
 @media (max-width: 768px) {
     .swiper-slide {
         width: 100%;
