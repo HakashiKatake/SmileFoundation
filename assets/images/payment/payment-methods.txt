@@ -1,0 +1,9 @@
+This directory contains placeholder images for payment methods.
+
+In a production environment, you would replace these with actual payment method logos.
+
+Payment method icons needed:
+- UPI: gpay.png, phonepe.png, paytm.png, bhim.png
+- Cards: visa.png, mastercard.png, rupay.png, amex.png
+- Banks: sbi.png, hdfc.png, icici.png, axis.png, kotak.png, pnb.png, bob.png, idfc.png
+- Wallets: paytm.png, amazon-pay.png, mobikwik.png, freecharge.png

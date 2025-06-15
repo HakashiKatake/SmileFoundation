@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparent Fund Tracker | Smile Foundation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/fund-tracker.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    
+
+    <section class="hero-section">
+        <div class="container">
+            <h1>Transparent Fund Tracker</h1>
+            <p>See exactly how your donations are making an impact</p>
+        </div>
+    </section>
+
+    <section class="fund-overview">
+        <div class="container">
+            <div class="fund-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="counter" data-target="8547921">0</h3>
+                        <p>Total Donations (₹)</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="counter" data-target="12489">0</h3>
+                        <p>Total Donors</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="counter" data-target="45678">0</h3>
+                        <p>Children Supported</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="counter" data-target="1247">0</h3>
+                        <p>Schools Reached</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="allocation-section">
+        <div class="container">
+            <h2>Fund Allocation</h2>
+            <p class="section-desc">We believe in complete transparency. Here's how your donations are being utilized across our programs.</p>
+            
+            <div class="allocation-chart-container">
+                <div class="chart-wrapper">
+                    <canvas id="allocation-chart"></canvas>
+                </div>
+                <div class="allocation-details">
+                    <div class="allocation-item">
+                        <div class="color-indicator" style="background-color: #4CAF50;"></div>
+                        <div class="allocation-info">
+                            <h4>Education Programs</h4>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 45%;" data-percentage="45"></div>
+                            </div>
+                            <p>45% - ₹3,846,564</p>
+                        </div>
+                    </div>
+                    <div class="allocation-item">
+                        <div class="color-indicator" style="background-color: #2196F3;"></div>
+                        <div class="allocation-info">
+                            <h4>Healthcare Initiatives</h4>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 30%;" data-percentage="30"></div>
+                            </div>
+                            <p>30% - ₹2,564,376</p>
+                        </div>
+                    </div>
+                    <div class="allocation-item">
+                        <div class="color-indicator" style="background-color: #FFC107;"></div>
+                        <div class="allocation-info">
+                            <h4>Nutrition & Meals</h4>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 15%;" data-percentage="15"></div>
+                            </div>
+                            <p>15% - ₹1,282,188</p>
+                        </div>
+                    </div>
+                    <div class="allocation-item">
+                        <div class="color-indicator" style="background-color: #9C27B0;"></div>
+                        <div class="allocation-info">
+                            <h4>Administrative Costs</h4>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 10%;" data-percentage="10"></div>
+                            </div>
+                            <p>10% - ₹854,792</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="recent-donations">
+        <div class="container">
+            <h2>Recent Donations</h2>
+            <p class="section-desc">Join these generous donors in making a difference</p>
+            
+            <div class="donations-table-container">
+                <table class="donations-table">
+                    <thead>
+                        <tr>
+                            <th>Donor</th>
+                            <th>Amount</th>
+                            <th>Program</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recent-donations-body">
+                       
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="impact-stories">
+        <div class="container">
+            <h2>Your Impact Stories</h2>
+            <p class="section-desc">See how your donations are changing lives</p>
+            
+            <div class="impact-cards">
+                <div class="impact-card">
+                    <div class="impact-image">
+                        <img src="https://smile-foundation-lime.vercel.app/assets/images/glimpse.webp" alt="Education Impact">
+                    </div>
+                    <div class="impact-content">
+                        <h3>New School in Rajasthan</h3>
+                        <p>Your donations helped build a new school in rural Rajasthan, providing education to 120 children who previously had no access to schooling.</p>
+                        <div class="impact-meta">
+                            <span class="impact-date">Completed: June 2023</span>
+                            <span class="impact-cost">Cost: ₹12,50,000</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-image">
+                        <img src="https://smile-foundation-lime.vercel.app/assets/images/sk-hero.webp" alt="Healthcare Impact">
+                    </div>
+                    <div class="impact-content">
+                        <h3>Medical Camp in Bihar</h3>
+                        <p>A week-long medical camp in Bihar provided healthcare services to over 2,000 people, including vaccinations, health check-ups, and medicine distribution.</p>
+                        <div class="impact-meta">
+                            <span class="impact-date">Completed: August 2023</span>
+                            <span class="impact-cost">Cost: ₹8,75,000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="annual-reports">
+        <div class="container">
+            <h2>Annual Financial Reports</h2>
+            <p class="section-desc">Download our detailed financial reports</p>
+            
+            <div class="reports-grid">
+                <div class="report-card">
+                    <div class="report-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="report-content">
+                        <h3>Annual Report 2023</h3>
+                        <p>Complete financial breakdown and impact assessment</p>
+                        <a href="#" class="btn-download">Download PDF</a>
+                    </div>
+                </div>
+                <div class="report-card">
+                    <div class="report-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="report-content">
+                        <h3>Annual Report 2022</h3>
+                        <p>Complete financial breakdown and impact assessment</p>
+                        <a href="#" class="btn-download">Download PDF</a>
+                    </div>
+                </div>
+                <div class="report-card">
+                    <div class="report-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="report-content">
+                        <h3>Annual Report 2021</h3>
+                        <p>Complete financial breakdown and impact assessment</p>
+                        <a href="#" class="btn-download">Download PDF</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>About Smile Foundation</h3>
+                    <p>We work to improve the lives of underprivileged children through education and healthcare initiatives across India.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="programs.html">Our Programs</a></li>
+                        <li><a href="volunteer.html">Volunteer</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 NGO Street, New Delhi, India</p>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-envelope"></i> info@smilefoundation.org</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Smile Foundation. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../assets/js/fund-tracker.js"></script>
+    <script src="../components/load-components.js"></script>
+</body>
+</html>

@@ -6,6 +6,8 @@
     <title>Donation | Smile Foundation</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/donation.css">
+    <link rel="stylesheet" href="../assets/css/payment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <main>
@@ -154,42 +156,14 @@
         </section>
     </main>
 
+    <script src="../assets/js/payment.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             // --- Donation Form Validation ---
+            // Note: Form submission is now handled by payment.js
+            // This validation is kept for backward compatibility
             const form = document.getElementById('donationForm');
             const requiredFields = form.querySelectorAll('[required]');
-
-            form.addEventListener('submit', function (event) {
-                event.preventDefault(); // Stop form submission
-                let isValid = true;
-                
-                // Reset previous errors
-                requiredFields.forEach(field => field.classList.remove('error'));
-
-                // Check each required field
-                requiredFields.forEach(field => {
-                    if (!field.value.trim()) {
-                        field.classList.add('error');
-                        isValid = false;
-                    }
-                });
-
-                // Special check for email format
-                const emailField = document.getElementById('email');
-                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (emailField.value && !emailRegex.test(emailField.value)) {
-                    emailField.classList.add('error');
-                    isValid = false;
-                }
-                
-                if (isValid) {
-                    alert('Thank you for your donation! Form submitted successfully.');
-                    form.reset(); 
-                } else {
-                    alert('Please fill in all the required fields correctly.');
-                }
-            });
 
             // --- Accordion Functionality ---
             const accordionItems = document.querySelectorAll('.accordion-item');
@@ -201,11 +175,13 @@
                 header.addEventListener('click', () => {
                     const isActive = item.classList.contains('active');
                     
-                    // Optional: Close all other accordions
-                    // accordionItems.forEach(i => {
-                    //     i.classList.remove('active');
-                    //     i.querySelector('.accordion-content').style.maxHeight = null;
-                    // });
+                    // Close all other accordions
+                    accordionItems.forEach(i => {
+                        if (i !== item) {
+                            i.classList.remove('active');
+                            i.querySelector('.accordion-content').style.maxHeight = null;
+                        }
+                    });
 
                     if (!isActive) {
                         item.classList.add('active');

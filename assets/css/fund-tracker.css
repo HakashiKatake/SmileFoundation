@@ -1,0 +1,444 @@
+/* Fund Tracker CSS - Minimal but effective */
+
+:root {
+    --primary-color: #8CC63F;
+    --secondary-color: #F7941D;
+    --dark-gray: #333333;
+    --light-gray: #f5f5f5;
+    --text-color: #555555;
+    --white: #ffffff;
+    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
+   
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--white);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header Styles */
+.site-header {
+    
+    box-shadow: var(--box-shadow);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.btn-donate {
+    background-color: var(--primary-color);
+    color: var(--white) !important;
+    padding: 8px 20px;
+    border-radius: 30px;
+}
+
+
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://smile-foundation-lime.vercel.app/assets/images/glimpse.webp');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    text-align: center;
+    padding: 80px 0;
+    height: 70vh;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    margin-top: 120px;
+
+
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Fund Overview Section */
+.fund-overview {
+    padding: 60px 0;
+    background-color: var(--light-gray);
+}
+
+.fund-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.stat-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: var(--transition);
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1.5rem;
+}
+
+.stat-content h3 {
+    font-size: 1.8rem;
+    color: var(--dark-gray);
+   
+    margin-bottom: 5px;
+}
+
+.stat-content p {
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+/* Allocation Section */
+.allocation-section {
+    padding: 60px 0;
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--dark-gray);
+    text-align: center;
+    margin-bottom: 10px;
+   
+}
+
+.section-desc {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.allocation-chart-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.chart-wrapper {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.allocation-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.allocation-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.color-indicator {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+}
+
+.allocation-info {
+    flex: 1;
+}
+
+.allocation-info h4 {
+    margin-bottom: 8px;
+    color: var(--dark-gray);
+    
+}
+
+.progress-bar {
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+}
+
+/* Recent Donations Section */
+.recent-donations {
+    padding: 60px 0;
+    background-color: var(--light-gray);
+}
+
+.donations-table-container {
+    overflow-x: auto;
+    margin-top: 30px;
+}
+
+.donations-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+}
+
+.donations-table th, 
+.donations-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.donations-table th {
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-weight: 600;
+}
+
+.donations-table tr:last-child td {
+    border-bottom: none;
+}
+
+.donations-table tr:hover {
+    background-color: rgba(140, 198, 63, 0.05);
+}
+
+/* Impact Stories Section */
+.impact-stories {
+    padding: 60px 0;
+}
+
+.impact-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.impact-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.impact-card:hover {
+    transform: translateY(-5px);
+}
+
+.impact-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.impact-content {
+    padding: 20px;
+}
+
+.impact-content h3 {
+    color: var(--dark-gray);
+    margin-bottom: 10px;
+   
+}
+
+.impact-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    font-size: 0.85rem;
+    color: var(--text-color);
+}
+
+/* Annual Reports Section */
+.annual-reports {
+    padding: 60px 0;
+    background-color: var(--light-gray);
+}
+
+.reports-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.report-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: var(--transition);
+}
+
+.report-card:hover {
+    transform: translateY(-5px);
+}
+
+.report-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.report-content h3 {
+    color: var(--dark-gray);
+    margin-bottom: 5px;
+   
+}
+
+.report-content p {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.btn-download {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 8px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.btn-download:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Footer Styles */
+.site-footer {
+    background-color: var(--dark-gray);
+    color: var(--white);
+    padding: 60px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.footer-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+    
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+.footer-contact p {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: var(--white);
+    transition: var(--transition);
+}
+
+.social-icons a:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .allocation-chart-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .chart-wrapper {
+        margin-bottom: 30px;
+    }
+    
+    .main-nav {
+        display: none; /* In a real project, would add a mobile menu */
+    }
+}
