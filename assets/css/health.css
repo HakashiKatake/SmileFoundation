@@ -15,21 +15,13 @@ body, html {
 .hero-banner {
     
     background-image: url('../images/health.png');
-
-  
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-
-   
     height: 100vh;
-
-   
     display: flex;
     justify-content: center;
     align-items: center;
-
-    
     color: white;
     text-align: center;
 }

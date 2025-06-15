@@ -273,7 +273,7 @@ body, .smile-blog-main {
     top: 0; left: 0; right: 0; bottom: 0;
     width: 100%;
     height: 100%;
-    background: url('../assets/images/most-bg.jpg') center center/cover no-repeat;
+    background: url('../images/getinvolved/school/hero.png') center center/cover no-repeat;
     opacity: 0.45;
     z-index: 1;
 }

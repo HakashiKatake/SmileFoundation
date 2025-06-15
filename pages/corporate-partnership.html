@@ -14,16 +14,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 
 
-    <style>
-        @font-face {
-            font-family: 'Bebas Neue';
-            src: url('/assets/fonts/BebasNeue-Regular.otf') format('opentype'),
-                 url('/assets/fonts/BebasNeue-Regular.ttf') format('truetype');
-            font-weight: 400;
-            font-style: normal;
-            font-display: swap;
-        }
-    </style>
+   
 </head>
 <body>
     <!-- Hero section -->
@@ -99,51 +90,50 @@
     </section>
 
     <!-- Ways to Partner section -->
-    <section class="cp-ways-section">
-        <div class="cp-container">
-            <h2 class="cp-section-title">WAYS TO PARTNER WITH US</h2>
-            
-            <div class="cp-ways-grid">
-                <!-- CSR -->
-                <div class="cp-way-item">
-                    <div class="cp-way-icon cp-icon-csr">
-                        <img src="/assets/images/partnar1.png" alt="CSR Icon">
-                    </div>
-                    <h3 class="cp-way-title">CORPORATE SOCIAL RESPONSIBILITY</h3>
-                    <p class="cp-way-text">
-                        Fulfill your CSR goals with us by supporting high-impact programmes in education, healthcare, skilling, nutrition and women empowerment
-                    </p>
-                    <a href="#" class="cp-know-more">Know More</a>
-                </div>
-                
-                <!-- Cause Marketing -->
-                <div class="cp-way-item">
-                    <div class="cp-way-icon cp-icon-marketing">
-                        <img src="/assets/images/partnar2.png" alt="Marketing Icon">
-                    </div>
-                    <h3 class="cp-way-title">CAUSE MARKETING & EVENTS</h3>
-                    <p class="cp-way-text">
-                        Foster brand alliances that combine the power of your legacy and our storytelling to create campaigns that make your brand stand out...
-                    </p>
-                    <a href="#" class="cp-know-more">Know More</a>
-                </div>
-                
-                <!-- Employee Engagement -->
-                <div class="cp-way-item">
-                    <div class="cp-way-icon cp-icon-employee">
-                        <img src="/assets/images/partnar3.png" alt="Employee Icon">
-                    </div>
-                    <h3 class="cp-way-title">EMPLOYEE ENGAGEMENT</h3>
-                    <p class="cp-way-text">
-                        Create a workplace where employees get the satisfaction of doing more than their jobs and engage in meaningful volunteer
-                    </p>
-                    <a href="#" class="cp-know-more">Know More</a>
-                </div>
+    <section class="partner-section">
+    <h2 class="section-title">WAYS TO PARTNER WITH US</h2>
+    
+    <div class="partner-grid">
+      
+        <div class="partner-card">
+            <div class="card-header">
+                <img src="https://www.smilefoundationindia.org/wp-content/uploads/2022/10/cORPORATE.png" alt="Corporate Social Responsibility Icon" class="card-icon">
+                <h3 class="card-title purple">CORPORATE SOCIAL RESPONSIBILITY</h3>
             </div>
+            <p class="card-description">
+                Fulfill your CSR goals with us by supporting high-impact programmes in education, healthcare, skilling, nutrition and women empowerment
+            </p>
+            <a href="#" class="btn-know-more">Know More</a>
         </div>
-    </section>
 
-    <!-- Testimonial Slider section -->
+        <!-- Card 2: Cause Marketing & Events -->
+        <div class="partner-card">
+            <div class="card-header">
+                <img src="https://www.smilefoundationindia.org/wp-content/uploads/2022/10/cAUSE.png" alt="Cause Marketing & Events Icon" class="card-icon">
+                <h3 class="card-title gold">CAUSE MARKETING & EVENTS</h3>
+            </div>
+            <p class="card-description">
+                Foster brand alliances that combine the power of your legacy and our storytelling to create campaigns that make your brand stand out...
+            </p>
+            <a href="#" class="btn-know-more">Know More</a>
+        </div>
+
+        <!-- Card 3: Employee Engagement -->
+        <div class="partner-card">
+            <div class="card-header">
+                <img src="https://www.smilefoundationindia.org/wp-content/uploads/2022/10/SDAD.png" alt="Employee Engagement Icon" class="card-icon">
+                <h3 class="card-title teal">EMPLOYEE ENGAGEMENT</h3>
+            </div>
+            <p class="card-description">
+                Create a workplace where employees get the satisfaction of doing more than their jobs and engage in meaningful volunteer
+            </p>
+            <a href="#" class="btn-know-more">Know More</a>
+        </div>
+    </div>
+</section>
+
+
+   
     <section class="cp-testimonial-section">
         <div class="cp-container">
             <h2 class="cp-section-title">WHAT OUR SUPPORTERS SAY</h2>
@@ -294,13 +284,13 @@
         </section>
     </section>
 
-    <!-- Slider JS -->
+   
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     
-    <!-- Custom JS -->
+    
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Initialize testimonial slider
+           
             const testimonialSlider = new Swiper('.testimonial-slider', {
                 slidesPerView: 1,
                 spaceBetween: 30,
@@ -330,11 +320,11 @@
                 },
             });
             
-            // Play button click simulation
+           
             const playButtons = document.querySelectorAll('.cp-play-button');
             playButtons.forEach(button => {
                 button.addEventListener('click', function() {
-                    // This would typically launch a video modal
+                    
                     alert('Video would play here');
                 });
             });

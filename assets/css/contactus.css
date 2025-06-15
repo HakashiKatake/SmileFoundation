@@ -1,6 +1,5 @@
 /* Contact Us Page Styles */
 .contactus-main {
-    font-family: 'Montserrat', Arial, sans-serif;
     background: #fff;
     min-height: 100vh;
 }
@@ -58,111 +57,167 @@
     margin: 0 0 16px 0;
     color: #444;
 }
+
 .donation-queries > div {
     margin-bottom: 16px;
 }
+
 .donation-queries h3 {
     font-size: 1rem;
     font-weight: 700;
     margin-bottom: 4px;
 }
-.contactus-form-section {
-    flex: 1 1 480px;
-    max-width: 600px;
+
+.contact-section {
+    padding: 60px 0;
+    background-color: #fff;
 }
-.contactus-form-section h2 {
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin-bottom: 8px;
-}
-.contactus-form-section p {
-    font-size: 1rem;
-    color: #444;
-    margin-bottom: 18px;
-}
-.contactus-form {
-    background: #fff;
-    border-radius: 2px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    padding: 24px 18px 18px 18px;
+
+.contact-wrapper {
     display: flex;
-    flex-direction: column;
-    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
+
+/* Left Column - Contact Info Styles */
+.contact-info {
+    width: 45%;
+}
+
+.info-block {
+    margin-bottom: 25px;
+}
+
+.info-heading {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.sub-heading {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.contact-person {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.contact-email {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Right Column - Help Desk Form Styles */
+.helpdesk-form {
+    width: 50%;
+}
+
+.form-heading {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.form-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
 .form-row {
     display: flex;
-    gap: 16px;
-    margin-bottom: 0;
+    justify-content: space-between;
+    gap: 20px;
 }
-.form-group {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    min-width: 0;
+
+.form-group.half {
+    width: calc(50% - 10px);
 }
-.form-group.full-width {
-    flex: 2;
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
 }
-.contactus-form label {
-    font-size: 1rem;
-    font-weight: 500;
-    margin-bottom: 4px;
-    color: #222;
+
+.required {
+    color: red;
 }
-.contactus-form input[type="text"],
-.contactus-form input[type="tel"],
-.contactus-form input[type="email"],
-.contactus-form textarea {
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 12px 15px;
     border: 1px solid #ccc;
-    border-radius: 2px;
-    padding: 10px 12px;
-    font-size: 1rem;
-    margin-bottom: 0;
-    background: #fafafa;
-    transition: border 0.2s;
+    font-size: 16px;
 }
-.contactus-form input:focus,
-.contactus-form textarea:focus {
-    border: 1.5px solid #8bc34a;
-    outline: none;
-}
-.contactus-form textarea {
-    min-height: 90px;
+
+textarea {
     resize: vertical;
+    min-height: 120px;
 }
-.contactus-form button.contactus-submit {
-    background: #111;
+
+.recaptcha {
+    margin-bottom: 20px;
+}
+
+.form-submit button {
+    background-color: #000;
     color: #fff;
-    font-size: 1.1rem;
-    font-weight: 700;
     border: none;
-    border-radius: 2px;
-    padding: 12px 0;
-    margin-top: 8px;
+    padding: 12px 30px;
+    font-size: 16px;
     cursor: pointer;
-    letter-spacing: 1px;
-    transition: background 0.2s;
+    width: 100%;
+    text-transform: uppercase;
 }
-.contactus-form button.contactus-submit:hover {
-    background: #8bc34a;
-    color: #111;
+
+.form-submit button:hover {
+    background-color: #333;
 }
-.contactus-form span {
-    color: #e53935;
-    font-size: 1.1em;
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contact-wrapper {
+        flex-direction: column;
+    }
+    
+    .contact-info,
+    .helpdesk-form {
+        width: 100%;
+    }
+    
+    .contact-info {
+        margin-bottom: 40px;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .form-group.half {
+        width: 100%;
+    }
 }
-.recaptcha-placeholder {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin: 8px 0 0 0;
-}
-.recaptcha-img {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 8px;
-}
+
 @media (max-width: 900px) {
     .contactus-content {
         flex-direction: column;
@@ -188,11 +243,7 @@
         flex-direction: column;
         gap: 8px;
     }
-    .recaptcha-placeholder {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 4px;
-    }
+   
     .contactus-form {
         padding: 8px 2px 4px 2px;
     }
@@ -201,322 +252,5 @@
     .contactus-form textarea {
         font-size: 0.95rem;
     }
-    .accordion-header {
-        font-size: 0.98rem;
-        padding: 12px 4px;
-    }
-    .accordion-content {
-        padding: 0 4px 8px 4px;
-        font-size: 0.98rem;
-    }
-    .accordion-container {
-        max-width: 100%;
-    }
-    .accordion-grid, .accordion-subgrid {
-        flex-direction: column;
-        gap: 8px;
-    }
-    .accordion-col, .accordion-subgrid > div {
-        min-width: 0;
-        font-size: 0.98rem;
-    }
-    .accordion-col h4, .accordion-col strong {
-        font-size: 1rem;
-    }
-}
-
-/* Accordion Styles */
-.contactus-accordion-section {
-    background: #f7f7f7;
-    padding: 40px 0;
-    display: flex;
-    justify-content: center;
-}
-.accordion-container {
-    background: #fff;
-    border-radius: 2px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-    overflow: hidden;
-}
-.accordion-item + .accordion-item {
-    border-top: 1px solid #eee;
-}
-.accordion-header {
-    width: 100%;
-    background: none;
-    border: none;
-    outline: none;
-    font-size: 1.25rem;
-    font-weight: 700;
-    text-align: left;
-    padding: 28px 32px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    transition: background 0.2s;
-    letter-spacing: 0.5px;
-}
-.accordion-header:hover {
-    background: #f0f0f0;
-}
-.accordion-icon {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-left: 16px;
-}
-.accordion-content {
-    padding: 0 32px 24px 32px;
-    background: #fff;
-    font-size: 1rem;
-    color: #444;
-}
-.accordion-jobs-row {
-    display: flex;
-    gap: 32px;
-    justify-content: space-between;
-    margin-top: 24px;
-    margin-bottom: 8px;
-}
-.accordion-job-col {
-    flex: 1 1 0;
-    min-width: 180px;
-}
-.accordion-job-col h4 {
-    font-size: 1.05rem;
-    font-weight: 700;
-    color: #888;
-    margin-bottom: 8px;
-    letter-spacing: 0.5px;
-}
-.accordion-job-col p {
-    font-size: 1rem;
-    color: #888;
-    margin: 0;
-    word-break: break-all;
-}
-@media (max-width: 900px) {
-    .accordion-jobs-row {
-        flex-direction: column;
-        gap: 18px;
-    }
-    .accordion-job-col {
-        min-width: 0;
-    }
-    .accordion-header, .accordion-content {
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-}
-@media (max-width: 600px) {
-    .accordion-header {
-        font-size: 1rem;
-        padding: 18px 8px;
-    }
-    .accordion-content {
-        padding: 0 8px 12px 8px;
-    }
-    .accordion-container {
-        max-width: 100%;
-    }
-}
-
-/* Accordion grid styles for content-rich sections */
-.accordion-grid {
-    display: flex;
-    gap: 32px;
-    margin-bottom: 18px;
-    flex-wrap: wrap;
-}
-.accordion-col {
-    flex: 1 1 260px;
-    min-width: 220px;
-    margin-bottom: 12px;
-}
-.accordion-col h4, .accordion-col strong {
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: #888;
-    margin-bottom: 8px;
-    letter-spacing: 0.5px;
-    display: block;
-}
-.accordion-col p, .accordion-col div, .accordion-col {
-    color: #888;
-    font-size: 1rem;
-    margin-bottom: 8px;
-}
-.accordion-subgrid {
-    display: flex;
-    gap: 32px;
-    margin-bottom: 12px;
-    flex-wrap: wrap;
-}
-.accordion-subgrid > div {
-    flex: 1 1 180px;
-    min-width: 180px;
-    margin-bottom: 8px;
-}
-@media (max-width: 900px) {
-    .accordion-grid, .accordion-subgrid {
-        flex-direction: column;
-        gap: 12px;
-    }
-    .accordion-col, .accordion-subgrid > div {
-        min-width: 0;
-    }
-}
-
-/* Visit Us Here Section */
-.contactus-visit-section {
-    margin: 48px auto 0 auto;
-    padding-bottom: 32px;
-}
-.visit-title {
-    font-size: 1.4rem;
-    font-weight: 700;
-    margin-bottom: 18px;
-    letter-spacing: 1px;
-}
-.visit-head-office {
-    margin-bottom: 32px;
-}
-.visit-head-office h3 {
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-bottom: 8px;
-    letter-spacing: 0.5px;
-}
-.visit-head-office p {
-    color: #444;
-    font-size: 1rem;
-    margin-bottom: 6px;
-}
-.visit-regional-offices h3 {
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-bottom: 12px;
-    letter-spacing: 0.5px;
-}
-.visit-tabs {
-    display: flex;
-    gap: 12px;
-    margin-bottom: 18px;
-}
-.visit-tab {
-    background: #fff;
-    border: 1.5px solid #eee;
-    border-radius: 6px;
-    padding: 8px 22px;
-    font-size: 1rem;
-    font-weight: 700;
-    color: #222;
-    cursor: pointer;
-    transition: background 0.2s, border 0.2s;
-    outline: none;
-}
-.visit-tab.active, .visit-tab:focus {
-    background: #f7f7f7;
-    border: 2px solid #8bc34a;
-    color: #111;
-}
-.visit-tab-content {
-    display: none;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
-    padding: 32px 16px 24px 16px;
-    margin-bottom: 0;
-    gap: 24px;
-    justify-content: center;
-}
-.visit-tab-content[style*="display: flex"] {
-    display: flex !important;
-}
-.visit-card {
-    flex: 1 1 220px;
-    min-width: 180px;
-    max-width: 320px;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    margin: 0 12px;
-    padding: 32px 18px 18px 18px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    position: relative;
-}
-.visit-card-icon {
-    position: absolute;
-    top: -24px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    padding: 6px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.visit-card-title {
-    font-size: 1.08rem;
-    font-weight: 700;
-    color: #555;
-    margin: 32px 0 8px 0;
-    letter-spacing: 0.5px;
-}
-.visit-card-text {
-    color: #888;
-    font-size: 1rem;
-    word-break: break-word;
-}
-@media (max-width: 900px) {
-    .visit-tab-content[style*="display: flex"] {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 18px;
-    }
-    .visit-card {
-        margin: 0 auto;
-        max-width: 100%;
-    }
-}
-@media (max-width: 600px) {
-    .contactus-visit-section {
-        margin: 32px 0 0 0;
-        padding-bottom: 16px;
-    }
-    .visit-title {
-        font-size: 1.1rem;
-    }
-    .visit-head-office h3, .visit-regional-offices h3 {
-        font-size: 1rem;
-    }
-    .visit-tabs {
-        gap: 6px;
-    }
-    .visit-tab {
-        font-size: 0.95rem;
-        padding: 6px 10px;
-    }
-    .visit-tab-content {
-        padding: 18px 2px 10px 2px;
-        gap: 10px;
-    }
-    .visit-card {
-        padding: 24px 6px 10px 6px;
-    }
-    .visit-card-title {
-        font-size: 0.98rem;
-        margin: 24px 0 6px 0;
-    }
-    .visit-card-text {
-        font-size: 0.95rem;
-    }
+    
 }

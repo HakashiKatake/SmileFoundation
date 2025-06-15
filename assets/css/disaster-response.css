@@ -1,16 +1,12 @@
-/* ==========================================================================
-   DISASTER RESPONSE SECTIONS
-   ========================================================================== */
 
-/* --- Utility Class --- */
 .text-center {
     text-align: center;
 }
 
-/* --- Hero Section --- */
+
 .disaster-hero {
     position: relative;
-    height: 450px;
+    height: 100vh;
     background-image: url('../images/disaster-hero.png'); /* Placeholder hero image */
     background-size: cover;
     background-position: center;
