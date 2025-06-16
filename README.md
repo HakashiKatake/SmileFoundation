@@ -22,6 +22,7 @@ The key challenges identified were:
   - Dynamic content loading for success stories
   - Interactive state selection for volunteer registration
   - Animated statistics and impact counters
+  - Live link - https://smile-foundation-lime.vercel.app/
 
 ### Design & Planning
 - **Figma**: Created comprehensive wireframes and prototypes for:
