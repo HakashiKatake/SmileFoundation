@@ -10,6 +10,7 @@ The key challenges identified were:
 - Limited transparency in donation tracking and fund utilization
 - Need for compelling presentation of success stories to inspire support
 - Requirement for a responsive design that works across all devices
+- Business model - https://docs.google.com/spreadsheets/d/1aLN_CwsimwQU2D98G1DsB52mKR4B3pkvLq_hAUvSr-E/edit?usp=sharing
 
 ## Tools & Technologies Used
 
@@ -28,6 +29,8 @@ The key challenges identified were:
   - Volunteer registration process
   - Impact storytelling sections
   - Mobile-responsive layouts
+
+  Link - https://www.figma.com/design/HRKqMoontW4SCiFwMNTomV/SmileFoundation?node-id=0-1&t=xGM2Elb6IuruEr61-1
 
 ### Version Control
 - **Git**: Maintained code versioning and collaboration
